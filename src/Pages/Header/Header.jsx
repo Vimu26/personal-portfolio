@@ -28,7 +28,8 @@ const Header = () => {
         width: "100%",
         zIndex: 10,
         padding: "1.4rem",
-        paddingTop: "2rem"
+        paddingTop: "2rem",
+        backgroundColor: 'white'
       }}
     >
       <Box sx={{ flexGrow: 1 }}>

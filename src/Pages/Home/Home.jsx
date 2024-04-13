@@ -186,7 +186,7 @@ const Home = () => {
                   className="App"
                   style={{
                     fontFamily: "cursive",
-                    fontSize: "2.3rem",
+                    fontSize: "2.1rem",
                     fontWeight: 800,
                     textAlign: "center",
                     display: "flex",
