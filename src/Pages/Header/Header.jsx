@@ -36,7 +36,7 @@ const Header = () => {
           <Grid
             item
             xs={6}
-            sm={4}
+            sm={5}
             justifyContent="start"
             container
             fontSize="2rem"
@@ -46,8 +46,8 @@ const Header = () => {
             Akalanka
           </Grid>
           {!isSmallScreen && (
-            <Grid item xs={6} sm={8} md={8} lg={8} >
-              <Grid container justifyContent="space-around" spacing={2}>
+            <Grid item xs={6} sm={7} md={7} lg={7} >
+              <Grid container justifyContent="space-evenly" spacing={2}>
                 <Grid item style={{paddingLeft : '0'}}>
                   <Button color="inherit" style={{display:"flex" , justifyContent: "start"}}>Home</Button>
                 </Grid>
