@@ -34,7 +34,7 @@ const Home = () => {
   };
 
   return (
-    <Container>
+    <Container maxWidth="false">
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container

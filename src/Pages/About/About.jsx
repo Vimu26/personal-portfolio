@@ -8,7 +8,7 @@ const About = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Container>
+    <Container maxWidth="false">
       <Grid
         container
         spacing={2}

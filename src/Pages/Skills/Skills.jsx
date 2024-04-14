@@ -1,11 +1,19 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import { Grid, Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import WorkIcon from "@mui/icons-material/Work";
+import SchoolIcon from "@mui/icons-material/School";
 
 const Skills = () => {
+  const [selectedDecision, setSelectedDecision] = useState("EXPERIENCE");
+
+  const onDecisionChange = (decision) => {
+    setSelectedDecision(decision);
+  };
+
   return (
-    <Container>
+    <Container maxWidth="false">
       <Typography variant="h4" gutterBottom>
         <b>Skills & Experience</b>
       </Typography>
@@ -18,7 +26,7 @@ const Skills = () => {
           <div
             style={{
               display: "flex",
-              justifyContent: "start",
+              justifyContent: "center",
               alignItems: "center",
               flexWrap: "wrap"
             }}
@@ -177,15 +185,35 @@ const Skills = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <div>
-            <h3>Skills</h3>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>JQuery</li>
-              <li>React</li>
-              <li>Redux</li>
-            </ul>
+            <div
+              style={{
+                display: "flex",
+                marginTop: "1rem",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <Button
+                variant={
+                  selectedDecision === "EXPERIENCE" ? "contained" : "outlined"
+                }
+                onClick={() => onDecisionChange("EXPERIENCE")}
+                startIcon={<WorkIcon />}
+                sx={{ mr: 1 }}
+              >
+                Experience
+              </Button>
+
+              <Button
+                variant={
+                  selectedDecision === "EDUCATION" ? "contained" : "outlined"
+                }
+                onClick={() => onDecisionChange("EDUCATION")}
+                startIcon={<SchoolIcon />}
+              >
+                Education
+              </Button>
+            </div>
           </div>
         </Grid>
       </Grid>
