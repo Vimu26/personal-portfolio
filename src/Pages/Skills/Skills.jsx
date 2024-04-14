@@ -13,7 +13,7 @@ const Skills = () => {
   };
 
   return (
-    <Container maxWidth="false">
+    <Container maxWidth="xl">
       <Typography variant="h4" gutterBottom>
         <b>Skills & Experience</b>
       </Typography>
