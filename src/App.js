@@ -1,6 +1,7 @@
 import About from "./Pages/About/About";
 import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
+import Skills from "./Pages/Skills/Skills";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         <Home />
         <div style={{ marginTop: "3rem" , marginBottom:'3rem' }}>
           <About />
+        </div>
+        <div style={{ marginTop: "5rem" , marginBottom:'3rem' }}>
+          <Skills />
         </div>
       </div>
     </div>
