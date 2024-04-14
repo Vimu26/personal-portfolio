@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import WorkIcon from "@mui/icons-material/Work";
 import SchoolIcon from "@mui/icons-material/School";
 
+
 const Skills = () => {
   const [selectedDecision, setSelectedDecision] = useState("EXPERIENCE");
 
@@ -213,6 +214,13 @@ const Skills = () => {
               >
                 Education
               </Button>
+            </div>
+            <div>
+              {selectedDecision === "EXPERIENCE" ? (
+                <div style={{marginTop:'2rem' , display:'flex', justifyContent:'center', alignItems: 'center'}}>akalanka</div>
+              ) : (
+                <div style={{marginTop:'2rem' , display:'flex', justifyContent:'center', alignItems: 'center'}}>vimukthi</div>
+              )}
             </div>
           </div>
         </Grid>

@@ -2,6 +2,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import * as React from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 const About = () => {
   const theme = useTheme();
@@ -31,7 +32,9 @@ const About = () => {
 
         <Grid item xs={12} sm={6}>
           <div>
-            <h2>About Me</h2>
+            <Typography variant="h4" gutterBottom>
+              <b>About Me</b>
+            </Typography>
             <p
               style={{
                 marginTop: "1rem",
