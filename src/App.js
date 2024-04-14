@@ -8,7 +8,7 @@ function App() {
       <Header />
       <div style={{ position: "relative", top: "8rem" }}>
         <Home />
-        <div style={{ marginTop: "3rem" }}>
+        <div style={{ marginTop: "3rem" , marginBottom:'3rem' }}>
           <About />
         </div>
       </div>

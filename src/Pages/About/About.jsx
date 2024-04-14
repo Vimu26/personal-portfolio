@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import * as React from "react";
-import {  useMediaQuery, useTheme } from "@mui/material";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 const About = () => {
   const theme = useTheme();
@@ -9,17 +9,27 @@ const About = () => {
 
   return (
     <Container>
-      <Grid container spacing={2}>
-
-        {
-          !isSmallScreen &&  (
-            <Grid item xs={12} sm={6}> 
-            <div>Image</div>
+      <Grid
+        container
+        spacing={2}
+        sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}
+      >
+        {!isSmallScreen && (
+          <Grid item xs={12} sm={6}>
+            <img
+              src="https://www.interviewbit.com/blog/wp-content/uploads/2021/11/Software-Engineer.png"
+              alt=""
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                margin: "auto"
+              }}
+            />
           </Grid>
-          ) 
-        }
-    
-        <Grid item xs={12} sm={6}> 
+        )}
+
+        <Grid item xs={12} sm={6}>
           <div>
             <h2>About Me</h2>
             <p
@@ -33,7 +43,7 @@ const About = () => {
               I'm Akalanka Vimukthi Rathnayake , a Passionate Software Engineer
               From SriLanka
             </p>
-            <Grid container >
+            <Grid container>
               <Grid item xs={4}>
                 <div
                   style={{
@@ -44,7 +54,6 @@ const About = () => {
                 >
                   Name
                 </div>
-               
               </Grid>
               <Grid item xs={8}>
                 <div
@@ -57,10 +66,9 @@ const About = () => {
                 >
                   Akalanka Vimukthi Rathnayake
                 </div>
-                
               </Grid>
             </Grid>
-            <Grid container >
+            <Grid container>
               <Grid item xs={4}>
                 <div
                   style={{
@@ -71,7 +79,6 @@ const About = () => {
                 >
                   Date of Birth
                 </div>
-               
               </Grid>
               <Grid item xs={8}>
                 <div
@@ -82,12 +89,11 @@ const About = () => {
                     marginBottom: "1rem"
                   }}
                 >
-                 2000.01.26
+                  2000.01.26
                 </div>
-                
               </Grid>
             </Grid>
-            <Grid container >
+            <Grid container>
               <Grid item xs={4}>
                 <div
                   style={{
@@ -98,7 +104,6 @@ const About = () => {
                 >
                   Address
                 </div>
-               
               </Grid>
               <Grid item xs={8}>
                 <div
@@ -111,10 +116,9 @@ const About = () => {
                 >
                   67/9B , Woodland av, Kalubowila , Dehiwala , SriLanka
                 </div>
-                
               </Grid>
             </Grid>
-            <Grid container >
+            <Grid container>
               <Grid item xs={2} sm={4}>
                 <div
                   style={{
@@ -125,7 +129,6 @@ const About = () => {
                 >
                   Email
                 </div>
-               
               </Grid>
               <Grid item xs={10} sm={8}>
                 <div
@@ -138,10 +141,9 @@ const About = () => {
                 >
                   akalankavimukthi2@gmail.com
                 </div>
-                
               </Grid>
             </Grid>
-            <Grid container >
+            <Grid container>
               <Grid item xs={4}>
                 <div
                   style={{
@@ -152,7 +154,6 @@ const About = () => {
                 >
                   Phone
                 </div>
-               
               </Grid>
               <Grid item xs={8}>
                 <div
@@ -163,17 +164,15 @@ const About = () => {
                     marginBottom: "1rem"
                   }}
                 >
-                 +94 77 459 6550
+                  +94 77 459 6550
                 </div>
-                
               </Grid>
             </Grid>
           </div>
         </Grid>
       </Grid>
-      </Container>
+    </Container>
   );
 };
 
 export default About;
-
