@@ -15,7 +15,7 @@ const Home = () => {
 
   const handleEmailButtonClick = () => {
     const emailAddress = "akalankavimukthi2@gmail.com";
-    const subject = ""; 
+    const subject = "";
     const body = "";
     const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
       subject
@@ -25,14 +25,13 @@ const Home = () => {
 
   const handleDownloadButtonClick = () => {
     const anchorElement = document.createElement("a");
-    anchorElement.href = 'https://drive.google.com/file/d/1cJ4ANWS5KQXe1o1wzpsS1uW_0TpLc-Ap/view?usp=drive_link';
-    anchorElement.download = "Akalanka Vimukthi CV 2024.pdf"; 
+    anchorElement.href =
+      "https://drive.google.com/file/d/1cJ4ANWS5KQXe1o1wzpsS1uW_0TpLc-Ap/view?usp=drive_link";
+    anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
     document.body.appendChild(anchorElement);
     anchorElement.click();
-    document.body.removeChild(anchorElement); 
+    document.body.removeChild(anchorElement);
   };
-
-
 
   return (
     <Container>
@@ -103,7 +102,11 @@ const Home = () => {
                 </div>
               </div>
               <div style={{ marginTop: "1rem" }}>
-                <Button variant="contained" startIcon={<DownloadIcon />} onClick={handleDownloadButtonClick}>
+                <Button
+                  variant="contained"
+                  startIcon={<DownloadIcon />}
+                  onClick={handleDownloadButtonClick}
+                >
                   Download CV
                 </Button>
               </div>
@@ -186,7 +189,7 @@ const Home = () => {
                   className="App"
                   style={{
                     fontFamily: "cursive",
-                    fontSize: "2.3rem",
+                    fontSize: "2.1rem",
                     fontWeight: 800,
                     textAlign: "center",
                     display: "flex",
@@ -218,7 +221,7 @@ const Home = () => {
                   Download CV
                 </Button>
               </div>
-              
+
               <div
                 style={{
                   display: "flex",
@@ -226,7 +229,7 @@ const Home = () => {
                   marginTop: "1rem"
                 }}
               >
-                  <IconButton
+                <IconButton
                   color="primary"
                   aria-label="fb"
                   onClick={() => {
