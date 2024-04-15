@@ -34,7 +34,7 @@ const Home = () => {
   };
 
   return (
-    <Container>
+    <Container maxWidth="xl">
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
@@ -46,7 +46,7 @@ const Home = () => {
               <div
                 style={{
                   fontFamily: "cursive",
-                  fontSize: "2rem",
+                  fontSize: "2.6rem",
                   color: "#82b5e2"
                 }}
               >
@@ -56,7 +56,7 @@ const Home = () => {
                 style={{
                   display: "flex",
                   fontFamily: "cursive",
-                  fontSize: "2rem",
+                  fontSize: "2.6rem",
                   color: "#82b5e2"
                 }}
               >
@@ -86,7 +86,10 @@ const Home = () => {
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter
-                        .typeString("Full Stack Engineer")
+                        .typeString("Front-End Developer")
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .typeString("Back-End Developer")
                         .pauseFor(1000)
                         .deleteAll()
                         .typeString("Full Stack Engineer")
