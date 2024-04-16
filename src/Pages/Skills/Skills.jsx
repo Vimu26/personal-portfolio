@@ -36,9 +36,18 @@ const Skills = () => {
         <b>Skills & Experience</b>
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          style={{
+            marginBottom: "2rem",
+            display: "ruby",
+            marginTop: isSmallScreen ? 0 : "7%"
+          }}
+        >
           <div>
-            <h3>Languages and Tools</h3>
+            <Typography variant="h5">Languages and Tools</Typography>
           </div>
 
           <div
@@ -139,14 +148,6 @@ const Skills = () => {
               {" "}
               <img
                 src={require("../../../src/assets/images/skill-icons/icons8-mysql-96.png")}
-                alt=""
-                style={{ width: "70px", height: "70px" }}
-              />
-            </div>
-            <div style={{ margin: "1rem " }}>
-              {" "}
-              <img
-                src={require("../../../src/assets/images/skill-icons/icons8-express-js-96.png")}
                 alt=""
                 style={{ width: "70px", height: "70px" }}
               />
@@ -259,24 +260,20 @@ const Skills = () => {
                             orientation="vertical"
                             variant="middle"
                             style={{
-                              height: "80%"
+                              height: "80%",
+                              marginBottom : '65px'
                             }}
                           />
                         </div>
                       </Grid>
                       <Grid item xs={10} style={{ paddingLeft: "0" }}>
                         <Stack spacing={2}>
-                          <Grid
-                            container
-                            spacing={2}
-                            style={{ marginTop: "1rem" }}
-                          >
+                          <Grid container spacing={2}>
                             <Grid
                               item
                               xs={1}
                               style={{
                                 paddingLeft: "0",
-                                paddingRight: "5px",
                                 display: "flex",
                                 alignItems: "center"
                               }}
@@ -289,7 +286,7 @@ const Skills = () => {
                                 }}
                               ></Divider>
                             </Grid>
-                            <Grid item xs={9} style={{ paddingLeft: "0" }}>
+                            <Grid item xs={10} style={{ paddingLeft: "0" }}>
                               <Card
                                 variant="outlined"
                                 style={{ marginTop: "1rem" }}
@@ -309,17 +306,12 @@ const Skills = () => {
                             </Grid>
                           </Grid>
 
-                          <Grid
-                            container
-                            spacing={2}
-                            style={{ marginTop: "1rem" }}
-                          >
+                          <Grid container spacing={2}>
                             <Grid
                               item
                               xs={1}
                               style={{
                                 paddingLeft: "0",
-                                paddingRight: "5px",
                                 display: "flex",
                                 alignItems: "center"
                               }}
@@ -332,7 +324,7 @@ const Skills = () => {
                                 }}
                               ></Divider>
                             </Grid>
-                            <Grid item xs={9} style={{ paddingLeft: "0" }}>
+                            <Grid item xs={10} style={{ paddingLeft: "0" }}>
                               <Card
                                 variant="outlined"
                                 style={{ marginTop: "1rem" }}
@@ -355,14 +347,13 @@ const Skills = () => {
                           <Grid
                             container
                             spacing={2}
-                            style={{ marginTop: "1rem", marginBottom: "1rem" }}
+                            style={{ marginBottom: "1rem" }}
                           >
                             <Grid
                               item
                               xs={1}
                               style={{
                                 paddingLeft: "0",
-                                paddingRight: "5px",
                                 display: "flex",
                                 alignItems: "center"
                               }}
@@ -375,7 +366,7 @@ const Skills = () => {
                                 }}
                               ></Divider>
                             </Grid>
-                            <Grid item xs={9} style={{ paddingLeft: "0" }}>
+                            <Grid item xs={10} style={{ paddingLeft: "0" }}>
                               <Card
                                 variant="outlined"
                                 style={{ marginTop: "1rem" }}
@@ -386,7 +377,7 @@ const Skills = () => {
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
                                     National Child Protection Authorization
-                                    (NCPA)
+                                    (NCPA) | ( 2023 - 2024)
                                   </Typography>
                                   <Typography variant="body1">
                                     Leading the Government Project NCPA , and
@@ -399,7 +390,7 @@ const Skills = () => {
                         </Stack>
                         <div
                           style={{
-                            marginTop: "2rem",
+                            marginTop: "1rem",
                             marginBottom: "2rem",
                             display: "flex",
                             justifyContent: "center"
@@ -486,9 +477,42 @@ const Skills = () => {
                     alignItems: "center"
                   }}
                 >
-                  <Typography variant="h6" gutterBottom>
-                    Undergraduate Student at University of Sri Jayawardenapura
-                  </Typography>
+                  <Container maxWidth="lg" style={{ paddingRight: "0" }}>
+                    <Stack xs={10} style={{ marginBottom: "2rem" }}>
+                      <Card
+                        variant="outlined"
+                        style={{ maxWidth: isSmallScreen ? "95%" : "90%" }}
+                      >
+                        <CardContent>
+                          <Typography variant="h6" gutterBottom>
+                            Undergraduate Student
+                          </Typography>
+                          <Typography variant="body1" gutterBottom>
+                            University of Sri Jayawardenapura , SriLanka | (2021
+                            - 2024)
+                          </Typography>
+                          <Typography variant="body1">
+                            Computer Science related Degree
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                    </Stack>
+                    <div
+                      style={{
+                        marginBottom: "2rem",
+                        display: "flex",
+                        justifyContent: "center"
+                      }}
+                    >
+                      <Button
+                        variant="contained"
+                        startIcon={<DownloadIcon />}
+                        onClick={handleDownloadButtonClick}
+                      >
+                        Download CV
+                      </Button>
+                    </div>
+                  </Container>
                 </div>
               )}
             </div>
