@@ -9,10 +9,10 @@ function App() {
       <Header />
       <div style={{ position: "relative", top: "8rem" }}>
         <Home />
-        <div style={{ marginTop: "5rem" , marginBottom:'6rem' }}>
+        <div style={{ marginTop: "5rem", marginBottom: "6rem" }}>
           <About />
         </div>
-        <div style={{ marginTop: "6rem" , marginBottom:'3rem' }}>
+        <div style={{ marginTop: "6rem", marginBottom: "3rem" }}>
           <Skills />
         </div>
       </div>

@@ -261,7 +261,7 @@ const Skills = () => {
                             variant="middle"
                             style={{
                               height: "80%",
-                              marginBottom : '65px'
+                              marginBottom: "65px"
                             }}
                           />
                         </div>
