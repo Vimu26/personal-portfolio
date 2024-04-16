@@ -29,7 +29,7 @@ const Header = () => {
         zIndex: 10,
         padding: "1.4rem",
         paddingTop: "2rem",
-        backgroundColor: 'white'
+        backgroundColor: "white"
       }}
     >
       <Box sx={{ flexGrow: 1 }}>
@@ -47,21 +47,26 @@ const Header = () => {
             Akalanka
           </Grid>
           {!isSmallScreen && (
-            <Grid item xs={6} sm={7} md={7} lg={7} >
+            <Grid item xs={6} sm={7} md={7} lg={7}>
               <Grid container justifyContent="space-evenly" spacing={2}>
-                <Grid item style={{paddingLeft : '0'}}>
-                  <Button color="inherit" style={{display:"flex" , justifyContent: "start"}}>Home</Button>
+                <Grid item style={{ paddingLeft: "0" }}>
+                  <Button
+                    color="inherit"
+                    style={{ display: "flex", justifyContent: "start" }}
+                  >
+                    Home
+                  </Button>
                 </Grid>
-                <Grid item style={{paddingLeft : '0'}}>
+                <Grid item style={{ paddingLeft: "0" }}>
                   <Button color="inherit">About</Button>
                 </Grid>
-                <Grid item style={{paddingLeft : '0'}}>
+                <Grid item style={{ paddingLeft: "0" }}>
                   <Button color="inherit">Skills</Button>
                 </Grid>
-                <Grid item style={{paddingLeft : '0'}}>
+                <Grid item style={{ paddingLeft: "0" }}>
                   <Button color="inherit">Projects</Button>
                 </Grid>
-                <Grid item style={{paddingLeft : '0'}}>
+                <Grid item style={{ paddingLeft: "0" }}>
                   <Button color="inherit">Contact</Button>
                 </Grid>
               </Grid>
