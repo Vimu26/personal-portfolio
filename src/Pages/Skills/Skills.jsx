@@ -43,7 +43,7 @@ const Skills = () => {
           style={{
             marginBottom: "2rem",
             display: "ruby",
-            marginTop: isSmallScreen ? 0 : "7%"
+            marginTop: isSmallScreen ? 0 : "7%",
           }}
         >
           <div>
@@ -55,7 +55,7 @@ const Skills = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              flexWrap: "wrap"
+              flexWrap: "wrap",
             }}
           >
             <div style={{ margin: "1rem " }}>
@@ -211,14 +211,14 @@ const Skills = () => {
                 flexGrow: 1,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center"
+                justifyContent: "center",
               }}
             >
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <Button
@@ -253,7 +253,7 @@ const Skills = () => {
                             display: "flex",
                             justifyContent: "end",
                             alignItems: "center",
-                            height: "100%"
+                            height: "100%",
                           }}
                         >
                           <Divider
@@ -261,7 +261,7 @@ const Skills = () => {
                             variant="middle"
                             style={{
                               height: "80%",
-                              marginBottom: "65px"
+                              marginBottom: "65px",
                             }}
                           />
                         </div>
@@ -275,14 +275,14 @@ const Skills = () => {
                               style={{
                                 paddingLeft: "0",
                                 display: "flex",
-                                alignItems: "center"
+                                alignItems: "center",
                               }}
                             >
                               <Divider
                                 style={{
                                   width: "100%",
                                   display: "flex",
-                                  alignItems: "center"
+                                  alignItems: "center",
                                 }}
                               ></Divider>
                             </Grid>
@@ -313,14 +313,14 @@ const Skills = () => {
                               style={{
                                 paddingLeft: "0",
                                 display: "flex",
-                                alignItems: "center"
+                                alignItems: "center",
                               }}
                             >
                               <Divider
                                 style={{
                                   width: "100%",
                                   display: "flex",
-                                  alignItems: "center"
+                                  alignItems: "center",
                                 }}
                               ></Divider>
                             </Grid>
@@ -355,14 +355,14 @@ const Skills = () => {
                               style={{
                                 paddingLeft: "0",
                                 display: "flex",
-                                alignItems: "center"
+                                alignItems: "center",
                               }}
                             >
                               <Divider
                                 style={{
                                   width: "100%",
                                   display: "flex",
-                                  alignItems: "center"
+                                  alignItems: "center",
                                 }}
                               ></Divider>
                             </Grid>
@@ -393,7 +393,7 @@ const Skills = () => {
                             marginTop: "1rem",
                             marginBottom: "2rem",
                             display: "flex",
-                            justifyContent: "center"
+                            justifyContent: "center",
                           }}
                         >
                           <Button
@@ -454,7 +454,7 @@ const Skills = () => {
                         style={{
                           marginBottom: "2rem",
                           display: "flex",
-                          justifyContent: "center"
+                          justifyContent: "center",
                         }}
                       >
                         <Button
@@ -474,7 +474,7 @@ const Skills = () => {
                     marginTop: "2rem",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center"
+                    alignItems: "center",
                   }}
                 >
                   <Container maxWidth="lg" style={{ paddingRight: "0" }}>
@@ -501,7 +501,7 @@ const Skills = () => {
                       style={{
                         marginBottom: "2rem",
                         display: "flex",
-                        justifyContent: "center"
+                        justifyContent: "center",
                       }}
                     >
                       <Button

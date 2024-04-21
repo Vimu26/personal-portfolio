@@ -24,7 +24,7 @@ const About = () => {
                 width: "100%",
                 height: "auto",
                 display: "block",
-                margin: "auto"
+                margin: "auto",
               }}
             />
           </Grid>
@@ -40,7 +40,7 @@ const About = () => {
                 marginTop: "1rem",
                 marginBottom: "1.5rem",
                 fontSize: "1.3rem",
-                color: "#717171"
+                color: "#717171",
               }}
             >
               I'm Akalanka Vimukthi Rathnayake , a Passionate Software Engineer
@@ -52,7 +52,7 @@ const About = () => {
                   style={{
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   Name
@@ -64,7 +64,7 @@ const About = () => {
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   Akalanka Vimukthi Rathnayake
@@ -77,7 +77,7 @@ const About = () => {
                   style={{
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   Date of Birth
@@ -89,7 +89,7 @@ const About = () => {
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   2000.01.26
@@ -102,7 +102,7 @@ const About = () => {
                   style={{
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   Address
@@ -114,7 +114,7 @@ const About = () => {
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   67/9B , Woodland av, Kalubowila , Dehiwala , SriLanka
@@ -127,7 +127,7 @@ const About = () => {
                   style={{
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   Email
@@ -139,7 +139,7 @@ const About = () => {
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   akalankavimukthi2@gmail.com
@@ -152,7 +152,7 @@ const About = () => {
                   style={{
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   Phone
@@ -164,7 +164,7 @@ const About = () => {
                     fontFamily: "cursive",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
-                    marginBottom: "1rem"
+                    marginBottom: "1rem",
                   }}
                 >
                   +94 77 459 6550

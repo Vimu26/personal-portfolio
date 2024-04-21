@@ -47,7 +47,7 @@ const Home = () => {
                 style={{
                   fontFamily: "cursive",
                   fontSize: "2.6rem",
-                  color: "#82b5e2"
+                  color: "#82b5e2",
                 }}
               >
                 <strong>I'm,</strong>
@@ -57,7 +57,7 @@ const Home = () => {
                   display: "flex",
                   fontFamily: "cursive",
                   fontSize: "2.6rem",
-                  color: "#82b5e2"
+                  color: "#82b5e2",
                 }}
               >
                 <strong>Akalanka Vimukthi Rathnayake</strong>
@@ -67,7 +67,7 @@ const Home = () => {
                   display: "flex",
                   justifyContent: isSmallScreen ? "center" : "start",
                   alignItems: "center",
-                  textAlign: "center"
+                  textAlign: "center",
                 }}
               >
                 <div
@@ -80,7 +80,7 @@ const Home = () => {
                     display: "flex",
                     justifyContent: "start",
                     alignItems: "center",
-                    color: "blue"
+                    color: "blue",
                   }}
                 >
                   <Typewriter
@@ -99,7 +99,7 @@ const Home = () => {
                     }}
                     options={{
                       autoStart: true,
-                      loop: true
+                      loop: true,
                     }}
                   />
                 </div>
@@ -117,7 +117,7 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "start",
-                  marginTop: "1rem"
+                  marginTop: "1rem",
                 }}
               >
                 <IconButton
@@ -163,7 +163,7 @@ const Home = () => {
                   justifyContent: "center",
                   fontFamily: "cursive",
                   fontSize: "2rem",
-                  color: "#82b5e2"
+                  color: "#82b5e2",
                 }}
               >
                 <strong>I'm,</strong>
@@ -175,7 +175,7 @@ const Home = () => {
                   fontFamily: "cursive",
                   fontSize: "2rem",
                   color: "#82b5e2",
-                  textAlign: "center"
+                  textAlign: "center",
                 }}
               >
                 <strong>Akalanka Vimukthi Rathnayake</strong>
@@ -185,7 +185,7 @@ const Home = () => {
                   display: "flex",
                   justifyContent: isSmallScreen ? "center" : "start",
                   alignItems: "center",
-                  textAlign: "center"
+                  textAlign: "center",
                 }}
               >
                 <div
@@ -198,7 +198,7 @@ const Home = () => {
                     display: "flex",
                     justifyContent: "start",
                     alignItems: "center",
-                    color: "blue"
+                    color: "blue",
                   }}
                 >
                   <Typewriter
@@ -214,7 +214,7 @@ const Home = () => {
                     }}
                     options={{
                       autoStart: true,
-                      loop: true
+                      loop: true,
                     }}
                   />
                 </div>
@@ -229,7 +229,7 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  marginTop: "1rem"
+                  marginTop: "1rem",
                 }}
               >
                 <IconButton
@@ -276,7 +276,7 @@ const Home = () => {
                 width: "100%",
                 height: "auto",
                 display: "block",
-                margin: "auto"
+                margin: "auto",
               }}
             />
           </Grid>
