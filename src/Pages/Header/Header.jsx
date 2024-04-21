@@ -7,7 +7,7 @@ import {
   Drawer,
   useMediaQuery,
   useTheme,
-  Stack
+  Stack,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
@@ -29,7 +29,7 @@ const Header = () => {
         zIndex: 10,
         padding: "1.4rem",
         paddingTop: "2rem",
-        backgroundColor: "white"
+        backgroundColor: "white",
       }}
     >
       <Box sx={{ flexGrow: 1 }}>
