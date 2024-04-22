@@ -86,13 +86,13 @@ const Home = () => {
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter
-                        .typeString("Front-End Developer")
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString("Back-End Developer")
-                        .pauseFor(1000)
-                        .deleteAll()
                         .typeString("Full Stack Engineer")
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .typeString("Web Developer")
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .typeString("Mobile App Developer")
                         .pauseFor(1000)
                         .deleteAll()
                         .start();
