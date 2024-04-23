@@ -45,7 +45,7 @@ const Home = () => {
             <Grid item xs={12} sm={6}>
               <div
                 style={{
-                  fontFamily: "cursive",
+                  fontFamily: "fantasy",
                   fontSize: "2.6rem",
                   color: "#82b5e2",
                 }}
@@ -55,7 +55,7 @@ const Home = () => {
               <div
                 style={{
                   display: "flex",
-                  fontFamily: "cursive",
+                  fontFamily: "fantasy",
                   fontSize: "2.6rem",
                   color: "#82b5e2",
                 }}
@@ -73,7 +73,7 @@ const Home = () => {
                 <div
                   className="App"
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "2.8rem",
                     fontWeight: 800,
                     textAlign: "center",
@@ -161,7 +161,7 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  fontFamily: "cursive",
+                  fontFamily: "fantasy",
                   fontSize: "2rem",
                   color: "#82b5e2",
                 }}
@@ -172,7 +172,7 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  fontFamily: "cursive",
+                  fontFamily: "fantasy",
                   fontSize: "2rem",
                   color: "#82b5e2",
                   textAlign: "center",
@@ -191,8 +191,8 @@ const Home = () => {
                 <div
                   className="App"
                   style={{
-                    fontFamily: "cursive",
-                    fontSize: "2.1rem",
+                    fontFamily: "fantasy",
+                    fontSize: "1.95rem",
                     fontWeight: 800,
                     textAlign: "center",
                     display: "flex",
@@ -207,7 +207,10 @@ const Home = () => {
                         .typeString("Full Stack Engineer")
                         .pauseFor(1000)
                         .deleteAll()
-                        .typeString("Full Stack Engineer")
+                        .typeString("Web Developer")
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .typeString("Mobile App Developer")
                         .pauseFor(1000)
                         .deleteAll()
                         .start();
