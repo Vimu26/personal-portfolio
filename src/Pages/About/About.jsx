@@ -39,18 +39,21 @@ const About = () => {
               style={{
                 marginTop: "1rem",
                 marginBottom: "1.5rem",
-                fontSize: "1.3rem",
+                fontSize: "1.1rem",
                 color: "#717171",
               }}
             >
               I'm Akalanka Vimukthi Rathnayake , a Passionate Software Engineer
-              From SriLanka
+              From SriLanka. I'm a Fast Learning , Responsible , Adaptable ,
+              Hard working and a Loyal Team Player that driven to meet or exceed
+              a company's expectations to deliver high-quality software
+              products.
             </p>
             <Grid container>
               <Grid item xs={4}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                   }}
@@ -61,7 +64,7 @@ const About = () => {
               <Grid item xs={8}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
@@ -75,7 +78,7 @@ const About = () => {
               <Grid item xs={4}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                   }}
@@ -86,7 +89,7 @@ const About = () => {
               <Grid item xs={8}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
@@ -100,7 +103,7 @@ const About = () => {
               <Grid item xs={4}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                   }}
@@ -111,7 +114,7 @@ const About = () => {
               <Grid item xs={8}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
@@ -125,7 +128,7 @@ const About = () => {
               <Grid item xs={2} sm={4}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                   }}
@@ -136,7 +139,7 @@ const About = () => {
               <Grid item xs={10} sm={8}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
@@ -150,7 +153,7 @@ const About = () => {
               <Grid item xs={4}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                   }}
@@ -161,7 +164,7 @@ const About = () => {
               <Grid item xs={8}>
                 <div
                   style={{
-                    fontFamily: "cursive",
+                    fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",

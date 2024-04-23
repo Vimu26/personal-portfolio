@@ -299,7 +299,8 @@ const Skills = () => {
                                     Echonlabs (PVT) LTD | (2024 Mar - Present)
                                   </Typography>
                                   <Typography variant="body1">
-                                    Currently Working as a Software Engineer
+                                    Currently Working as a Trainee Software
+                                    Engineer
                                   </Typography>
                                 </CardContent>
                               </Card>
@@ -337,7 +338,7 @@ const Skills = () => {
                                     Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
                                   </Typography>
                                   <Typography variant="body1">
-                                    Worked as a Software Engineer
+                                    Worked as a Trainee Software Engineer
                                   </Typography>
                                 </CardContent>
                               </Card>
@@ -418,7 +419,7 @@ const Skills = () => {
                               Echonlabs (PVT) LTD | (2024 Mar - Present)
                             </Typography>
                             <Typography variant="body1">
-                              Currently Working as a Software Engineer
+                              Currently Working as a Trainee Software Engineer
                             </Typography>
                           </CardContent>
                         </Card>
@@ -431,7 +432,7 @@ const Skills = () => {
                               Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
                             </Typography>
                             <Typography variant="body1">
-                              Worked as a Software Engineer
+                              Worked as a Trainee Software Engineer
                             </Typography>
                           </CardContent>
                         </Card>
