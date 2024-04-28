@@ -8,11 +8,8 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import SendIcon from "@mui/icons-material/Send";
-// import axios from 'axios';
 
 const Contact = () => {
-  //   const theme = useTheme();
-  //   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [formData, setFormData] = useState({
     Fname: "",
     Lname: "",
@@ -20,14 +17,42 @@ const Contact = () => {
     pno: "",
     message: "",
   });
+  const [formErrors, setFormErrors] = useState({
+    Fname: false,
+    Lname: false,
+    email: false,
+    pno: false,
+    message: false,
+  });
+  const [formValid, setFormValid] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setFormErrors({ ...formErrors, [name]: value.trim() === "" });
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     const { Fname, Lname, email, pno, message } = formData;
+    // Check if any required field is empty
+    if (
+      Fname.trim() === "" ||
+      Lname.trim() === "" ||
+      email.trim() === "" ||
+      pno.trim() === "" ||
+      message.trim() === ""
+    ) {
+      // Set errors for all empty required fields
+      setFormErrors({
+        Fname: Fname.trim() === "",
+        Lname: Lname.trim() === "",
+        email: email.trim() === "",
+        pno: pno.trim() === "",
+        message: message.trim() === "",
+      });
+      return;
+    }
     const subject = "Mail from Portfolio website";
     const to = "akalankavimukthi2@gmail.com";
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(
@@ -43,6 +68,13 @@ const Contact = () => {
   const handleCloseSnackbar = () => {
     setSnackbarOpen(false);
   };
+
+  // Check overall form validity
+  React.useEffect(() => {
+    const isValid = Object.values(formErrors).every((error) => !error);
+    setFormValid(isValid);
+  }, [formErrors]);
+
   return (
     <Container maxWidth="xl">
       <Typography variant="h4" align={"center"}>
@@ -55,7 +87,7 @@ const Contact = () => {
           color: "grey",
         }}
       >
-        Need to Hire? Please Feel Free to send a Message <br></br>
+        Need to Hire? Please Feel Free to send a Message <br />
         I'll get Touch with you as Soon as Possible.
       </Typography>
 
@@ -67,9 +99,12 @@ const Contact = () => {
               label="First Name"
               variant="outlined"
               fullWidth
+              required
               margin="normal"
               value={formData.Fname}
               onChange={handleChange}
+              error={formErrors.Fname}
+              helperText={formErrors.Fname && "First Name is required"}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -78,9 +113,12 @@ const Contact = () => {
               label="Last Name"
               variant="outlined"
               fullWidth
+              required
               margin="normal"
               value={formData.Lname}
               onChange={handleChange}
+              error={formErrors.Lname}
+              helperText={formErrors.Lname && "Last Name is required"}
             />
           </Grid>
         </Grid>
@@ -92,9 +130,13 @@ const Contact = () => {
               label="Email"
               variant="outlined"
               fullWidth
+              required
+              type="email"
               margin="normal"
               value={formData.email}
               onChange={handleChange}
+              error={formErrors.email}
+              helperText={formErrors.email && "Email is required"}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -103,9 +145,13 @@ const Contact = () => {
               label="Contact Number"
               variant="outlined"
               fullWidth
+              required
+              type="number"
               margin="normal"
               value={formData.pno}
               onChange={handleChange}
+              error={formErrors.pno}
+              helperText={formErrors.pno && "Contact Number is required"}
             />
           </Grid>
         </Grid>
@@ -116,10 +162,13 @@ const Contact = () => {
           variant="outlined"
           fullWidth
           multiline
+          required
           rows={4}
           margin="normal"
           value={formData.message}
           onChange={handleChange}
+          error={formErrors.message}
+          helperText={formErrors.message && "Message is required"}
         />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Button
@@ -128,6 +177,14 @@ const Contact = () => {
             color="primary"
             onClick={handleSubmit}
             endIcon={<SendIcon />}
+            disabled={
+              !formValid &&
+              (formData.Fname.trim() === "" ||
+                formData.Lname.trim() === "" ||
+                formData.email.trim() === "" ||
+                formData.pno.trim() === "" ||
+                formData.message.trim() === "")
+            }
           >
             <b>Send</b>
           </Button>
@@ -139,11 +196,7 @@ const Contact = () => {
           onClose={handleCloseSnackbar}
           message="Message sent successfully!"
           action={
-            <Button
-              color="inherit"
-              size="small"
-              onClick={() => handleCloseSnackbar}
-            >
+            <Button color="inherit" size="small" onClick={handleCloseSnackbar}>
               Close
             </Button>
           }
