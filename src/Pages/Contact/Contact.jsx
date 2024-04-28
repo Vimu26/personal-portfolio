@@ -17,26 +17,26 @@ const Contact = () => {
     Fname: "",
     Lname: "",
     email: "",
+    pno: "",
     message: "",
   });
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleChange = (e) => {
-    console.log(e);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async () => {
-    const { Fname, Lname, email, message } = formData;
+    const { Fname, Lname, email, pno, message } = formData;
     const subject = "Mail from Portfolio website";
     const to = "akalankavimukthi2@gmail.com";
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(
       subject
-    )}&body=Name: ${Fname} ${Lname}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+    )}&body=Name: ${Fname} ${Lname}%0D%0AEmail: ${email}%0D%0AContact Number: ${pno}%0D%0AMessage: ${message}`;
 
     window.location.href = mailtoLink;
 
-    setFormData({ Fname: "", Lname: "", email: "", message: "" });
+    setFormData({ Fname: "", Lname: "", email: "", pno: "", message: "" });
     setSnackbarOpen(true);
   };
 
@@ -61,7 +61,7 @@ const Contact = () => {
 
       <div style={{ padding: "20px" }}>
         <Grid container spacing={2}>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <TextField
               name="Fname"
               label="First Name"
@@ -72,7 +72,7 @@ const Contact = () => {
               onChange={handleChange}
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <TextField
               name="Lname"
               label="Last Name"
@@ -85,15 +85,31 @@ const Contact = () => {
           </Grid>
         </Grid>
 
-        <TextField
-          name="email"
-          label="Email"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <TextField
+              name="email"
+              label="Email"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <TextField
+              name="pno"
+              label="Contact Number"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              value={formData.pno}
+              onChange={handleChange}
+            />
+          </Grid>
+        </Grid>
+
         <TextField
           name="message"
           label="Message"
