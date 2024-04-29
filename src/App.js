@@ -1,5 +1,6 @@
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
+import Footer from "./Pages/Footer/Footer";
 import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
 import Projects from "./Pages/Projects/Projects";
@@ -22,6 +23,9 @@ function App() {
         </div>
         <div style={{ marginTop: "10rem", marginBottom: "10rem" }}>
           <Contact />
+        </div>
+        <div style={{ marginTop: "6rem" }}>
+          <Footer />
         </div>
       </div>
     </div>
