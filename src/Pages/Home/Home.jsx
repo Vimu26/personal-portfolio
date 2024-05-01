@@ -45,9 +45,9 @@ const Home = () => {
             <Grid item xs={12} sm={6}>
               <div
                 style={{
-                  fontFamily: "fantasy",
+                  fontFamily: "sans-serif",
                   fontSize: "2.6rem",
-                  color: "#82b5e2",
+                  color: "#82b5e2"
                 }}
               >
                 <strong>I'm,</strong>
@@ -55,9 +55,9 @@ const Home = () => {
               <div
                 style={{
                   display: "flex",
-                  fontFamily: "fantasy",
+                  fontFamily: "sans-serif",
                   fontSize: "2.6rem",
-                  color: "#82b5e2",
+                  color: "#82b5e2"
                 }}
               >
                 <strong>Akalanka Vimukthi Rathnayake</strong>
@@ -67,20 +67,20 @@ const Home = () => {
                   display: "flex",
                   justifyContent: isSmallScreen ? "center" : "start",
                   alignItems: "center",
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 <div
                   className="App"
                   style={{
-                    fontFamily: "fantasy",
-                    fontSize: "2.8rem",
+                    fontFamily: "sans-serif",
+                    fontSize: "2.5rem",
                     fontWeight: 800,
                     textAlign: "center",
                     display: "flex",
                     justifyContent: "start",
                     alignItems: "center",
-                    color: "blue",
+                    color: "blue"
                   }}
                 >
                   <Typewriter
@@ -99,7 +99,7 @@ const Home = () => {
                     }}
                     options={{
                       autoStart: true,
-                      loop: true,
+                      loop: true
                     }}
                   />
                 </div>
@@ -117,7 +117,7 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "start",
-                  marginTop: "1rem",
+                  marginTop: "1rem"
                 }}
               >
                 <IconButton
@@ -161,9 +161,9 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  fontFamily: "fantasy",
+                  fontFamily: "sans-serif",
                   fontSize: "2rem",
-                  color: "#82b5e2",
+                  color: "#82b5e2"
                 }}
               >
                 <strong>I'm,</strong>
@@ -172,10 +172,10 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  fontFamily: "fantasy",
+                  fontFamily: "sans-serif",
                   fontSize: "2rem",
                   color: "#82b5e2",
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 <strong>Akalanka Vimukthi Rathnayake</strong>
@@ -185,20 +185,20 @@ const Home = () => {
                   display: "flex",
                   justifyContent: isSmallScreen ? "center" : "start",
                   alignItems: "center",
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 <div
                   className="App"
                   style={{
-                    fontFamily: "fantasy",
+                    fontFamily: "sans-serif",
                     fontSize: "1.95rem",
                     fontWeight: 800,
                     textAlign: "center",
                     display: "flex",
                     justifyContent: "start",
                     alignItems: "center",
-                    color: "blue",
+                    color: "blue"
                   }}
                 >
                   <Typewriter
@@ -217,7 +217,7 @@ const Home = () => {
                     }}
                     options={{
                       autoStart: true,
-                      loop: true,
+                      loop: true
                     }}
                   />
                 </div>
@@ -232,7 +232,7 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  marginTop: "1rem",
+                  marginTop: "1rem"
                 }}
               >
                 <IconButton
@@ -276,10 +276,10 @@ const Home = () => {
               src="https://www.pngitem.com/pimgs/m/112-1127587_software-hire-developers-hd-png-download.png"
               alt=""
               style={{
-                width: "100%",
-                height: "auto",
+                width: "90%",
+                height: "100%",
                 display: "block",
-                margin: "auto",
+                margin: "auto"
               }}
             />
           </Grid>
