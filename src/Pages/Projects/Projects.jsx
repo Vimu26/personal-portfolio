@@ -189,6 +189,7 @@ const Projects = () => {
                     aria-label="preview"
                     size="large"
                     onClick={() => handleGitHubClick(slide.link)}
+                    color="primary"
                   >
                     <PreviewIcon fontSize="inherit" />
                   </IconButton>

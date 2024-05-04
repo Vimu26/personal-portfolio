@@ -32,7 +32,11 @@ const Skills = () => {
 
   return (
     <Container maxWidth="xl">
-      <Typography variant="h4" gutterBottom>
+      <Typography
+        variant="h4"
+        gutterBottom
+        style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}
+      >
         <b>Skills & Experience</b>
       </Typography>
       <Grid container spacing={2}>
