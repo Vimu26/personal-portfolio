@@ -32,13 +32,6 @@ const Skills = () => {
 
   return (
     <Container maxWidth="xl">
-      <Typography
-        variant="h4"
-        gutterBottom
-        style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}
-      >
-        <b>Skills & Experience</b>
-      </Typography>
       <Grid container spacing={2}>
         <Grid
           item
@@ -47,9 +40,19 @@ const Skills = () => {
           style={{
             marginBottom: "2rem",
             display: "ruby",
-            marginTop: isSmallScreen ? 0 : "7%",
+            marginTop: isSmallScreen ? 0 : "4%",
           }}
         >
+          <div style={{marginBottom : "2rem"}}>
+                <Typography
+        variant="h4"
+        gutterBottom
+        style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}
+      >
+        <b>Skills & Experience</b>
+      </Typography>
+          </div> <br></br>
+       
           <div>
             <Typography variant="h5">Languages and Tools</Typography>
           </div>
