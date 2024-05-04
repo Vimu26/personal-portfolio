@@ -105,7 +105,8 @@ const Projects = () => {
           </Typography>
         </Grid>
       </Grid>
-      <div
+      <Container
+      maxWidth= 'xl'
         style={{
           width: "100%",
           marginTop: "3rem",
@@ -136,7 +137,7 @@ const Projects = () => {
                 style={{
                   width: "80%",
                   display: "flex",
-                  justifyContent: "space-evenly",
+                  justifyContent: "center",
                   textAlign: "center"
                 }}
               >
@@ -178,7 +179,7 @@ const Projects = () => {
             </div>
           ))}
         </Slider>
-      </div>
+      </Container>
     </Container>
   );
 };
