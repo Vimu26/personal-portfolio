@@ -5,31 +5,35 @@ import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
 import Projects from "./Pages/Projects/Projects";
 import Skills from "./Pages/Skills/Skills";
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-      <div style={{ position: "relative", top: "6rem" }}>
+      <div style={{ position: "relative", top: "6rem" }} id="home">
         <Home />
-        <div style={{ marginTop: "5rem", marginBottom: "6rem" }}>
+        <div style={{ marginTop: "5rem", marginBottom: "6rem" }} id="about">
           <About />
         </div>
-        <div style={{ marginTop: "6rem", marginBottom: "3rem" }}>
+        <div style={{ marginTop: "6rem", marginBottom: "3rem" }} id="skills">
           <Skills />
         </div>
-        <div style={{ marginTop: "6rem", marginBottom: "5rem" }}>
+        <div style={{ marginTop: "6rem", marginBottom: "5rem" }} id="projects">
           <Projects />
         </div>
-        <div style={{ marginTop: "10rem", marginBottom: "6rem" }}>
+        <div style={{ marginTop: "10rem", marginBottom: "6rem" }} id="contact">
           <Contact />
         </div>
         <div style={{ marginTop: "6rem" }}>
           <Footer />
         </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
+

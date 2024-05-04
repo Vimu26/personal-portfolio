@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Grid,
-  Button,
   IconButton,
   Drawer,
   useMediaQuery,
@@ -11,14 +10,22 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ location }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -49,24 +56,33 @@ const Header = () => {
             <Grid item xs={6} sm={7} md={7} lg={7}>
               <Grid container justifyContent="space-evenly" spacing={2}>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button
-                    color="inherit"
-                    style={{ display: "flex", justifyContent: "start" }}
-                  >
-                    Home
-                  </Button>
+                  <Link component="button" underline="none"  to="/home"  onClick={() => scrollToSection("home")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+                    <b>Home</b>
+                  </Link>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit">About</Button>
+                  <Link to="/about" underline="none" onClick={() => scrollToSection("about")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+                    
+                    <b>About</b>
+                  </Link>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit">Skills</Button>
+                  <Link to="/skills" underline="none" onClick={() => scrollToSection("skills")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+                    
+                    <b>Skills</b>
+                  </Link>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit">Projects</Button>
+                  <Link to="/projects" underline="none" onClick={() => scrollToSection("projects")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+                    
+                    <b>Projects</b>
+                  </Link>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit">Contact</Button>
+                  <Link to="/contact" underline="none" onClick={() => scrollToSection("contact")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+                    
+                    <b>Contact</b>
+                  </Link>
                 </Grid>
               </Grid>
             </Grid>
@@ -107,11 +123,25 @@ const Header = () => {
             <CancelOutlinedIcon />
           </IconButton>
           <Stack direction="column" spacing={2}>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Skills</Button>
-            <Button color="inherit">Projects</Button>
-            <Button color="inherit">Contact</Button>
+            <Link to="/" onClick={() => scrollToSection("home")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+              
+              <b>Home</b>
+            </Link>
+            <Link to="/about" onClick={() => scrollToSection("about")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+              
+              <b>About</b>
+            </Link>
+            <Link to="/skills" onClick={() => scrollToSection("skills")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+              
+              <b>Skills</b>
+            </Link>
+            <Link to="/projects" onClick={() => scrollToSection("projects")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+              
+              <b>Projects</b>
+            </Link>
+            <Link to="/contact" onClick={() => scrollToSection("contact")} style={{ textDecoration: 'none' , color : 'cornflowerblue', fontSize:'20px'}}>
+            <b>Contact</b>
+            </Link>
           </Stack>
         </Box>
       </Drawer>
