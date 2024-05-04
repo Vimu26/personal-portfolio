@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Carousel from "better-react-carousel";
-import IconButton from '@mui/material/IconButton';
+import IconButton from "@mui/material/IconButton";
 
 const Projects = () => {
   const theme = useTheme();
@@ -153,37 +153,47 @@ const Projects = () => {
                   {slide.description}
                 </Typography>
               </CardContent>
-              {!isSmallScreen ? (<CardActions
-                style={{ display: "flex", justifyContent: "space-evenly" }}
-              >
-                
-                <Button
-                  style={{ width: "40%" }}
-                  variant="outlined"
-                  onClick={() => handleGitHubClick(slide.link)}
-                  startIcon={<GitHubIcon />}
+              {!isSmallScreen ? (
+                <CardActions
+                  style={{ display: "flex", justifyContent: "space-evenly" }}
                 >
-                  Go to GitHub
-                </Button>
-                <Button
-                  style={{ width: "40%" }}
-                  variant="contained"
-                  onClick={() => handleGitHubClick(slide.link)}
-                  startIcon={<PreviewIcon />}
+                  <Button
+                    style={{ width: "40%" }}
+                    variant="outlined"
+                    onClick={() => handleGitHubClick(slide.link)}
+                    startIcon={<GitHubIcon />}
+                  >
+                    Go to GitHub
+                  </Button>
+                  <Button
+                    style={{ width: "40%" }}
+                    variant="contained"
+                    onClick={() => handleGitHubClick(slide.link)}
+                    startIcon={<PreviewIcon />}
+                  >
+                    Show More Images
+                  </Button>
+                </CardActions>
+              ) : (
+                <CardActions
+                  style={{ display: "flex", justifyContent: "space-evenly" }}
                 >
-                  Show More Images
-                </Button>
-              </CardActions>) : (<CardActions
-                style={{ display: "flex", justifyContent: "space-evenly" }}
-              >
-                
-                <IconButton aria-label="github" size="large" onClick={() => handleGitHubClick(slide.link)}>
-                <GitHubIcon fontSize="inherit" />
-      </IconButton>
-                <IconButton aria-label="preview" size="large" onClick={() => handleGitHubClick(slide.link)}>
-                <PreviewIcon fontSize="inherit" />
-      </IconButton>
-              </CardActions>)}
+                  <IconButton
+                    aria-label="github"
+                    size="large"
+                    onClick={() => handleGitHubClick(slide.link)}
+                  >
+                    <GitHubIcon fontSize="inherit" />
+                  </IconButton>
+                  <IconButton
+                    aria-label="preview"
+                    size="large"
+                    onClick={() => handleGitHubClick(slide.link)}
+                  >
+                    <PreviewIcon fontSize="inherit" />
+                  </IconButton>
+                </CardActions>
+              )}
             </Card>
           </Carousel.Item>
         ))}
