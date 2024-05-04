@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Carousel from "better-react-carousel";
+import IconButton from '@mui/material/IconButton';
 
 const Projects = () => {
   const theme = useTheme();
@@ -84,19 +85,60 @@ const Projects = () => {
     window.open(link, "_blank");
   };
 
+  const responsiveLayout = [
+    {
+      breakpoint: theme?.breakpoints?.values?.sm,
+      cols: 1,
+      rows: 1,
+      gap: 40,
+    },
+    {
+      breakpoint: theme?.breakpoints?.values?.md,
+      cols: 2,
+      rows: 1,
+      gap: 60,
+    },
+    {
+      breakpoint: theme?.breakpoints?.values?.lg,
+      cols: 2,
+      rows: 1,
+      gap: 60,
+    },
+    {
+      breakpoint: theme?.breakpoints?.values?.xl,
+      cols: 2,
+      rows: 1,
+      gap: 60,
+    },
+  ];
+  console.log(theme?.breakpoints?.values?.sm);
+
   return (
     <Container maxWidth="xl">
-      <Grid container justifyContent={isSmallScreen ? "center" : "flex-start"}>
+      <Grid
+        container
+        justifyContent={isSmallScreen ? "center" : "flex-start"}
+        style={{ marginBottom: "2rem" }}
+      >
         <Grid item>
           <Typography variant="h4">
             <b>Projects</b>
           </Typography>
         </Grid>
       </Grid>
-      <Carousel cols={2} rows={1} gap={60} loop>
+      <Carousel
+        responsiveLayout={responsiveLayout}
+        loop={true}
+        scrollSnap={true}
+        showDots={true}
+        dotColorActive={"cornflowerblue"}
+      >
         {slides.map((slide, index) => (
           <Carousel.Item key={index + 1}>
-            <Card variant="outlined" style={{ paddingBottom: "1rem" }}>
+            <Card
+              variant="outlined"
+              style={{ paddingBottom: "1rem", marginBottom: "2rem" }}
+            >
               <CardMedia
                 component="img"
                 height="300"
@@ -111,9 +153,10 @@ const Projects = () => {
                   {slide.description}
                 </Typography>
               </CardContent>
-              <CardActions
+              {!isSmallScreen ? (<CardActions
                 style={{ display: "flex", justifyContent: "space-evenly" }}
               >
+                
                 <Button
                   style={{ width: "40%" }}
                   variant="outlined"
@@ -130,7 +173,17 @@ const Projects = () => {
                 >
                   Show More Images
                 </Button>
-              </CardActions>
+              </CardActions>) : (<CardActions
+                style={{ display: "flex", justifyContent: "space-evenly" }}
+              >
+                
+                <IconButton aria-label="github" size="large" onClick={() => handleGitHubClick(slide.link)}>
+                <GitHubIcon fontSize="inherit" />
+      </IconButton>
+                <IconButton aria-label="preview" size="large" onClick={() => handleGitHubClick(slide.link)}>
+                <PreviewIcon fontSize="inherit" />
+      </IconButton>
+              </CardActions>)}
             </Card>
           </Carousel.Item>
         ))}
