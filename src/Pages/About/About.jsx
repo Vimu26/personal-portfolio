@@ -31,7 +31,7 @@ const About = () => {
         )}
 
         <Grid item xs={12} sm={6}>
-          <div>
+          <div style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}>
             <Typography variant="h4" gutterBottom>
               <b>About Me</b>
             </Typography>

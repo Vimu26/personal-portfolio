@@ -3,32 +3,21 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea } from "@mui/material";
+import { Button } from "@mui/material";
 import Container from "@mui/material/Container";
 import { Grid, useMediaQuery, useTheme } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import PreviewIcon from "@mui/icons-material/Preview";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Carousel from "better-react-carousel";
+import IconButton from "@mui/material/IconButton";
 
 const Projects = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   //   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
-
-  //TODO @akalanka add the projects and do the stuff
-  const settings = {
-    dots: true,
-    speed: 500,
-    slidesToShow: isSmallScreen ? 1 : 2,
-    slidesToScroll: 1,
-    infinite: true,
-    centerMode: false,
-    arrows: true,
-    centerPadding: isSmallScreen ? 0 : "2rem"
-  };
 
   const slides = [
     {
@@ -37,7 +26,7 @@ const Projects = () => {
       title: "Lizard1",
       link: "www.google.com",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     },
     {
       image:
@@ -45,7 +34,7 @@ const Projects = () => {
       title: "Lizard2",
       link: "www.google.com",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     },
     {
       image:
@@ -53,7 +42,7 @@ const Projects = () => {
       title: "Lizard3",
       link: "www.google.com",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     },
     {
       image:
@@ -61,7 +50,7 @@ const Projects = () => {
       title: "Lizard4",
       link: "www.google.com",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     },
     {
       image:
@@ -69,7 +58,7 @@ const Projects = () => {
       title: "Lizard5",
       link: "www.google.com",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     },
     {
       image:
@@ -77,7 +66,7 @@ const Projects = () => {
       title: "Lizard6",
       link: "www.google.com",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     },
     {
       image:
@@ -85,8 +74,8 @@ const Projects = () => {
       title: "Lizard7",
       link: "www.google.com",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
-    }
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    },
   ];
 
   const handleGitHubClick = (link) => {
@@ -96,90 +85,120 @@ const Projects = () => {
     window.open(link, "_blank");
   };
 
+  const responsiveLayout = [
+    {
+      breakpoint: theme?.breakpoints?.values?.sm,
+      cols: 1,
+      rows: 1,
+      gap: 40,
+    },
+    {
+      breakpoint: theme?.breakpoints?.values?.md,
+      cols: 2,
+      rows: 1,
+      gap: 60,
+    },
+    {
+      breakpoint: theme?.breakpoints?.values?.lg,
+      cols: 2,
+      rows: 1,
+      gap: 60,
+    },
+    {
+      breakpoint: theme?.breakpoints?.values?.xl,
+      cols: 2,
+      rows: 1,
+      gap: 60,
+    },
+  ];
+  console.log(theme?.breakpoints?.values?.sm);
+
   return (
     <Container maxWidth="xl">
-      <Grid container justifyContent={isSmallScreen ? "center" : "flex-start"}>
+      <Grid
+        container
+        justifyContent={isSmallScreen ? "center" : "flex-start"}
+        style={{ marginBottom: "2rem" }}
+      >
         <Grid item>
           <Typography variant="h4">
             <b>Projects</b>
           </Typography>
         </Grid>
       </Grid>
-      <Container
-      maxWidth= 'xl'
-        style={{
-          width: "100%",
-          marginTop: "3rem",
-          display: "flex!important",
-          justifyContent: "center !important"
-        }}
+      <Carousel
+        responsiveLayout={responsiveLayout}
+        loop={true}
+        scrollSnap={true}
+        showDots={true}
+        dotColorActive={"cornflowerblue"}
       >
-        <Slider
-          {...settings}
-          style={{
-            display: "flex!important",
-            justifyContent: "center !important"
-          }}
-        >
-          {slides.map((slide, index) => (
-            <div
-              key={index + 1}
-              style={{
-                width: "100%",
-                display: "flex !important",
-                justifyContent: "space-evenly !important",
-                alignItems: "center !important",
-                margin: "1rem 0",
-                textAlign: "center"
-              }}
+        {slides.map((slide, index) => (
+          <Carousel.Item key={index + 1}>
+            <Card
+              variant="outlined"
+              style={{ paddingBottom: "1rem", marginBottom: "2rem" }}
             >
-              <Card
-                style={{
-                  width: "80%",
-                  display: "flex",
-                  justifyContent: "center",
-                  textAlign: "center"
-                }}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="300"
-                    image={slide.image}
-                    alt=""
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {slide.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {slide.description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions
-                    style={{ display: "flex", justifyContent: "space-evenly" }}
+              <CardMedia
+                component="img"
+                height="300"
+                image={slide.image}
+                alt=""
+              />
+              <CardContent style={{ height: "103px" }}>
+                <Typography gutterBottom variant="h5" component="div">
+                  {slide.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {slide.description}
+                </Typography>
+              </CardContent>
+              {!isSmallScreen ? (
+                <CardActions
+                  style={{ display: "flex", justifyContent: "space-evenly" }}
+                >
+                  <Button
+                    style={{ width: "40%" }}
+                    variant="outlined"
+                    onClick={() => handleGitHubClick(slide.link)}
+                    startIcon={<GitHubIcon />}
                   >
-                    <Button
-                      variant="outlined"
-                      onClick={() => handleGitHubClick(slide.link)}
-                      startIcon={<GitHubIcon />}
-                    >
-                      Go to GitHub
-                    </Button>
-                    <Button
-                      variant="contained"
-                      onClick={() => handleGitHubClick(slide.link)}
-                      startIcon={<PreviewIcon />}
-                    >
-                      Show More Images
-                    </Button>
-                  </CardActions>
-                </CardActionArea>
-              </Card>
-            </div>
-          ))}
-        </Slider>
-      </Container>
+                    Go to GitHub
+                  </Button>
+                  <Button
+                    style={{ width: "40%" }}
+                    variant="contained"
+                    onClick={() => handleGitHubClick(slide.link)}
+                    startIcon={<PreviewIcon />}
+                  >
+                    Show More Images
+                  </Button>
+                </CardActions>
+              ) : (
+                <CardActions
+                  style={{ display: "flex", justifyContent: "space-evenly" }}
+                >
+                  <IconButton
+                    aria-label="github"
+                    size="large"
+                    onClick={() => handleGitHubClick(slide.link)}
+                  >
+                    <GitHubIcon fontSize="inherit" />
+                  </IconButton>
+                  <IconButton
+                    aria-label="preview"
+                    size="large"
+                    onClick={() => handleGitHubClick(slide.link)}
+                    color="primary"
+                  >
+                    <PreviewIcon fontSize="inherit" />
+                  </IconButton>
+                </CardActions>
+              )}
+            </Card>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </Container>
   );
 };
