@@ -27,7 +27,10 @@ const Header = ({ location }) => {
     } else {
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: id==="skills" ? isSmallScreen ? "start" :"end" : "center" });
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: id === "skills" ? (isSmallScreen ? "start" : "end") : "center",
+        });
       }
     }
   };
@@ -63,7 +66,6 @@ const Header = ({ location }) => {
                   <Link
                     component="button"
                     underline="none"
-      
                     onClick={() => scrollToSection("home")}
                     style={{
                       textDecoration: "none",
@@ -76,7 +78,7 @@ const Header = ({ location }) => {
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
                   <Link
-                       underline="none"
+                    underline="none"
                     onClick={() => scrollToSection("about")}
                     style={{
                       textDecoration: "none",
@@ -89,7 +91,6 @@ const Header = ({ location }) => {
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
                   <Link
-                 
                     underline="none"
                     onClick={() => scrollToSection("skills")}
                     style={{
@@ -103,7 +104,6 @@ const Header = ({ location }) => {
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
                   <Link
-                 
                     underline="none"
                     onClick={() => scrollToSection("projects")}
                     style={{
@@ -117,7 +117,6 @@ const Header = ({ location }) => {
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
                   <Link
-            
                     underline="none"
                     onClick={() => scrollToSection("contact")}
                     style={{
@@ -179,7 +178,6 @@ const Header = ({ location }) => {
               <b>Home</b>
             </Link>
             <Link
-        
               onClick={() => scrollToSection("about")}
               style={{
                 textDecoration: "none",
@@ -190,7 +188,6 @@ const Header = ({ location }) => {
               <b>About</b>
             </Link>
             <Link
-          
               onClick={() => scrollToSection("skills")}
               style={{
                 textDecoration: "none",
@@ -201,7 +198,6 @@ const Header = ({ location }) => {
               <b>Skills</b>
             </Link>
             <Link
-         
               onClick={() => scrollToSection("projects")}
               style={{
                 textDecoration: "none",
@@ -212,7 +208,6 @@ const Header = ({ location }) => {
               <b>Projects</b>
             </Link>
             <Link
-           
               onClick={() => scrollToSection("contact")}
               style={{
                 textDecoration: "none",

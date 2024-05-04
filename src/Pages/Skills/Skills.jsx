@@ -43,20 +43,19 @@ const Skills = () => {
             marginTop: isSmallScreen ? 0 : "4%",
           }}
         >
-          <div style={{marginBottom : "2rem"}}>
-                <Typography
-        variant="h4"
-        gutterBottom
-        style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}
-      >
-        <b>Skills & Experience</b>
-      </Typography>
-          </div> <br></br>
-       
+          <div style={{ marginBottom: "2rem" }}>
+            <Typography
+              variant="h4"
+              gutterBottom
+              style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}
+            >
+              <b>Skills & Experience</b>
+            </Typography>
+          </div>{" "}
+          <br></br>
           <div>
             <Typography variant="h5">Languages and Tools</Typography>
           </div>
-
           <div
             style={{
               display: "flex",
