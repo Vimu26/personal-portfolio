@@ -21,7 +21,7 @@ function App() {
         <div style={{ marginTop: "6rem", marginBottom: "5rem" }}>
           <Projects />
         </div>
-        <div style={{ marginTop: "10rem", marginBottom: "10rem" }}>
+        <div style={{ marginTop: "10rem", marginBottom: "6rem" }}>
           <Contact />
         </div>
         <div style={{ marginTop: "6rem" }}>

@@ -1,13 +1,11 @@
 import React from "react";
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 const Footer = () => {
   return (
-    <footer>
-      <Container
-        maxWidth="lg"
+      <div
         style={{
-          backgroundColor: "#94b4fb",
+          backgroundColor: "cornflowerblue",
           height: "3rem",
           display: "flex",
           justifyContent: "center",
@@ -18,10 +16,9 @@ const Footer = () => {
           align="center"
           style={{ marginTop: "1rem" }}
         >
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Akalanka Vimukthi Rathnayake. All rights reserved.
         </Typography>
-      </Container>
-    </footer>
+      </div>
   );
 };
 
