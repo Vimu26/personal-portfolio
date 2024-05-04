@@ -5,7 +5,7 @@ import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
 import Projects from "./Pages/Projects/Projects";
 import Skills from "./Pages/Skills/Skills";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
@@ -34,6 +34,3 @@ function App() {
 }
 
 export default App;
-
-
-
