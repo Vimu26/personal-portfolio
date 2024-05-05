@@ -161,11 +161,29 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
           </Grid>
         </Grid>
       </Box>
-      <Drawer anchor="right" open={isMenuOpen} onClose={toggleMenu}>
+
+      <Drawer
+        style={{
+          backgroundColor:
+            theme.palette.mode === "light" ? "#ffffff" : "#292828",
+        }}
+        anchor="right"
+        open={isMenuOpen}
+        onClose={toggleMenu}
+      >
         <Box
-          sx={{ width: 250, paddingTop: "1.2rem", paddingLeft: "1rem" }}
+          sx={{
+            width: 250,
+            paddingTop: "1.2rem",
+            paddingLeft: "1rem",
+            height: "100%",
+          }}
           onClick={toggleMenu}
           onKeyDown={toggleMenu}
+          style={{
+            backgroundColor:
+              theme.palette.mode === "light" ? "#ffffff" : "#292828",
+          }}
         >
           <IconButton
             color="inherit"
@@ -231,11 +249,11 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
             >
               <b>Contact</b>
             </Link>
+            <IconButton onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
+              <Brightness4Icon />
+            </IconButton>
           </Stack>
         </Box>
-        <IconButton onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
-          <Brightness4Icon />
-        </IconButton>
       </Drawer>
     </div>
   );

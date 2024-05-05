@@ -41,7 +41,12 @@ const About = () => {
         )}
 
         <Grid item xs={12} sm={6}>
-          <div style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}>
+          <div
+            style={{
+              textAlign: isSmallScreen ? "center" : "match-parent",
+              paddingBottom: "6rem",
+            }}
+          >
             <Typography
               variant="h4"
               gutterBottom
