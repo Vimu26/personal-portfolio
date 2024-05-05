@@ -24,7 +24,7 @@ const About = () => {
         {!isSmallScreen && (
           <Grid item xs={12} sm={6} style={{ paddingBottom: "1rem" }}>
             <img
-              src="https://www.interviewbit.com/blog/wp-content/uploads/2021/11/Software-Engineer.png"
+              src="https://thehonestcoder.com/wp-content/uploads/2022/12/logo-1-1024x831.png"
               alt=""
               style={{
                 width: "100%",
@@ -115,7 +115,10 @@ const About = () => {
                   style={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color: "cornflowerblue",
+                    color:
+                      theme.palette.mode === "dark"
+                        ? "primary.light"
+                        : "primary.dark",
                     marginBottom: "1rem",
                   }}
                 >
@@ -141,7 +144,10 @@ const About = () => {
                   style={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color: "cornflowerblue",
+                    color:
+                      theme.palette.mode === "dark"
+                        ? "primary.light"
+                        : "primary.dark",
                     marginBottom: "1rem",
                   }}
                 >
@@ -167,7 +173,10 @@ const About = () => {
                   style={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color: "cornflowerblue",
+                    color:
+                      theme.palette.mode === "dark"
+                        ? "primary.light"
+                        : "primary.dark",
                     marginBottom: "1rem",
                   }}
                 >
@@ -193,7 +202,10 @@ const About = () => {
                   style={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color: "cornflowerblue",
+                    color:
+                      theme.palette.mode === "dark"
+                        ? "primary.light"
+                        : "primary.dark",
                     marginBottom: "1rem",
                   }}
                 >

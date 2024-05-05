@@ -111,7 +111,6 @@ const Projects = () => {
       gap: 60,
     },
   ];
-  console.log(theme?.breakpoints?.values?.sm);
 
   return (
     <Container maxWidth="xl">
