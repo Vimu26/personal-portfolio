@@ -5,10 +5,9 @@ import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
 import Projects from "./Pages/Projects/Projects";
 import Skills from "./Pages/Skills/Skills";
-import React, { useState } from 'react';
-import {  ThemeProvider } from '@mui/material/styles';
-import { lightTheme, darkTheme } from './theme';
-
+import React, { useState } from "react";
+import { ThemeProvider } from "@mui/material/styles";
+import { lightTheme, darkTheme } from "./theme";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -19,26 +18,26 @@ function App() {
 
   return (
     <div>
-       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-      <div style={{ position: "relative", top: "5rem" }}>
-        <Home />
-        <div>
-          <About />
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <div style={{ position: "relative", top: "5rem" }}>
+          <Home darkMode={darkMode} />
+          <div>
+            <About />
+          </div>
+          <div>
+            <Skills />
+          </div>
+          <div style={{ paddingTop: "6rem", paddingBottom: "5rem" }}>
+            <Projects />
+          </div>
+          <div style={{ paddingTop: "10rem", paddingBottom: "6rem" }}>
+            <Contact />
+          </div>
+          <div style={{ paddingTop: "6rem" }}>
+            <Footer />
+          </div>
         </div>
-        <div >
-          <Skills />
-        </div>
-        <div style={{ paddingTop: "6rem", paddingBottom: "5rem" }}>
-          <Projects />
-        </div>
-        <div style={{ paddingTop: "10rem", paddingBottom: "6rem" }}>
-          <Contact />
-        </div>
-        <div style={{ paddingTop: "6rem" }}>
-          <Footer />
-        </div>
-      </div>
       </ThemeProvider>
     </div>
   );

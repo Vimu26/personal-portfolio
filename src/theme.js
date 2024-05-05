@@ -1,14 +1,14 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 // Define light theme
 const lightTheme = createTheme({
   palette: {
-    mode: 'light',
+    mode: "light",
     primary: {
-      main: '#2196f3', // Adjust the primary color as needed
+      main: "#2196f3", // Adjust the primary color as needed
     },
     secondary: {
-      main: '#ff4081', // Adjust the secondary color as needed
+      main: "#ff4081", // Adjust the secondary color as needed
     },
     // Add any other light mode specific configurations here
   },
@@ -21,12 +21,12 @@ const lightTheme = createTheme({
 // Define dark theme
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: '#2196f3', // Adjust the primary color as needed
+      main: "#2196f3", // Adjust the primary color as needed
     },
     secondary: {
-      main: '#ff4081', // Adjust the secondary color as needed
+      main: "#ff4081", // Adjust the secondary color as needed
     },
     // Add any other dark mode specific configurations here
   },
