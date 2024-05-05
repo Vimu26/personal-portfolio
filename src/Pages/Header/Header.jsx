@@ -52,22 +52,46 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                 <Grid item style={{ paddingLeft: "0" }}>
                   <Button
                     color="inherit"
-                    style={{ display: "flex", justifyContent: "start", color: theme.palette.text.primary }}
+                    style={{
+                      display: "flex",
+                      justifyContent: "start",
+                      color: theme.palette.text.primary,
+                    }}
                   >
                     Home
                   </Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit" style={{ color: theme.palette.text.primary }}>About</Button>
+                  <Button
+                    color="inherit"
+                    style={{ color: theme.palette.text.primary }}
+                  >
+                    About
+                  </Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit" style={{ color: theme.palette.text.primary }}>Skills</Button>
+                  <Button
+                    color="inherit"
+                    style={{ color: theme.palette.text.primary }}
+                  >
+                    Skills
+                  </Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit" style={{ color: theme.palette.text.primary }}>Projects</Button>
+                  <Button
+                    color="inherit"
+                    style={{ color: theme.palette.text.primary }}
+                  >
+                    Projects
+                  </Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit" style={{ color: theme.palette.text.primary }}>Contact</Button>
+                  <Button
+                    color="inherit"
+                    style={{ color: theme.palette.text.primary }}
+                  >
+                    Contact
+                  </Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
                   <IconButton
@@ -91,7 +115,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
           >
             {isSmallScreen ? (
               <IconButton
-                style={{color : theme.palette.primary.main}}
+                style={{ color: theme.palette.primary.main }}
                 aria-label="menu"
                 onClick={toggleMenu}
               >
@@ -124,14 +148,13 @@ const Header = ({ darkMode, toggleDarkMode }) => {
           </Stack>
         </Box>
         <IconButton
-                    onClick={toggleDarkMode}
-                    aria-label="Toggle Dark Mode"
-                    // Adjust position as needed
-                  >
-                    <Brightness4Icon />
-                  </IconButton>
+          onClick={toggleDarkMode}
+          aria-label="Toggle Dark Mode"
+          // Adjust position as needed
+        >
+          <Brightness4Icon />
+        </IconButton>
       </Drawer>
-   
     </div>
   );
 };
