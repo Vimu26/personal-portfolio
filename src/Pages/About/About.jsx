@@ -10,11 +10,15 @@ import React from "react";
 const About = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  console.log(theme.palette.mode);
 
   return (
     <Container
       maxWidth="xl"
-      sx={{ backgroundColor: theme.palette.background.default }}
+      sx={{
+        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
+        color: theme.palette.text.primary,
+      }}
     >
       <Grid
         container

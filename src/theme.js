@@ -7,6 +7,9 @@ const lightTheme = createTheme({
     primary: {
       main: "#2196f3", // Adjust the primary color as needed
     },
+    background: {
+      paper: "#424242", // Change this to the desired shade of grey
+    },
     secondary: {
       main: "#ff4081", // Adjust the secondary color as needed
     },

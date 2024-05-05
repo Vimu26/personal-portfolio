@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div
       style={{
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
         color: theme.palette.text.primary,
         paddingBottom: "6rem",
         paddingTop: "2rem",
@@ -114,7 +114,7 @@ const Home = () => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      color: "blue",
+                      color: "#00f8ff",
                       marginBottom: "1rem",
                     }}
                   >
@@ -252,7 +252,7 @@ const Home = () => {
                       display: "flex",
                       justifyContent: "start",
                       alignItems: "center",
-                      color: "blue",
+                      color: "#00f8ff",
                       marginBottom: "1rem",
                     }}
                   >

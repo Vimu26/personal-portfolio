@@ -29,19 +29,13 @@ function App() {
           <div id="skills">
             <Skills />
           </div>
-          <div
-            style={{ paddingTop: "6rem", paddingBottom: "5rem" }}
-            id="projects"
-          >
+          <div id="projects">
             <Projects />
           </div>
-          <div
-            style={{ paddingTop: "10rem", paddingBottom: "6rem" }}
-            id="contact"
-          >
+          <div id="contact">
             <Contact />
           </div>
-          <div style={{ paddingTop: "6rem" }}>
+          <div>
             <Footer />
           </div>
         </div>

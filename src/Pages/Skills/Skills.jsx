@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Container from "@mui/material/Container";
-import { Grid, Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import WorkIcon from "@mui/icons-material/Work";
 import SchoolIcon from "@mui/icons-material/School";
@@ -8,7 +7,7 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { useMediaQuery, useTheme } from "@mui/material";
+import { useMediaQuery, useTheme, Grid, Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 
 const Skills = () => {
@@ -31,7 +30,13 @@ const Skills = () => {
   };
 
   return (
-    <Container maxWidth="xl">
+    <Container
+      maxWidth="xl"
+      style={{
+        paddingTop: "6rem",
+        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
+      }}
+    >
       <Grid container spacing={2}>
         <Grid
           item
@@ -40,20 +45,25 @@ const Skills = () => {
           style={{
             marginBottom: "2rem",
             display: "ruby",
-            marginTop: isSmallScreen ? 0 : "4%",
           }}
         >
           <div style={{ marginBottom: "2rem" }}>
             <Typography
               variant="h4"
               gutterBottom
-              style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}
+              style={{
+                textAlign: isSmallScreen ? "center" : "match-parent",
+                color: "cornflowerblue",
+              }}
             >
               <b>Skills & Experience</b>
             </Typography>
-          </div>{" "}
+          </div>
+
           <br></br>
-          <div>
+          <div
+            style={{ marginBottom: "2rem", color: theme.palette.text.primary }}
+          >
             <Typography variant="h5">Languages and Tools</Typography>
           </div>
           <div
@@ -295,7 +305,13 @@ const Skills = () => {
                             <Grid item xs={10} style={{ paddingLeft: "0" }}>
                               <Card
                                 variant="outlined"
-                                style={{ marginTop: "1rem" }}
+                                style={{
+                                  marginTop: "1rem",
+                                  backgroundColor:
+                                    theme.palette.mode === "dark"
+                                      ? "#292828"
+                                      : "#ffffff",
+                                }}
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
@@ -334,7 +350,13 @@ const Skills = () => {
                             <Grid item xs={10} style={{ paddingLeft: "0" }}>
                               <Card
                                 variant="outlined"
-                                style={{ marginTop: "1rem" }}
+                                style={{
+                                  marginTop: "1rem",
+                                  backgroundColor:
+                                    theme.palette.mode === "dark"
+                                      ? "#292828"
+                                      : "#ffffff",
+                                }}
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
@@ -376,7 +398,13 @@ const Skills = () => {
                             <Grid item xs={10} style={{ paddingLeft: "0" }}>
                               <Card
                                 variant="outlined"
-                                style={{ marginTop: "1rem" }}
+                                style={{
+                                  marginTop: "1rem",
+                                  backgroundColor:
+                                    theme.palette.mode === "dark"
+                                      ? "#292828"
+                                      : "#ffffff",
+                                }}
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
@@ -416,7 +444,16 @@ const Skills = () => {
                   ) : (
                     <Container maxWidth="lg" style={{ paddingRight: "0" }}>
                       <Stack style={{ marginBottom: "2rem" }}>
-                        <Card variant="outlined" style={{ marginTop: "1rem" }}>
+                        <Card
+                          variant="outlined"
+                          style={{
+                            marginTop: "1rem",
+                            backgroundColor:
+                              theme.palette.mode === "dark"
+                                ? "#292828"
+                                : "#ffffff",
+                          }}
+                        >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
                               Full-Time Trainee Software Engineer
@@ -429,7 +466,16 @@ const Skills = () => {
                             </Typography>
                           </CardContent>
                         </Card>
-                        <Card variant="outlined" style={{ marginTop: "1rem" }}>
+                        <Card
+                          variant="outlined"
+                          style={{
+                            marginTop: "1rem",
+                            backgroundColor:
+                              theme.palette.mode === "dark"
+                                ? "#292828"
+                                : "#ffffff",
+                          }}
+                        >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
                               Part-Time Trainee Software Engineer
@@ -442,7 +488,16 @@ const Skills = () => {
                             </Typography>
                           </CardContent>
                         </Card>
-                        <Card variant="outlined" style={{ marginTop: "1rem" }}>
+                        <Card
+                          variant="outlined"
+                          style={{
+                            marginTop: "1rem",
+                            backgroundColor:
+                              theme.palette.mode === "dark"
+                                ? "#292828"
+                                : "#ffffff",
+                          }}
+                        >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
                               Software Engineer
@@ -488,7 +543,13 @@ const Skills = () => {
                     <Stack xs={10} style={{ marginBottom: "2rem" }}>
                       <Card
                         variant="outlined"
-                        style={{ maxWidth: isSmallScreen ? "95%" : "90%" }}
+                        style={{
+                          maxWidth: isSmallScreen ? "95%" : "90%",
+                          backgroundColor:
+                            theme.palette.mode === "dark"
+                              ? "#292828"
+                              : "#ffffff",
+                        }}
                       >
                         <CardContent>
                           <Typography variant="h6" gutterBottom>
