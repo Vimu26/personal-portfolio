@@ -42,10 +42,7 @@ const About = () => {
               variant="h4"
               gutterBottom
               sx={{
-                color:
-                  theme.palette.mode === "dark"
-                    ? "primary.light"
-                    : "primary.dark",
+                color: "cornflowerblue",
               }}
             >
               <b>About Me</b>
@@ -86,10 +83,7 @@ const About = () => {
                   sx={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color:
-                      theme.palette.mode === "dark"
-                        ? "primary.light"
-                        : "primary.dark",
+                    color: "cornflowerblue",
                     marginBottom: "1rem",
                   }}
                 >
@@ -115,10 +109,7 @@ const About = () => {
                   style={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color:
-                      theme.palette.mode === "dark"
-                        ? "primary.light"
-                        : "primary.dark",
+                    color: "cornflowerblue",
                     marginBottom: "1rem",
                   }}
                 >
@@ -144,10 +135,7 @@ const About = () => {
                   style={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color:
-                      theme.palette.mode === "dark"
-                        ? "primary.light"
-                        : "primary.dark",
+                    color: "cornflowerblue",
                     marginBottom: "1rem",
                   }}
                 >
@@ -173,10 +161,7 @@ const About = () => {
                   style={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color:
-                      theme.palette.mode === "dark"
-                        ? "primary.light"
-                        : "primary.dark",
+                    color: "cornflowerblue",
                     marginBottom: "1rem",
                   }}
                 >
@@ -202,10 +187,7 @@ const About = () => {
                   style={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color:
-                      theme.palette.mode === "dark"
-                        ? "primary.light"
-                        : "primary.dark",
+                    color: "cornflowerblue",
                     marginBottom: "1rem",
                   }}
                 >
