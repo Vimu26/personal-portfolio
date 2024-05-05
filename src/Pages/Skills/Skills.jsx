@@ -539,48 +539,211 @@ const Skills = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Container maxWidth="lg" style={{ paddingRight: "0" }}>
-                    <Stack xs={10} style={{ marginBottom: "2rem" }}>
-                      <Card
-                        variant="outlined"
-                        style={{
-                          maxWidth: isSmallScreen ? "95%" : "90%",
-                          backgroundColor:
-                            theme.palette.mode === "dark"
-                              ? "#292828"
-                              : "#ffffff",
-                        }}
-                      >
-                        <CardContent>
-                          <Typography variant="h6" gutterBottom>
-                            Undergraduate Student
-                          </Typography>
-                          <Typography variant="body1" gutterBottom>
-                            University of Sri Jayawardenapura , SriLanka | (2021
-                            - 2024)
-                          </Typography>
-                          <Typography variant="body1">
-                            Computer Science related Degree
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Stack>
-                    <div
-                      style={{
-                        marginBottom: "2rem",
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Button
-                        variant="contained"
-                        startIcon={<DownloadIcon />}
-                        onClick={handleDownloadButtonClick}
-                      >
-                        Download CV
-                      </Button>
-                    </div>
-                  </Container>
+                  <Grid container spacing={2}>
+                    {!isSmallScreen ? (
+                      <Grid container spacing={2}>
+                        <Grid item xs={2}>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "end",
+                              alignItems: "center",
+                              height: "100%",
+                            }}
+                          >
+                            <Divider
+                              orientation="vertical"
+                              variant="middle"
+                              style={{
+                                height: "80%",
+                                marginBottom: "65px",
+                              }}
+                            />
+                          </div>
+                        </Grid>
+                        <Grid item xs={10} style={{ paddingLeft: "0" }}>
+                          <Stack spacing={2}>
+                            <Grid container spacing={2}>
+                              <Grid
+                                item
+                                xs={1}
+                                style={{
+                                  paddingLeft: "0",
+                                  display: "flex",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <Divider
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    alignItems: "center",
+                                  }}
+                                ></Divider>
+                              </Grid>
+                              <Grid item xs={10} style={{ paddingLeft: "0" }}>
+                                <Card
+                                  variant="outlined"
+                                  style={{
+                                    maxWidth: isSmallScreen ? "95%" : "100%",
+                                    backgroundColor:
+                                      theme.palette.mode === "dark"
+                                        ? "#292828"
+                                        : "#ffffff",
+                                  }}
+                                >
+                                  <CardContent>
+                                    <Typography variant="h6" gutterBottom>
+                                      Undergraduate Student
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom>
+                                      University of Sri Jayawardenapura ,
+                                      SriLanka | (2021 - 2024)
+                                    </Typography>
+                                    <Typography variant="body1">
+                                      Computer Science related Degree
+                                    </Typography>
+                                  </CardContent>
+                                </Card>
+                              </Grid>
+                            </Grid>
+
+                            <Grid container spacing={2}>
+                              <Grid
+                                item
+                                xs={1}
+                                style={{
+                                  paddingLeft: "0",
+                                  display: "flex",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <Divider
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    alignItems: "center",
+                                  }}
+                                ></Divider>
+                              </Grid>
+                              <Grid item xs={10} style={{ paddingLeft: "0" }}>
+                                <Card
+                                  variant="outlined"
+                                  style={{
+                                    marginTop: "1rem",
+                                    maxWidth: isSmallScreen ? "95%" : "100%",
+                                    backgroundColor:
+                                      theme.palette.mode === "dark"
+                                        ? "#292828"
+                                        : "#ffffff",
+                                  }}
+                                >
+                                  <CardContent>
+                                    <Typography variant="h6" gutterBottom>
+                                      G.C.E Advanced Level Examination
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom>
+                                      D.S.Senanayake College - Colombo 07,
+                                      SriLanka | (2016 - 2019)
+                                    </Typography>
+                                    <Typography variant="body1">
+                                      Physical Science Stream - 2B's (Combined
+                                      Mathematics & Chemistry) 1C (Physics)
+                                    </Typography>
+                                  </CardContent>
+                                </Card>
+                              </Grid>
+                            </Grid>
+                          </Stack>
+                          <div
+                            style={{
+                              marginTop: "2rem",
+                              marginBottom: "2rem",
+                              display: "flex",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <Button
+                              variant="contained"
+                              startIcon={<DownloadIcon />}
+                              onClick={handleDownloadButtonClick}
+                            >
+                              Download CV
+                            </Button>
+                          </div>
+                        </Grid>
+                      </Grid>
+                    ) : (
+                      <Container maxWidth="lg" style={{ paddingRight: "0" }}>
+                        <Stack style={{ marginBottom: "2rem" }}>
+                          <Card
+                            variant="outlined"
+                            style={{
+                              maxWidth: isSmallScreen ? "95%" : "100%",
+                              backgroundColor:
+                                theme.palette.mode === "dark"
+                                  ? "#292828"
+                                  : "#ffffff",
+                            }}
+                          >
+                            <CardContent>
+                              <Typography variant="h6" gutterBottom>
+                                Undergraduate Student
+                              </Typography>
+                              <Typography variant="body1" gutterBottom>
+                                University of Sri Jayawardenapura , SriLanka |
+                                (2021 - 2024)
+                              </Typography>
+                              <Typography variant="body1">
+                                Computer Science related Degree
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                          <Card
+                            variant="outlined"
+                            style={{
+                              marginTop: "1rem",
+                              maxWidth: isSmallScreen ? "95%" : "100%",
+                              backgroundColor:
+                                theme.palette.mode === "dark"
+                                  ? "#292828"
+                                  : "#ffffff",
+                            }}
+                          >
+                            <CardContent>
+                              <Typography variant="h6" gutterBottom>
+                                G.C.E Advanced Level Examination
+                              </Typography>
+                              <Typography variant="body1" gutterBottom>
+                                D.S.Senanayake College - Colombo 07, SriLanka |
+                                (2016 - 2019)
+                              </Typography>
+                              <Typography variant="body1">
+                                Physical Science Stream - 2B's (Combined
+                                Mathematics & Chemistry) 1C (Physics)
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                        </Stack>
+                        <div
+                          style={{
+                            marginTop: "1rem",
+                            marginBottom: "2rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Button
+                            variant="contained"
+                            startIcon={<DownloadIcon />}
+                            onClick={handleDownloadButtonClick}
+                          >
+                            Download CV
+                          </Button>
+                        </div>
+                      </Container>
+                    )}
+                  </Grid>
                 </div>
               )}
             </div>
