@@ -5,29 +5,41 @@ import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
 import Projects from "./Pages/Projects/Projects";
 import Skills from "./Pages/Skills/Skills";
+import React, { useState } from 'react';
+import {  ThemeProvider } from '@mui/material/styles';
+import { lightTheme, darkTheme } from './theme';
+
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div>
-      <Header />
-      <div style={{ position: "relative", top: "6rem" }}>
+       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+      <div style={{ position: "relative", top: "5rem" }}>
         <Home />
-        <div style={{ marginTop: "5rem", marginBottom: "6rem" }}>
+        <div>
           <About />
         </div>
-        <div style={{ marginTop: "6rem", marginBottom: "3rem" }}>
+        <div >
           <Skills />
         </div>
-        <div style={{ marginTop: "6rem", marginBottom: "5rem" }}>
+        <div style={{ paddingTop: "6rem", paddingBottom: "5rem" }}>
           <Projects />
         </div>
-        <div style={{ marginTop: "10rem", marginBottom: "6rem" }}>
+        <div style={{ paddingTop: "10rem", paddingBottom: "6rem" }}>
           <Contact />
         </div>
-        <div style={{ marginTop: "6rem" }}>
+        <div style={{ paddingTop: "6rem" }}>
           <Footer />
         </div>
       </div>
+      </ThemeProvider>
     </div>
   );
 }

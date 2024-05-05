@@ -7,12 +7,13 @@ import {
   Drawer,
   useMediaQuery,
   useTheme,
-  Stack
+  Stack,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
 
-const Header = () => {
+const Header = ({ darkMode, toggleDarkMode }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ const Header = () => {
         width: "100%",
         zIndex: 10,
         padding: "2rem 1.4rem 0rem 1.4rem",
-        backgroundColor: "white"
+        backgroundColor: theme.palette.background.default,
       }}
     >
       <Box sx={{ flexGrow: 1 }}>
@@ -51,22 +52,30 @@ const Header = () => {
                 <Grid item style={{ paddingLeft: "0" }}>
                   <Button
                     color="inherit"
-                    style={{ display: "flex", justifyContent: "start" }}
+                    style={{ display: "flex", justifyContent: "start", color: theme.palette.text.primary }}
                   >
                     Home
                   </Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit">About</Button>
+                  <Button color="inherit" style={{ color: theme.palette.text.primary }}>About</Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit">Skills</Button>
+                  <Button color="inherit" style={{ color: theme.palette.text.primary }}>Skills</Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit">Projects</Button>
+                  <Button color="inherit" style={{ color: theme.palette.text.primary }}>Projects</Button>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button color="inherit">Contact</Button>
+                  <Button color="inherit" style={{ color: theme.palette.text.primary }}>Contact</Button>
+                </Grid>
+                <Grid item style={{ paddingLeft: "0" }}>
+                  <IconButton
+                    onClick={toggleDarkMode}
+                    aria-label="Toggle Dark Mode"
+                  >
+                    <Brightness4Icon />
+                  </IconButton>
                 </Grid>
               </Grid>
             </Grid>
@@ -82,7 +91,7 @@ const Header = () => {
           >
             {isSmallScreen ? (
               <IconButton
-                color="inherit"
+                style={{color : theme.palette.primary.main}}
                 aria-label="menu"
                 onClick={toggleMenu}
               >
@@ -114,7 +123,15 @@ const Header = () => {
             <Button color="inherit">Contact</Button>
           </Stack>
         </Box>
+        <IconButton
+                    onClick={toggleDarkMode}
+                    aria-label="Toggle Dark Mode"
+                    // Adjust position as needed
+                  >
+                    <Brightness4Icon />
+                  </IconButton>
       </Drawer>
+   
     </div>
   );
 };
