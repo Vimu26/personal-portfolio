@@ -10,7 +10,6 @@ import React from "react";
 const About = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  console.log(theme.palette.mode);
 
   return (
     <Container
