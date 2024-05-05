@@ -13,7 +13,7 @@ import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 import { Link } from "react-router-dom";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 
-const Header = ({ darkMode, toggleDarkMode, location }) => {
+const Header = ({ darkMode, toggleDarkMode ,location }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,7 +70,7 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     onClick={() => scrollToSection("home")}
                     style={{
                       textDecoration: "none",
-                      color: theme.palette.text.primary,
+                      color: "cornflowerblue",
                       fontSize: "20px",
                     }}
                   >
@@ -83,7 +83,7 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     onClick={() => scrollToSection("about")}
                     style={{
                       textDecoration: "none",
-                      color: theme.palette.text.primary,
+                      color: "cornflowerblue" ,
                       fontSize: "20px",
                     }}
                   >
@@ -96,7 +96,7 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     onClick={() => scrollToSection("skills")}
                     style={{
                       textDecoration: "none",
-                      color: theme.palette.text.primary,
+                     color: "cornflowerblue" ,
                       fontSize: "20px",
                     }}
                   >
@@ -109,7 +109,7 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     onClick={() => scrollToSection("projects")}
                     style={{
                       textDecoration: "none",
-                      color: theme.palette.text.primary,
+                     color: "cornflowerblue" ,
                       fontSize: "20px",
                     }}
                   >
@@ -122,21 +122,21 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     onClick={() => scrollToSection("contact")}
                     style={{
                       textDecoration: "none",
-                      color: theme.palette.text.primary,
+                     color: "cornflowerblue" ,
                       fontSize: "20px",
                     }}
                   >
                     <b>Contact</b>
                   </Link>
                 </Grid>
-                <Grid item style={{ paddingLeft: "0", marginTop: "-8px" }}>
+                <Grid item style={{ paddingLeft: "0" , marginTop: '-8px' }} >
                   <IconButton
                     onClick={toggleDarkMode}
                     aria-label="Toggle Dark Mode"
                   >
                     <Brightness4Icon />
                   </IconButton>
-                </Grid>
+                  </Grid>
               </Grid>
             </Grid>
           )}
@@ -180,9 +180,9 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               onClick={() => scrollToSection("home")}
               style={{
                 textDecoration: "none",
-                color: theme.palette.text.primary,
+               color: "cornflowerblue" ,
                 fontSize: "20px",
-                textAlign: "center",
+                textAlign:'center'
               }}
             >
               <b>Home</b>
@@ -191,9 +191,9 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               onClick={() => scrollToSection("about")}
               style={{
                 textDecoration: "none",
-                color: theme.palette.text.primary,
+               color: "cornflowerblue" ,
                 fontSize: "20px",
-                textAlign: "center",
+                textAlign:'center'
               }}
             >
               <b>About</b>
@@ -202,9 +202,9 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               onClick={() => scrollToSection("skills")}
               style={{
                 textDecoration: "none",
-                color: theme.palette.text.primary,
+               color: "cornflowerblue" ,
                 fontSize: "20px",
-                textAlign: "center",
+                textAlign:'center'
               }}
             >
               <b>Skills</b>
@@ -213,9 +213,9 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               onClick={() => scrollToSection("projects")}
               style={{
                 textDecoration: "none",
-                color: theme.palette.text.primary,
+               color: "cornflowerblue" ,
                 fontSize: "20px",
-                textAlign: "center",
+                textAlign:'center'
               }}
             >
               <b>Projects</b>
@@ -224,16 +224,19 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               onClick={() => scrollToSection("contact")}
               style={{
                 textDecoration: "none",
-                color: theme.palette.text.primary,
+               color: "cornflowerblue" ,
                 fontSize: "20px",
-                textAlign: "center",
+                textAlign:'center'
               }}
             >
               <b>Contact</b>
             </Link>
           </Stack>
         </Box>
-        <IconButton onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
+        <IconButton
+          onClick={toggleDarkMode}
+          aria-label="Toggle Dark Mode"
+        >
           <Brightness4Icon />
         </IconButton>
       </Drawer>
