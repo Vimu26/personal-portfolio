@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Grid,
-  Button,
   IconButton,
   Drawer,
   useMediaQuery,
@@ -11,15 +10,30 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
+import { Link } from "react-router-dom";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 
-const Header = ({ darkMode, toggleDarkMode }) => {
+const Header = ({ darkMode, toggleDarkMode, location }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (id) => {
+    if (id === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: id === "skills" ? (isSmallScreen ? "start" : "end") : "center",
+        });
+      }
+    }
   };
 
   return (
@@ -50,50 +64,72 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             <Grid item xs={6} sm={7} md={7} lg={7}>
               <Grid container justifyContent="space-evenly" spacing={2}>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button
-                    color="inherit"
+                  <Link
+                    component="button"
+                    underline="none"
+                    onClick={() => scrollToSection("home")}
                     style={{
-                      display: "flex",
-                      justifyContent: "start",
+                      textDecoration: "none",
                       color: theme.palette.text.primary,
+                      fontSize: "20px",
                     }}
                   >
-                    Home
-                  </Button>
+                    <b>Home</b>
+                  </Link>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button
-                    color="inherit"
-                    style={{ color: theme.palette.text.primary }}
+                  <Link
+                    underline="none"
+                    onClick={() => scrollToSection("about")}
+                    style={{
+                      textDecoration: "none",
+                      color: theme.palette.text.primary,
+                      fontSize: "20px",
+                    }}
                   >
-                    About
-                  </Button>
+                    <b>About</b>
+                  </Link>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button
-                    color="inherit"
-                    style={{ color: theme.palette.text.primary }}
+                  <Link
+                    underline="none"
+                    onClick={() => scrollToSection("skills")}
+                    style={{
+                      textDecoration: "none",
+                      color: theme.palette.text.primary,
+                      fontSize: "20px",
+                    }}
                   >
-                    Skills
-                  </Button>
+                    <b>Skills</b>
+                  </Link>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button
-                    color="inherit"
-                    style={{ color: theme.palette.text.primary }}
+                  <Link
+                    underline="none"
+                    onClick={() => scrollToSection("projects")}
+                    style={{
+                      textDecoration: "none",
+                      color: theme.palette.text.primary,
+                      fontSize: "20px",
+                    }}
                   >
-                    Projects
-                  </Button>
+                    <b>Projects</b>
+                  </Link>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Button
-                    color="inherit"
-                    style={{ color: theme.palette.text.primary }}
+                  <Link
+                    underline="none"
+                    onClick={() => scrollToSection("contact")}
+                    style={{
+                      textDecoration: "none",
+                      color: theme.palette.text.primary,
+                      fontSize: "20px",
+                    }}
                   >
-                    Contact
-                  </Button>
+                    <b>Contact</b>
+                  </Link>
                 </Grid>
-                <Grid item style={{ paddingLeft: "0" }}>
+                <Grid item style={{ paddingLeft: "0", marginTop: "-8px" }}>
                   <IconButton
                     onClick={toggleDarkMode}
                     aria-label="Toggle Dark Mode"
@@ -140,18 +176,64 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             <CancelOutlinedIcon />
           </IconButton>
           <Stack direction="column" spacing={2}>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Skills</Button>
-            <Button color="inherit">Projects</Button>
-            <Button color="inherit">Contact</Button>
+            <Link
+              onClick={() => scrollToSection("home")}
+              style={{
+                textDecoration: "none",
+                color: theme.palette.text.primary,
+                fontSize: "20px",
+                textAlign: "center",
+              }}
+            >
+              <b>Home</b>
+            </Link>
+            <Link
+              onClick={() => scrollToSection("about")}
+              style={{
+                textDecoration: "none",
+                color: theme.palette.text.primary,
+                fontSize: "20px",
+                textAlign: "center",
+              }}
+            >
+              <b>About</b>
+            </Link>
+            <Link
+              onClick={() => scrollToSection("skills")}
+              style={{
+                textDecoration: "none",
+                color: theme.palette.text.primary,
+                fontSize: "20px",
+                textAlign: "center",
+              }}
+            >
+              <b>Skills</b>
+            </Link>
+            <Link
+              onClick={() => scrollToSection("projects")}
+              style={{
+                textDecoration: "none",
+                color: theme.palette.text.primary,
+                fontSize: "20px",
+                textAlign: "center",
+              }}
+            >
+              <b>Projects</b>
+            </Link>
+            <Link
+              onClick={() => scrollToSection("contact")}
+              style={{
+                textDecoration: "none",
+                color: theme.palette.text.primary,
+                fontSize: "20px",
+                textAlign: "center",
+              }}
+            >
+              <b>Contact</b>
+            </Link>
           </Stack>
         </Box>
-        <IconButton
-          onClick={toggleDarkMode}
-          aria-label="Toggle Dark Mode"
-          // Adjust position as needed
-        >
+        <IconButton onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
           <Brightness4Icon />
         </IconButton>
       </Drawer>

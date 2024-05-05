@@ -172,7 +172,7 @@ const Contact = () => {
         />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Button
-            style={{ width: "100%", height: "4rem" , marginTop : '0.6rem'}}
+            style={{ width: "100%", height: "4rem", marginTop: "0.6rem" }}
             variant="contained"
             color="primary"
             onClick={handleSubmit}

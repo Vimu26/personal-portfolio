@@ -8,6 +8,7 @@ import Skills from "./Pages/Skills/Skills";
 import React, { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { lightTheme, darkTheme } from "./theme";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,21 +18,27 @@ function App() {
   };
 
   return (
-    <div>
+    <BrowserRouter>
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <div style={{ position: "relative", top: "5rem" }}>
+        <div style={{ position: "relative", top: "5rem" }} id="home">
           <Home darkMode={darkMode} />
-          <div>
+          <div id="about">
             <About />
           </div>
-          <div>
+          <div id="skills">
             <Skills />
           </div>
-          <div style={{ paddingTop: "6rem", paddingBottom: "5rem" }}>
+          <div
+            style={{ paddingTop: "6rem", paddingBottom: "5rem" }}
+            id="projects"
+          >
             <Projects />
           </div>
-          <div style={{ paddingTop: "10rem", paddingBottom: "6rem" }}>
+          <div
+            style={{ paddingTop: "10rem", paddingBottom: "6rem" }}
+            id="contact"
+          >
             <Contact />
           </div>
           <div style={{ paddingTop: "6rem" }}>
@@ -39,7 +46,7 @@ function App() {
           </div>
         </div>
       </ThemeProvider>
-    </div>
+    </BrowserRouter>
   );
 }
 
