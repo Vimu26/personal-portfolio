@@ -1,22 +1,28 @@
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import * as React from "react";
-import { useMediaQuery, useTheme } from "@mui/material";
-import Typography from "@mui/material/Typography";
+import {
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import React from "react";
 
 const About = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Container maxWidth="xl">
+    <Container
+      maxWidth="xl"
+      sx={{ backgroundColor: theme.palette.background.default }}
+    >
       <Grid
         container
         spacing={2}
         sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}
       >
         {!isSmallScreen && (
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} style={{ paddingBottom: "1rem" }}>
             <img
               src="https://www.interviewbit.com/blog/wp-content/uploads/2021/11/Software-Engineer.png"
               alt=""
@@ -32,46 +38,63 @@ const About = () => {
 
         <Grid item xs={12} sm={6}>
           <div style={{ textAlign: isSmallScreen ? "center" : "match-parent" }}>
-            <Typography variant="h4" gutterBottom>
+            <Typography
+              variant="h4"
+              gutterBottom
+              sx={{
+                color:
+                  theme.palette.mode === "dark"
+                    ? "primary.light"
+                    : "primary.dark",
+              }}
+            >
               <b>About Me</b>
             </Typography>
-            <p
-              style={{
+            <Typography
+              variant="body1"
+              gutterBottom
+              sx={{
                 marginTop: "1rem",
                 marginBottom: "1.5rem",
                 fontSize: "1.1rem",
-                color: "#717171",
+                color: theme.palette.text.primary,
               }}
             >
-              I'm Akalanka Vimukthi Rathnayake , a Passionate Software Engineer
-              From SriLanka. I'm a Fast Learning , Responsible , Adaptable ,
-              Hard working and a Loyal Team Player that driven to meet or exceed
-              a company's expectations to deliver high-quality software
+              I'm Akalanka Vimukthi Rathnayake, a Passionate Software Engineer
+              from Sri Lanka. I'm a Fast Learning, Responsible, Adaptable,
+              Hardworking, and a Loyal Team Player that is driven to meet or
+              exceed a company's expectations to deliver high-quality software
               products.
-            </p>
+            </Typography>
             <Grid container>
               <Grid item xs={4}>
-                <div
-                  style={{
+                <Typography
+                  variant="body1"
+                  sx={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
+                    color: theme.palette.text.primary,
                   }}
                 >
                   Name
-                </div>
+                </Typography>
               </Grid>
               <Grid item xs={8}>
-                <div
-                  style={{
+                <Typography
+                  variant="body1"
+                  sx={{
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
-                    color: "cornflowerblue",
+                    color:
+                      theme.palette.mode === "dark"
+                        ? "primary.light"
+                        : "primary.dark",
                     marginBottom: "1rem",
                   }}
                 >
                   Akalanka Vimukthi Rathnayake
-                </div>
+                </Typography>
               </Grid>
             </Grid>
             <Grid container>
@@ -81,6 +104,7 @@ const About = () => {
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
+                    color: theme.palette.text.primary,
                   }}
                 >
                   Date of Birth
@@ -106,6 +130,7 @@ const About = () => {
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
+                    color: theme.palette.text.primary,
                   }}
                 >
                   Address
@@ -131,6 +156,7 @@ const About = () => {
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
+                    color: theme.palette.text.primary,
                   }}
                 >
                   Email
@@ -156,6 +182,7 @@ const About = () => {
                     fontFamily: "fantasy",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
+                    color: theme.palette.text.primary,
                   }}
                 >
                   Phone
