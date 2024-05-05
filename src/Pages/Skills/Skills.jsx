@@ -674,7 +674,10 @@ const Skills = () => {
                         </Grid>
                       </Grid>
                     ) : (
-                      <Container maxWidth="lg" style={{ paddingRight: "0" }}>
+                      <Container
+                        maxWidth="lg"
+                        style={{ paddingRight: "0", paddingBottom: "6rem" }}
+                      >
                         <Stack style={{ marginBottom: "2rem" }}>
                           <Card
                             variant="outlined"

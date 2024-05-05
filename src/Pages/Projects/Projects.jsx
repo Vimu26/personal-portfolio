@@ -3,9 +3,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button } from "@mui/material";
 import Container from "@mui/material/Container";
-import { Grid, useMediaQuery, useTheme } from "@mui/material";
+import { Grid, useMediaQuery, useTheme, Button } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import PreviewIcon from "@mui/icons-material/Preview";
 import "slick-carousel/slick/slick.css";
@@ -17,7 +16,6 @@ import IconButton from "@mui/material/IconButton";
 const Projects = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  //   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   const slides = [
     {
@@ -113,14 +111,19 @@ const Projects = () => {
   ];
 
   return (
-    <Container maxWidth="xl">
-      <Grid
-        container
-        justifyContent={isSmallScreen ? "center" : "flex-start"}
-        style={{ marginBottom: "2rem" }}
-      >
+    <Container
+      maxWidth="xl"
+      style={{
+        paddingTop: "4rem",
+        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
+      }}
+    >
+      <Grid container justifyContent="center" style={{ marginBottom: "2rem" }}>
         <Grid item>
-          <Typography variant="h4">
+          <Typography
+            variant="h4"
+            style={{ color: "cornflowerblue", marginBottom: "2rem" }}
+          >
             <b>Projects</b>
           </Typography>
         </Grid>
@@ -129,14 +132,18 @@ const Projects = () => {
         responsiveLayout={responsiveLayout}
         loop={true}
         scrollSnap={true}
-        showDots={true}
+        showDots={false}
         dotColorActive={"cornflowerblue"}
       >
         {slides.map((slide, index) => (
           <Carousel.Item key={index + 1}>
             <Card
               variant="outlined"
-              style={{ paddingBottom: "1rem", marginBottom: "2rem" }}
+              style={{
+                paddingBottom: "1rem",
+                marginBottom: "2rem",
+                backgroundColor: "#ffffff",
+              }}
             >
               <CardMedia
                 component="img"
@@ -145,10 +152,15 @@ const Projects = () => {
                 alt=""
               />
               <CardContent style={{ height: "103px" }}>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  color="black"
+                >
                   {slide.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="black">
                   {slide.description}
                 </Typography>
               </CardContent>
