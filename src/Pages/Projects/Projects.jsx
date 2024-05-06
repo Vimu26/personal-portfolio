@@ -193,6 +193,7 @@ const Projects = () => {
                     aria-label="github"
                     size="large"
                     onClick={() => handleGitHubClick(slide.link)}
+                    color="primary"
                   >
                     <GitHubIcon fontSize="inherit" />
                   </IconButton>

@@ -5,11 +5,13 @@ import {
   Typography,
   Snackbar,
   Container,
+  useTheme,
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import SendIcon from "@mui/icons-material/Send";
 
 const Contact = () => {
+  const theme = useTheme();
   const [formData, setFormData] = useState({
     Fname: "",
     Lname: "",
@@ -76,7 +78,15 @@ const Contact = () => {
   }, [formErrors]);
 
   return (
-    <Container maxWidth="xl">
+    <Container
+      maxWidth="xl"
+      sx={{
+        paddingTop: "6rem",
+        paddingBottom: "4rem",
+        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
+        color: theme.palette.text.primary,
+      }}
+    >
       <Typography variant="h4" align={"center"}>
         <b>Contact Me</b>
       </Typography>
