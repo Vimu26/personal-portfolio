@@ -30,11 +30,19 @@ const Home = () => {
     window.open(mailtoLink);
   };
 
+  const goToContactSection = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleDownloadButtonClick = () => {
     const anchorElement = document.createElement("a");
     anchorElement.href =
       "https://drive.google.com/file/d/1cJ4ANWS5KQXe1o1wzpsS1uW_0TpLc-Ap/view?usp=drive_link";
     anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
+    anchorElement.target = "_blank"; // Open in a new tab
     document.body.appendChild(anchorElement);
     anchorElement.click();
     document.body.removeChild(anchorElement);
@@ -157,7 +165,7 @@ const Home = () => {
                   <Button
                     variant="outlined"
                     startIcon={<CallIcon />}
-                    onClick={handleDownloadButtonClick}
+                    onClick={goToContactSection}
                   >
                     Contact Me
                   </Button>
