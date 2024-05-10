@@ -412,7 +412,7 @@ const Skills = () => {
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
                                     National Child Protection Authorization
-                                    (NCPA) | ( 2023 - 2024)
+                                    (NCPA) Project | ( 2023 - 2024)
                                   </Typography>
                                   <Typography variant="body1">
                                     Leading the Government Project NCPA , and
@@ -504,6 +504,7 @@ const Skills = () => {
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               National Child Protection Authorization (NCPA)
+                              Project | ( 2023 - 2024)
                             </Typography>
                             <Typography variant="body1">
                               Leading the Government Project NCPA , and Handling

@@ -142,7 +142,8 @@ const Projects = () => {
               style={{
                 paddingBottom: "1rem",
                 marginBottom: "2rem",
-                backgroundColor: "#ffffff",
+                backgroundColor:
+                  theme.palette.mode === "dark" ? "rgb(29 29 29)" : "#ffffff",
               }}
             >
               <CardMedia
@@ -156,11 +157,18 @@ const Projects = () => {
                   gutterBottom
                   variant="h5"
                   component="div"
-                  color="black"
+                  style={{
+                    color: theme.palette.mode === "dark" ? "#ffffff" : "black",
+                  }}
                 >
                   {slide.title}
                 </Typography>
-                <Typography variant="body2" color="black">
+                <Typography
+                  variant="body2"
+                  style={{
+                    color: theme.palette.mode === "dark" ? "#ffffff" : "black",
+                  }}
+                >
                   {slide.description}
                 </Typography>
               </CardContent>
