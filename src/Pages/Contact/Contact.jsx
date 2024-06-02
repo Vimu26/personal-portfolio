@@ -87,7 +87,11 @@ const Contact = () => {
         color: theme.palette.text.primary,
       }}
     >
-      <Typography variant="h4" align={"center"}>
+      <Typography
+        variant="h4"
+        align={"center"}
+        style={{ color: "cornflowerblue" }}
+      >
         <b>Contact Me</b>
       </Typography>
       <Typography
@@ -182,9 +186,13 @@ const Contact = () => {
         />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Button
-            style={{ width: "100%", height: "4rem", marginTop: "0.6rem" }}
+            style={{
+              width: "100%",
+              height: "4rem",
+              marginTop: "0.6rem",
+              backgroundColor: "rgb(68 135 255)",
+            }}
             variant="contained"
-            color="primary"
             onClick={handleSubmit}
             endIcon={<SendIcon />}
             disabled={
