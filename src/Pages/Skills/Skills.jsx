@@ -329,7 +329,7 @@ const Skills = () => {
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
-                                    Full-Time Trainee Software Engineer
+                                    Trainee Software Engineer
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
                                     Echonlabs (PVT) LTD | (2024 Mar - Present)
@@ -374,7 +374,7 @@ const Skills = () => {
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
-                                    Part-Time Trainee Software Engineer
+                                    Trainee Software Engineer
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
                                     Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
@@ -429,7 +429,7 @@ const Skills = () => {
                                     (NCPA) Project | ( 2023 - 2024)
                                   </Typography>
                                   <Typography variant="body1">
-                                    Leading the Government Project NCPA , and
+                                    Lead the Government Project NCPA , and
                                     Handling the client
                                   </Typography>
                                 </CardContent>
@@ -471,7 +471,7 @@ const Skills = () => {
                         >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
-                              Full-Time Trainee Software Engineer
+                              Trainee Software Engineer
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               Echonlabs (PVT) LTD | (2024 Mar - Present)
@@ -493,7 +493,7 @@ const Skills = () => {
                         >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
-                              Part-Time Trainee Software Engineer
+                              Trainee Software Engineer
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
@@ -522,7 +522,7 @@ const Skills = () => {
                               Project | ( 2023 - 2024)
                             </Typography>
                             <Typography variant="body1">
-                              Leading the Government Project NCPA , and Handling
+                              Lead the Government Project NCPA , and Handling
                               the client
                             </Typography>
                           </CardContent>

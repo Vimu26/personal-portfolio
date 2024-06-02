@@ -191,7 +191,7 @@ const Projects = () => {
                     onClick={() => handleGitHubClick(slide.link)}
                     startIcon={<PreviewIcon />}
                   >
-                    Show More Images
+                    Watch Video
                   </Button>
                 </CardActions>
               ) : (
