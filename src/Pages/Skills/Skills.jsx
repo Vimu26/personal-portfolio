@@ -241,9 +241,17 @@ const Skills = () => {
                   variant={
                     selectedDecision === "EXPERIENCE" ? "contained" : "outlined"
                   }
+                  sx={{
+                    // color: selectedDecision === "EXPERIENCE" ? 'white' : 'rgb(68, 135, 255)',
+                    backgroundColor:
+                      selectedDecision === "EXPERIENCE" && "contained"
+                        ? "rgb(68, 135, 255)"
+                        : null,
+                    mr: 1,
+                    mb: 2,
+                  }}
                   onClick={() => onDecisionChange("EXPERIENCE")}
                   startIcon={<WorkIcon />}
-                  sx={{ mr: 1, mb: 2 }}
                 >
                   Experience
                 </Button>
@@ -252,9 +260,15 @@ const Skills = () => {
                   variant={
                     selectedDecision === "EDUCATION" ? "contained" : "outlined"
                   }
+                  sx={{
+                    backgroundColor:
+                      selectedDecision === "EDUCATION" && "contained"
+                        ? "rgb(68, 135, 255)"
+                        : null,
+                    mb: 2,
+                  }}
                   onClick={() => onDecisionChange("EDUCATION")}
                   startIcon={<SchoolIcon />}
-                  sx={{ mb: 2 }}
                 >
                   Education
                 </Button>
@@ -315,7 +329,7 @@ const Skills = () => {
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
-                                    Full-Time Trainee Software Engineer
+                                    Trainee Software Engineer
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
                                     Echonlabs (PVT) LTD | (2024 Mar - Present)
@@ -360,7 +374,7 @@ const Skills = () => {
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
-                                    Part-Time Trainee Software Engineer
+                                    Trainee Software Engineer
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
                                     Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
@@ -415,7 +429,7 @@ const Skills = () => {
                                     (NCPA) Project | ( 2023 - 2024)
                                   </Typography>
                                   <Typography variant="body1">
-                                    Leading the Government Project NCPA , and
+                                    Lead the Government Project NCPA , and
                                     Handling the client
                                   </Typography>
                                 </CardContent>
@@ -433,6 +447,7 @@ const Skills = () => {
                         >
                           <Button
                             variant="contained"
+                            style={{ backgroundColor: "rgb(68 135 255)" }}
                             startIcon={<DownloadIcon />}
                             onClick={handleDownloadButtonClick}
                           >
@@ -456,7 +471,7 @@ const Skills = () => {
                         >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
-                              Full-Time Trainee Software Engineer
+                              Trainee Software Engineer
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               Echonlabs (PVT) LTD | (2024 Mar - Present)
@@ -478,7 +493,7 @@ const Skills = () => {
                         >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
-                              Part-Time Trainee Software Engineer
+                              Trainee Software Engineer
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
@@ -507,7 +522,7 @@ const Skills = () => {
                               Project | ( 2023 - 2024)
                             </Typography>
                             <Typography variant="body1">
-                              Leading the Government Project NCPA , and Handling
+                              Lead the Government Project NCPA , and Handling
                               the client
                             </Typography>
                           </CardContent>
@@ -522,6 +537,7 @@ const Skills = () => {
                       >
                         <Button
                           variant="contained"
+                          style={{ backgroundColor: "rgb(68 135 255)" }}
                           startIcon={<DownloadIcon />}
                           onClick={handleDownloadButtonClick}
                         >
@@ -666,6 +682,7 @@ const Skills = () => {
                           >
                             <Button
                               variant="contained"
+                              style={{ backgroundColor: "rgb(68 135 255)" }}
                               startIcon={<DownloadIcon />}
                               onClick={handleDownloadButtonClick}
                             >
@@ -739,6 +756,7 @@ const Skills = () => {
                         >
                           <Button
                             variant="contained"
+                            style={{ backgroundColor: "rgb(68 135 255)" }}
                             startIcon={<DownloadIcon />}
                             onClick={handleDownloadButtonClick}
                           >
