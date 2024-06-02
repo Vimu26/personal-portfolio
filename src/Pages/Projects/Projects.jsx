@@ -179,13 +179,14 @@ const Projects = () => {
                   <Button
                     style={{ width: "40%" }}
                     variant="outlined"
+                    // color="rgb(68 135 255)"
                     onClick={() => handleGitHubClick(slide.link)}
                     startIcon={<GitHubIcon />}
                   >
                     Go to GitHub
                   </Button>
                   <Button
-                    style={{ width: "40%" }}
+                    style={{ width: "40%", backgroundColor: "rgb(68 135 255)" }}
                     variant="contained"
                     onClick={() => handleGitHubClick(slide.link)}
                     startIcon={<PreviewIcon />}

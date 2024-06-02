@@ -241,9 +241,17 @@ const Skills = () => {
                   variant={
                     selectedDecision === "EXPERIENCE" ? "contained" : "outlined"
                   }
+                  sx={{
+                    // color: selectedDecision === "EXPERIENCE" ? 'white' : 'rgb(68, 135, 255)',
+                    backgroundColor:
+                      selectedDecision === "EXPERIENCE" && "contained"
+                        ? "rgb(68, 135, 255)"
+                        : null,
+                    mr: 1,
+                    mb: 2,
+                  }}
                   onClick={() => onDecisionChange("EXPERIENCE")}
                   startIcon={<WorkIcon />}
-                  sx={{ mr: 1, mb: 2 }}
                 >
                   Experience
                 </Button>
@@ -252,9 +260,15 @@ const Skills = () => {
                   variant={
                     selectedDecision === "EDUCATION" ? "contained" : "outlined"
                   }
+                  sx={{
+                    backgroundColor:
+                      selectedDecision === "EDUCATION" && "contained"
+                        ? "rgb(68, 135, 255)"
+                        : null,
+                    mb: 2,
+                  }}
                   onClick={() => onDecisionChange("EDUCATION")}
                   startIcon={<SchoolIcon />}
-                  sx={{ mb: 2 }}
                 >
                   Education
                 </Button>
@@ -433,6 +447,7 @@ const Skills = () => {
                         >
                           <Button
                             variant="contained"
+                            style={{ backgroundColor: "rgb(68 135 255)" }}
                             startIcon={<DownloadIcon />}
                             onClick={handleDownloadButtonClick}
                           >
@@ -522,6 +537,7 @@ const Skills = () => {
                       >
                         <Button
                           variant="contained"
+                          style={{ backgroundColor: "rgb(68 135 255)" }}
                           startIcon={<DownloadIcon />}
                           onClick={handleDownloadButtonClick}
                         >
@@ -666,6 +682,7 @@ const Skills = () => {
                           >
                             <Button
                               variant="contained"
+                              style={{ backgroundColor: "rgb(68 135 255)" }}
                               startIcon={<DownloadIcon />}
                               onClick={handleDownloadButtonClick}
                             >
@@ -739,6 +756,7 @@ const Skills = () => {
                         >
                           <Button
                             variant="contained"
+                            style={{ backgroundColor: "rgb(68 135 255)" }}
                             startIcon={<DownloadIcon />}
                             onClick={handleDownloadButtonClick}
                           >
