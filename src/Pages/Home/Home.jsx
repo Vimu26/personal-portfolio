@@ -83,7 +83,7 @@ const Home = () => {
                   style={{
                     fontFamily: "sans-serif",
                     fontSize: "2.6rem",
-                    color: theme.palette.primary.main,
+                    color: "cornflowerblue",
                     display: "flex",
                     justifyContent: "center",
                     marginBottom: "1rem",
@@ -95,7 +95,7 @@ const Home = () => {
                   style={{
                     fontFamily: "sans-serif",
                     fontSize: "2.6rem",
-                    color: theme.palette.primary.main,
+                    color: "cornflowerblue",
                     display: "flex",
                     justifyContent: "center",
                     marginBottom: "1rem",
@@ -122,7 +122,7 @@ const Home = () => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      color: "#00f8ff",
+                      color: "rgb(144 101 255)",
                       marginBottom: "1rem",
                     }}
                   >
@@ -156,6 +156,7 @@ const Home = () => {
                   }}
                 >
                   <Button
+                    style={{ backgroundColor: "rgb(68 135 255)" }}
                     variant="contained"
                     startIcon={<DownloadIcon />}
                     onClick={handleDownloadButtonClick}
@@ -260,7 +261,7 @@ const Home = () => {
                       display: "flex",
                       justifyContent: "start",
                       alignItems: "center",
-                      color: "#00f8ff",
+                      color: "rgb(144 101 255)",
                       marginBottom: "1rem",
                     }}
                   >
@@ -294,7 +295,11 @@ const Home = () => {
                     gap: "2rem",
                   }}
                 >
-                  <Button variant="contained" startIcon={<DownloadIcon />}>
+                  <Button
+                    variant="contained"
+                    style={{ backgroundColor: "rgb(68 135 255)" }}
+                    startIcon={<DownloadIcon />}
+                  >
                     Download CV
                   </Button>
                   <Button variant="outlined" startIcon={<CallIcon />}>
