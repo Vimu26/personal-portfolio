@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   TextField,
   Button,
@@ -37,7 +37,6 @@ const Contact = () => {
 
   const handleSubmit = () => {
     const { Fname, Lname, email, pno, message } = formData;
-    // Check if any required field is empty
     if (
       Fname.trim() === "" ||
       Lname.trim() === "" ||
@@ -45,7 +44,6 @@ const Contact = () => {
       pno.trim() === "" ||
       message.trim() === ""
     ) {
-      // Set errors for all empty required fields
       setFormErrors({
         Fname: Fname.trim() === "",
         Lname: Lname.trim() === "",
@@ -55,6 +53,7 @@ const Contact = () => {
       });
       return;
     }
+
     const subject = "Mail from Portfolio website";
     const to = "akalankavimukthi2@gmail.com";
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(
@@ -71,11 +70,15 @@ const Contact = () => {
     setSnackbarOpen(false);
   };
 
-  // Check overall form validity
-  React.useEffect(() => {
-    const isValid = Object.values(formErrors).every((error) => !error);
+  useEffect(() => {
+    const isValid =
+      formData.Fname.trim() !== "" &&
+      formData.Lname.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.pno.trim() !== "" &&
+      formData.message.trim() !== "";
     setFormValid(isValid);
-  }, [formErrors]);
+  }, [formData]);
 
   return (
     <Container
@@ -89,18 +92,12 @@ const Contact = () => {
     >
       <Typography
         variant="h4"
-        align={"center"}
+        align="center"
         style={{ color: "cornflowerblue" }}
       >
         <b>Contact Me</b>
       </Typography>
-      <Typography
-        variant="subtitle1"
-        align={"center"}
-        sx={{
-          color: "grey",
-        }}
-      >
+      <Typography variant="subtitle1" align="center" sx={{ color: "grey" }}>
         Need to Hire? Please Feel Free to send a Message <br />
         I'll get Touch with you as Soon as Possible.
       </Typography>
@@ -119,6 +116,11 @@ const Contact = () => {
               onChange={handleChange}
               error={formErrors.Fname}
               helperText={formErrors.Fname && "First Name is required"}
+              sx={{
+                "& .MuiOutlinedInput-root.Mui-focused": {
+                  borderColor: "cornflowerblue",
+                },
+              }}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -133,6 +135,11 @@ const Contact = () => {
               onChange={handleChange}
               error={formErrors.Lname}
               helperText={formErrors.Lname && "Last Name is required"}
+              sx={{
+                "& .MuiOutlinedInput-root.Mui-focused": {
+                  borderColor: "cornflowerblue",
+                },
+              }}
             />
           </Grid>
         </Grid>
@@ -151,6 +158,11 @@ const Contact = () => {
               onChange={handleChange}
               error={formErrors.email}
               helperText={formErrors.email && "Email is required"}
+              sx={{
+                "& .MuiOutlinedInput-root.Mui-focused": {
+                  borderColor: "cornflowerblue",
+                },
+              }}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -160,12 +172,17 @@ const Contact = () => {
               variant="outlined"
               fullWidth
               required
-              type="number"
+              type="tel"
               margin="normal"
               value={formData.pno}
               onChange={handleChange}
               error={formErrors.pno}
               helperText={formErrors.pno && "Contact Number is required"}
+              sx={{
+                "& .MuiOutlinedInput-root.Mui-focused": {
+                  borderColor: "cornflowerblue",
+                },
+              }}
             />
           </Grid>
         </Grid>
@@ -183,6 +200,11 @@ const Contact = () => {
           onChange={handleChange}
           error={formErrors.message}
           helperText={formErrors.message && "Message is required"}
+          sx={{
+            "& .MuiOutlinedInput-root.Mui-focused": {
+              borderColor: "cornflowerblue",
+            },
+          }}
         />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Button
@@ -190,19 +212,12 @@ const Contact = () => {
               width: "100%",
               height: "4rem",
               marginTop: "0.6rem",
-              backgroundColor: "rgb(68 135 255)",
+              backgroundColor: "rgb(68, 135, 255)",
             }}
             variant="contained"
             onClick={handleSubmit}
             endIcon={<SendIcon />}
-            disabled={
-              !formValid &&
-              (formData.Fname.trim() === "" ||
-                formData.Lname.trim() === "" ||
-                formData.email.trim() === "" ||
-                formData.pno.trim() === "" ||
-                formData.message.trim() === "")
-            }
+            disabled={!formValid}
           >
             <b>Send</b>
           </Button>
