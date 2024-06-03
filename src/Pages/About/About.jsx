@@ -21,7 +21,7 @@ const About = () => {
     >
       <Grid
         container
-        spacing={2}
+        // spacing={2}
         sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}
       >
         {!isSmallScreen && (
@@ -43,7 +43,7 @@ const About = () => {
           <div
             style={{
               textAlign: isSmallScreen ? "center" : "match-parent",
-              paddingBottom: "6rem",
+              // paddingBottom: "2rem",
             }}
           >
             <Typography
@@ -168,7 +168,7 @@ const About = () => {
                 <div
                   style={{
                     fontFamily: "fantasy",
-                    fontSize: "1.3rem",
+                    fontSize: "1.13rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
                   }}

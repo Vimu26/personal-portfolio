@@ -42,7 +42,6 @@ const Home = () => {
     anchorElement.href =
       "https://drive.google.com/file/d/1cJ4ANWS5KQXe1o1wzpsS1uW_0TpLc-Ap/view?usp=drive_link";
     anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
-    anchorElement.target = "_blank"; // Open in a new tab
     document.body.appendChild(anchorElement);
     anchorElement.click();
     document.body.removeChild(anchorElement);
@@ -55,6 +54,9 @@ const Home = () => {
         color: theme.palette.text.primary,
         paddingBottom: "6rem",
         paddingTop: "2rem",
+        overflow: "hidden",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Container
@@ -70,7 +72,7 @@ const Home = () => {
         >
           <Grid
             container
-            spacing={2}
+            // spacing={2}
             sx={{
               width: "100%",
               alignItems: "center",
@@ -78,7 +80,7 @@ const Home = () => {
             }}
           >
             {!isSmallScreen && (
-              <Grid item xs={12} sm={7} style={{}}>
+              <Grid item xs={12} sm={7}>
                 <div
                   style={{
                     fontFamily: "sans-serif",
@@ -188,6 +190,14 @@ const Home = () => {
                     <FacebookIcon />
                   </IconButton>
                   <IconButton
+                    aria-label="link"
+                    onClick={() => {
+                      window.open("https://github.com/Vimu26", "_blank");
+                    }}
+                  >
+                    <GitHubIcon />
+                  </IconButton>
+                  <IconButton
                     color="primary"
                     aria-label="link"
                     onClick={() => {
@@ -201,14 +211,6 @@ const Home = () => {
                   </IconButton>
                   <IconButton
                     aria-label="link"
-                    onClick={() => {
-                      window.open("https://github.com/Vimu26", "_blank");
-                    }}
-                  >
-                    <GitHubIcon />
-                  </IconButton>
-                  <IconButton
-                    aria-label="link"
                     onClick={handleEmailButtonClick}
                   >
                     <EmailIcon />
@@ -217,7 +219,12 @@ const Home = () => {
               </Grid>
             )}
             {isSmallScreen && (
-              <Grid item xs={12} sm={6} style={{ paddingTop: "2rem" }}>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                style={{ paddingTop: "2rem", width: "100%" }}
+              >
                 <div
                   style={{
                     display: "flex",
@@ -246,7 +253,7 @@ const Home = () => {
                 <div
                   style={{
                     display: "flex",
-                    justifyContent: isSmallScreen ? "center" : "start",
+                    justifyContent: "center",
                     alignItems: "center",
                     textAlign: "center",
                   }}
@@ -291,18 +298,23 @@ const Home = () => {
                     paddingTop: "1rem",
                     textAlign: "center",
                     display: "flex",
-                    justifyContent: "center",
-                    gap: "2rem",
+                    justifyContent: "space-between",
+                    gap: 4,
                   }}
                 >
                   <Button
                     variant="contained"
                     style={{ backgroundColor: "rgb(68 135 255)" }}
                     startIcon={<DownloadIcon />}
+                    onClick={handleDownloadButtonClick}
                   >
                     Download CV
                   </Button>
-                  <Button variant="outlined" startIcon={<CallIcon />}>
+                  <Button
+                    variant="outlined"
+                    startIcon={<CallIcon />}
+                    onClick={goToContactSection}
+                  >
                     Contact Me
                   </Button>
                 </div>
@@ -324,6 +336,14 @@ const Home = () => {
                     <FacebookIcon />
                   </IconButton>
                   <IconButton
+                    aria-label="link"
+                    onClick={() => {
+                      window.open("https://github.com/Vimu26", "_blank");
+                    }}
+                  >
+                    <GitHubIcon />
+                  </IconButton>
+                  <IconButton
                     color="primary"
                     aria-label="link"
                     onClick={() => {
@@ -334,14 +354,6 @@ const Home = () => {
                     }}
                   >
                     <LinkedInIcon />
-                  </IconButton>
-                  <IconButton
-                    aria-label="link"
-                    onClick={() => {
-                      window.open("https://github.com/Vimu26", "_blank");
-                    }}
-                  >
-                    <GitHubIcon />
                   </IconButton>
                   <IconButton
                     aria-label="link"
@@ -358,7 +370,7 @@ const Home = () => {
                 src="https://r2.erweima.ai/imgcompressed/compressed_46c4b22d420b61d8e93934c35a64586b.webp"
                 alt=""
                 style={{
-                  width: "90%",
+                  width: "100%",
                   height: "100%",
                   display: "block",
                   margin: "auto",

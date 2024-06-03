@@ -6,12 +6,13 @@ const Footer = () => {
     <div
       style={{
         backgroundColor: "cornflowerblue",
-        height: "3rem",
+        height: "4rem",
         display: "flex",
         justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      <Typography variant="body2" align="center" style={{ marginTop: "1rem" }}>
+      <Typography variant="body2" align="center" style={{ margin: "1rem" }}>
         &copy; {new Date().getFullYear()} Akalanka Vimukthi Rathnayake. All
         rights reserved.
       </Typography>

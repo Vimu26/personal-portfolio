@@ -21,7 +21,14 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <div style={{ position: "relative", top: "5rem" }} id="home">
+        <div
+          style={{
+            position: "relative",
+            paddingTop: "5rem",
+            overflow: "hidden",
+          }}
+          id="home"
+        >
           <Home darkMode={darkMode} />
           <div id="about">
             <About />
