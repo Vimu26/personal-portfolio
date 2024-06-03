@@ -10,10 +10,10 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 
-const Header = ({ darkMode, toggleDarkMode, location }) => {
+const Header = ({ toggleDarkMode }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,27 +23,35 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
   };
 
   const scrollToSection = (id) => {
-    if (id === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: id === "skills" ? (isSmallScreen ? "start" : "end") : "center",
-        });
+    setIsMenuOpen(false);
+    setTimeout(() => {
+      if (id === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block:
+              id === "skills" ? (isSmallScreen ? "start" : "end") : "center",
+          });
+        }
       }
-    }
+    }, 300);
   };
 
   return (
     <div
       style={{
         position: "fixed",
-        width: "100%",
+        width: "100vw",
         zIndex: 10,
-        padding: "2rem 1.4rem 0rem 1.4rem",
+        height: 80,
+        display: "flex",
+        alignItems: "center",
+        paddingLeft: "1.4rem",
         backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
+        top: 0,
       }}
     >
       <Box sx={{ flexGrow: 1 }}>
@@ -64,7 +72,7 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
             <Grid item xs={6} sm={7} md={7} lg={7}>
               <Grid container justifyContent="space-evenly" spacing={2}>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Link
+                  <RouterLink
                     component="button"
                     underline="none"
                     onClick={() => scrollToSection("home")}
@@ -75,10 +83,10 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     }}
                   >
                     <b>Home</b>
-                  </Link>
+                  </RouterLink>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Link
+                  <RouterLink
                     underline="none"
                     onClick={() => scrollToSection("about")}
                     style={{
@@ -88,10 +96,10 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     }}
                   >
                     <b>About</b>
-                  </Link>
+                  </RouterLink>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Link
+                  <RouterLink
                     underline="none"
                     onClick={() => scrollToSection("skills")}
                     style={{
@@ -101,10 +109,10 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     }}
                   >
                     <b>Skills</b>
-                  </Link>
+                  </RouterLink>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Link
+                  <RouterLink
                     underline="none"
                     onClick={() => scrollToSection("projects")}
                     style={{
@@ -114,10 +122,10 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     }}
                   >
                     <b>Projects</b>
-                  </Link>
+                  </RouterLink>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0" }}>
-                  <Link
+                  <RouterLink
                     underline="none"
                     onClick={() => scrollToSection("contact")}
                     style={{
@@ -127,7 +135,7 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
                     }}
                   >
                     <b>Contact</b>
-                  </Link>
+                  </RouterLink>
                 </Grid>
                 <Grid item style={{ paddingLeft: "0", marginTop: "-8px" }}>
                   <IconButton
@@ -163,9 +171,11 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
       </Box>
 
       <Drawer
-        style={{
-          backgroundColor:
-            theme.palette.mode === "light" ? "#ffffff" : "#292828",
+        PaperProps={{
+          sx: {
+            backgroundColor:
+              theme.palette.mode === "light" ? "#ffffff" : "#292828",
+          },
         }}
         anchor="right"
         open={isMenuOpen}
@@ -180,10 +190,6 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
           }}
           onClick={toggleMenu}
           onKeyDown={toggleMenu}
-          style={{
-            backgroundColor:
-              theme.palette.mode === "light" ? "#ffffff" : "#292828",
-          }}
         >
           <IconButton
             color="inherit"
@@ -194,7 +200,7 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
             <CancelOutlinedIcon />
           </IconButton>
           <Stack direction="column" spacing={2}>
-            <Link
+            <RouterLink
               onClick={() => scrollToSection("home")}
               style={{
                 textDecoration: "none",
@@ -204,8 +210,8 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               }}
             >
               <b>Home</b>
-            </Link>
-            <Link
+            </RouterLink>
+            <RouterLink
               onClick={() => scrollToSection("about")}
               style={{
                 textDecoration: "none",
@@ -215,8 +221,8 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               }}
             >
               <b>About</b>
-            </Link>
-            <Link
+            </RouterLink>
+            <RouterLink
               onClick={() => scrollToSection("skills")}
               style={{
                 textDecoration: "none",
@@ -226,8 +232,8 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               }}
             >
               <b>Skills</b>
-            </Link>
-            <Link
+            </RouterLink>
+            <RouterLink
               onClick={() => scrollToSection("projects")}
               style={{
                 textDecoration: "none",
@@ -237,8 +243,8 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               }}
             >
               <b>Projects</b>
-            </Link>
-            <Link
+            </RouterLink>
+            <RouterLink
               onClick={() => scrollToSection("contact")}
               style={{
                 textDecoration: "none",
@@ -248,7 +254,7 @@ const Header = ({ darkMode, toggleDarkMode, location }) => {
               }}
             >
               <b>Contact</b>
-            </Link>
+            </RouterLink>
             <IconButton onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
               <Brightness4Icon />
             </IconButton>
