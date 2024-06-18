@@ -329,7 +329,7 @@ const Skills = () => {
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
-                                    Trainee Software Engineer
+                                    <b>Trainee Software Engineer</b>
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
                                     Echonlabs (PVT) LTD | (2024 Mar - Present)
@@ -374,7 +374,7 @@ const Skills = () => {
                               >
                                 <CardContent>
                                   <Typography variant="h6" gutterBottom>
-                                    Trainee Software Engineer
+                                    <b>Trainee Software Engineer (Part-Time)</b>
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
                                     Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
@@ -387,7 +387,7 @@ const Skills = () => {
                             </Grid>
                           </Grid>
 
-                          <Grid
+                          {/* <Grid
                             container
                             spacing={2}
                             style={{ marginBottom: "1rem" }}
@@ -435,7 +435,7 @@ const Skills = () => {
                                 </CardContent>
                               </Card>
                             </Grid>
-                          </Grid>
+                          </Grid> */}
                         </Stack>
                         <div
                           style={{
@@ -471,7 +471,7 @@ const Skills = () => {
                         >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
-                              Trainee Software Engineer
+                              <b>Trainee Software Engineer</b>
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               Echonlabs (PVT) LTD | (2024 Mar - Present)
@@ -493,7 +493,7 @@ const Skills = () => {
                         >
                           <CardContent>
                             <Typography variant="h6" gutterBottom>
-                              Trainee Software Engineer
+                              <b>Trainee Software Engineer (Part-Time)</b>
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
@@ -503,7 +503,7 @@ const Skills = () => {
                             </Typography>
                           </CardContent>
                         </Card>
-                        <Card
+                        {/* <Card
                           variant="outlined"
                           style={{
                             marginTop: "1rem",
@@ -526,7 +526,7 @@ const Skills = () => {
                               the client
                             </Typography>
                           </CardContent>
-                        </Card>
+                        </Card> */}
                       </Stack>
                       <div
                         style={{
@@ -611,7 +611,7 @@ const Skills = () => {
                                 >
                                   <CardContent>
                                     <Typography variant="h6" gutterBottom>
-                                      Undergraduate Student
+                                      <b>Undergraduate Student</b>
                                     </Typography>
                                     <Typography variant="body1" gutterBottom>
                                       University of Sri Jayawardenapura ,
@@ -657,7 +657,7 @@ const Skills = () => {
                                 >
                                   <CardContent>
                                     <Typography variant="h6" gutterBottom>
-                                      G.C.E Advanced Level Examination
+                                      <b>G.C.E Advanced Level Examination</b>
                                     </Typography>
                                     <Typography variant="body1" gutterBottom>
                                       D.S.Senanayake College - Colombo 07,
@@ -666,6 +666,52 @@ const Skills = () => {
                                     <Typography variant="body1">
                                       Physical Science Stream - 2B's (Combined
                                       Mathematics & Chemistry) 1C (Physics)
+                                    </Typography>
+                                  </CardContent>
+                                </Card>
+                              </Grid>
+                            </Grid>
+                            <Grid container spacing={2}>
+                              <Grid
+                                item
+                                xs={1}
+                                style={{
+                                  paddingLeft: "0",
+                                  display: "flex",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <Divider
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    alignItems: "center",
+                                  }}
+                                ></Divider>
+                              </Grid>
+                              <Grid item xs={10} style={{ paddingLeft: "0" }}>
+                                <Card
+                                  variant="outlined"
+                                  style={{
+                                    marginTop: "1rem",
+                                    maxWidth: isSmallScreen ? "95%" : "100%",
+                                    backgroundColor:
+                                      theme.palette.mode === "dark"
+                                        ? "#292828"
+                                        : "#ffffff",
+                                  }}
+                                >
+                                  <CardContent>
+                                    <Typography variant="h6" gutterBottom>
+                                      <b>G.C.E Ordinary Level Examination</b>
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom>
+                                      D.S.Senanayake College - Colombo 07,
+                                      SriLanka | (2014 - 2015)
+                                    </Typography>
+                                    <Typography variant="body1">
+                                      9 A's (Including Information &
+                                      Communication Technology)
                                     </Typography>
                                   </CardContent>
                                 </Card>
@@ -700,7 +746,7 @@ const Skills = () => {
                           <Card
                             variant="outlined"
                             style={{
-                              maxWidth: isSmallScreen ? "95%" : "100%",
+                              maxWidth: "100%",
                               backgroundColor:
                                 theme.palette.mode === "dark"
                                   ? "#292828"
@@ -709,7 +755,7 @@ const Skills = () => {
                           >
                             <CardContent>
                               <Typography variant="h6" gutterBottom>
-                                Undergraduate Student
+                                <b>Undergraduate Student</b>
                               </Typography>
                               <Typography variant="body1" gutterBottom>
                                 University of Sri Jayawardenapura , SriLanka |
@@ -724,7 +770,7 @@ const Skills = () => {
                             variant="outlined"
                             style={{
                               marginTop: "1rem",
-                              maxWidth: isSmallScreen ? "95%" : "100%",
+                              maxWidth: "100%",
                               backgroundColor:
                                 theme.palette.mode === "dark"
                                   ? "#292828"
@@ -733,7 +779,7 @@ const Skills = () => {
                           >
                             <CardContent>
                               <Typography variant="h6" gutterBottom>
-                                G.C.E Advanced Level Examination
+                                <b>G.C.E Advanced Level Examination</b>
                               </Typography>
                               <Typography variant="body1" gutterBottom>
                                 D.S.Senanayake College - Colombo 07, SriLanka |
@@ -742,6 +788,31 @@ const Skills = () => {
                               <Typography variant="body1">
                                 Physical Science Stream - 2B's (Combined
                                 Mathematics & Chemistry) 1C (Physics)
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                          <Card
+                            variant="outlined"
+                            style={{
+                              marginTop: "1rem",
+                              maxWidth: "100%",
+                              backgroundColor:
+                                theme.palette.mode === "dark"
+                                  ? "#292828"
+                                  : "#ffffff",
+                            }}
+                          >
+                            <CardContent>
+                              <Typography variant="h6" gutterBottom>
+                                <b>G.C.E Ordinary Level Examination</b>
+                              </Typography>
+                              <Typography variant="body1" gutterBottom>
+                                D.S.Senanayake College - Colombo 07, SriLanka |
+                                (2014 - 2015)
+                              </Typography>
+                              <Typography variant="body1">
+                                9 A's (Including Information & Communication
+                                Technology)
                               </Typography>
                             </CardContent>
                           </Card>
