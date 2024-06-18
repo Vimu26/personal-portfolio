@@ -19,28 +19,37 @@ const Projects = () => {
 
   const slides = [
     {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-      title: "Lizard1",
-      link: "www.google.com",
+      image: require("../../assets/images/projects/foddie.png"),
+      title: "Foodie",
+      link: "https://github.com/Vimu26/Foodie",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "This is a Web application for Restaurants, Restaurant owners can add their restaurant here including their dishes with dish categories and Customers can order food. (2023 - present)",
+      stack: "Angular , Bootstrap ExpressJS , MongoDB , FireBase",
+      video:
+        "https://drive.google.com/file/d/17EHjLkvYFCYKigixvABBXFObn2ayRXy_/view?usp=sharing",
+      objectFit: "fill",
     },
     {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-      title: "Lizard2",
-      link: "www.google.com",
+      image: require("../../assets/images/projects/sociafy img.png"),
+      title: "Sociafy",
+      link: "https://github.com/Vimu26/sociafy-react-app",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "This is a Social Media web application that users can add or remove friends , add posts , like , comment to posts. (2024-present) ",
+      stack: "React , ExpressJS , MongoDB , REDUX , MUI",
+      video:
+        "https://drive.google.com/file/d/1ksbmrYmDjmmprLW7wkIPSY_zsn2L568D/view?usp=drive_link",
+      objectFit: "fill",
     },
     {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-      title: "Lizard3",
-      link: "www.google.com",
+      image: require("../../assets/images/projects/mobile app.png"),
+      title: "Rent a Car Mobile App",
+      link: "https://github.com/Vimu26/Rent-a-Car-Mobile-App",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "This is a Mobile application for rent car community , Customers can select their own cars (2024 - present)",
+      stack: "React Native , NestJs , MongoDB",
+      video:
+        "https://drive.google.com/file/d/1Q53pCGOB9yuC9vFaPoKBrLnnsahJIlIF/view?usp=drive_link",
+      objectFit: "contain",
     },
     {
       image:
@@ -49,6 +58,7 @@ const Projects = () => {
       link: "www.google.com",
       description:
         "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      stack: " 1234",
     },
     {
       image:
@@ -57,6 +67,7 @@ const Projects = () => {
       link: "www.google.com",
       description:
         "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      stack: " 1234",
     },
     {
       image:
@@ -65,6 +76,7 @@ const Projects = () => {
       link: "www.google.com",
       description:
         "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      stack: " 1234",
     },
     {
       image:
@@ -73,10 +85,11 @@ const Projects = () => {
       link: "www.google.com",
       description:
         "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      stack: " 1234",
     },
   ];
 
-  const handleGitHubClick = (link) => {
+  const handleClick = (link) => {
     if (!/^https?:\/\//i.test(link)) {
       link = `http://${link}`;
     }
@@ -150,26 +163,43 @@ const Projects = () => {
                 component="img"
                 height="300"
                 image={slide.image}
+                style={{
+                  objectFit: slide.objectFit,
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
                 alt=""
               />
-              <CardContent style={{ height: "103px" }}>
+              <CardContent style={{ height: "160px" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
                   style={{
-                    color: theme.palette.mode === "dark" ? "#ffffff" : "black",
+                    color: "cornflowerblue",
                   }}
                 >
-                  {slide.title}
+                  <b>{slide.title}</b>
                 </Typography>
                 <Typography
-                  variant="body2"
+                  variant="body1"
                   style={{
-                    color: theme.palette.mode === "dark" ? "#ffffff" : "black",
+                    color:
+                      theme.palette.mode === "dark" ? "#ffffff" : "#575757",
+                    marginBottom: 10,
                   }}
                 >
                   {slide.description}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  style={{
+                    color: "rgb(144, 101, 255)",
+                  }}
+                >
+                  Technologies : {slide.stack}
                 </Typography>
               </CardContent>
               {!isSmallScreen ? (
@@ -177,18 +207,18 @@ const Projects = () => {
                   style={{ display: "flex", justifyContent: "space-evenly" }}
                 >
                   <Button
-                    style={{ width: "40%" }}
+                    style={{ width: "45%" }}
                     variant="outlined"
                     // color="rgb(68 135 255)"
-                    onClick={() => handleGitHubClick(slide.link)}
+                    onClick={() => handleClick(slide.link)}
                     startIcon={<GitHubIcon />}
                   >
                     Go to GitHub
                   </Button>
                   <Button
-                    style={{ width: "40%", backgroundColor: "rgb(68 135 255)" }}
+                    style={{ width: "45%", backgroundColor: "rgb(68 135 255)" }}
                     variant="contained"
-                    onClick={() => handleGitHubClick(slide.link)}
+                    onClick={() => handleClick(slide.video)}
                     startIcon={<PreviewIcon />}
                   >
                     Watch Video
@@ -201,7 +231,7 @@ const Projects = () => {
                   <IconButton
                     aria-label="github"
                     size="large"
-                    onClick={() => handleGitHubClick(slide.link)}
+                    onClick={() => handleClick(slide.link)}
                     color="primary"
                   >
                     <GitHubIcon fontSize="inherit" />
@@ -209,7 +239,7 @@ const Projects = () => {
                   <IconButton
                     aria-label="preview"
                     size="large"
-                    onClick={() => handleGitHubClick(slide.link)}
+                    onClick={() => handleClick(slide.video)}
                     color="primary"
                   >
                     <PreviewIcon fontSize="inherit" />
