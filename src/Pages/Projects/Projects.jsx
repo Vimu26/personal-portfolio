@@ -34,7 +34,7 @@ const Projects = () => {
       title: "Sociafy",
       link: "https://github.com/Vimu26/sociafy-react-app",
       description:
-        "This is a Social Media web application that users can add or remove friends , add posts , like , comment to posts. (2024-present) ",
+        "This is a Social Media web application that users can add or remove friends , add new posts , like and comment to posts. (2024-present) ",
       stack: "React , ExpressJS , MongoDB , REDUX , MUI",
       video:
         "https://drive.google.com/file/d/1ksbmrYmDjmmprLW7wkIPSY_zsn2L568D/view?usp=drive_link",
@@ -52,13 +52,15 @@ const Projects = () => {
       objectFit: "contain",
     },
     {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-      title: "Lizard4",
-      link: "www.google.com",
+      image: require("../../assets/images/projects/emp man img.png"),
+      title: "Employee Management System",
+      link: "https://github.com/Vimu26/Employ-Management-System",
+      video:
+        "https://drive.google.com/file/d/1sS7WbvuWNKvdvDaKqSQOSMQpcArM-Zaq/view?usp=sharing",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-      stack: " 1234",
+        "This is a Web Application that manages Employees in a company ,  Admin can add , edit , delete and create and view users according to their details ",
+      stack: "React , MUI , ExpressJS , MySQL",
+      objectFit: "contain",
     },
     {
       image:
@@ -172,7 +174,7 @@ const Projects = () => {
                 }}
                 alt=""
               />
-              <CardContent style={{ height: "160px" }}>
+              <CardContent style={{ height: "220px" }}>
                 <Typography
                   gutterBottom
                   variant="h5"

@@ -298,8 +298,8 @@ const Home = () => {
                     paddingTop: "1rem",
                     textAlign: "center",
                     display: "flex",
-                    justifyContent: "space-between",
-                    gap: 4,
+                    justifyContent: "center",
+                    gap: 20,
                   }}
                 >
                   <Button

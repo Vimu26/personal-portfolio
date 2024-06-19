@@ -377,7 +377,7 @@ const Skills = () => {
                                     <b>Trainee Software Engineer (Part-Time)</b>
                                   </Typography>
                                   <Typography variant="body1" gutterBottom>
-                                    Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
+                                    Echonlabs (PVT) LTD | (2023 Feb - 2024 Feb)
                                   </Typography>
                                   <Typography variant="body1">
                                     Worked as a Trainee Software Engineer
@@ -496,7 +496,7 @@ const Skills = () => {
                               <b>Trainee Software Engineer (Part-Time)</b>
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                              Echonlabs (PVT) LTD | (2023 Jan - 2023 Feb)
+                              Echonlabs (PVT) LTD | (2023 Feb - 2024 Feb)
                             </Typography>
                             <Typography variant="body1">
                               Worked as a Trainee Software Engineer
