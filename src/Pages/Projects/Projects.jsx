@@ -46,7 +46,7 @@ const Projects = () => {
       link: "https://github.com/Vimu26/Rent-a-Car-Mobile-App",
       description:
         "This is a Mobile application for rent car community , Customers can select their own cars (2024 - present)",
-      stack: "React Native , NestJs , MongoDB",
+      stack: "React Native , Typescript , NestJs , MongoDB",
       video:
         "https://drive.google.com/file/d/1Q53pCGOB9yuC9vFaPoKBrLnnsahJIlIF/view?usp=drive_link",
       objectFit: "contain",
@@ -63,32 +63,34 @@ const Projects = () => {
       objectFit: "contain",
     },
     {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-      title: "Lizard5",
-      link: "www.google.com",
+      image: require("../../assets/images/projects/rock img.png"),
+      title: "Rock Paper Scissors",
+      link: "https://github.com/Vimu26/Rock-Paper-Scissors---JS",
       description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-      stack: " 1234",
+        "This is a App for play the game named as rock paper scissors,  anyone can play this game with the compute , and the score is displaying on the screen (2023)",
+      stack: "HTML , CSS , Javascript",
+      video:
+        "https://drive.google.com/file/d/1QeTgbbQT--Gsl_kRugZT4pUAo_uepyCH/view?usp=sharing",
+      objectFit: "fill",
     },
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-      title: "Lizard6",
-      link: "www.google.com",
-      description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-      stack: " 1234",
-    },
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-      title: "Lizard7",
-      link: "www.google.com",
-      description:
-        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-      stack: " 1234",
-    },
+    // {
+    //   // image:
+    //   //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
+    //   title: "Book Store",
+    //   link: "www.google.com",
+    //   description:
+    //     "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    //   stack: " 1234",
+    // },
+    // {
+    //   // image:
+    //   //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
+    //   title: "Book Store",
+    //   link: "www.google.com",
+    //   description:
+    //     "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    //   stack: " 1234",
+    // },
   ];
 
   const handleClick = (link) => {
@@ -161,20 +163,22 @@ const Projects = () => {
                   theme.palette.mode === "dark" ? "rgb(29 29 29)" : "#ffffff",
               }}
             >
-              <CardMedia
-                component="img"
-                height="300"
-                image={slide.image}
-                style={{
-                  objectFit: slide.objectFit,
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                alt=""
-              />
-              <CardContent style={{ height: "220px" }}>
+              {slide.image ? (
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={slide.image}
+                  style={{
+                    objectFit: slide.objectFit,
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  alt=""
+                />
+              ) : null}
+              <CardContent style={{ minHeight: "160px" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
