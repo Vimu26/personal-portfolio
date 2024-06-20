@@ -72,13 +72,24 @@ const About = () => {
               products.
             </Typography>
             <Grid container>
-              <Grid item xs={4}>
+              <Grid
+                item
+                xs={4}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <Typography
                   variant="body1"
                   sx={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                     color: theme.palette.text.primary,
                   }}
                 >
@@ -89,10 +100,13 @@ const About = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   Akalanka Vimukthi Rathnayake
@@ -100,13 +114,24 @@ const About = () => {
               </Grid>
             </Grid>
             <Grid container>
-              <Grid item xs={4}>
+              <Grid
+                item
+                xs={4}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <div
                   style={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                     color: theme.palette.text.primary,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   Date of Birth
@@ -115,10 +140,13 @@ const About = () => {
               <Grid item xs={8}>
                 <div
                   style={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   2000.01.26
@@ -126,13 +154,24 @@ const About = () => {
               </Grid>
             </Grid>
             <Grid container>
-              <Grid item xs={4}>
+              <Grid
+                item
+                xs={4}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <div
                   style={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                     color: theme.palette.text.primary,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   Address
@@ -141,10 +180,13 @@ const About = () => {
               <Grid item xs={8}>
                 <div
                   style={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   67/9B , Woodland av, Kalubowila , Dehiwala , SriLanka
@@ -152,13 +194,25 @@ const About = () => {
               </Grid>
             </Grid>
             <Grid container>
-              <Grid item xs={2} sm={4}>
+              <Grid
+                item
+                xs={2}
+                sm={4}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <div
                   style={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                     color: theme.palette.text.primary,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   Email
@@ -167,10 +221,13 @@ const About = () => {
               <Grid item xs={10} sm={8}>
                 <div
                   style={{
-                    fontFamily: "fantasy",
-                    fontSize: "1.13rem",
+                    fontFamily: "emoji",
+                    fontSize: isSmallScreen ? "1.12rem" : "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   akalankavimukthi2@gmail.com
@@ -178,13 +235,24 @@ const About = () => {
               </Grid>
             </Grid>
             <Grid container>
-              <Grid item xs={4}>
+              <Grid
+                item
+                xs={4}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <div
                   style={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     marginBottom: "1rem",
                     color: theme.palette.text.primary,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   Phone
@@ -193,10 +261,13 @@ const About = () => {
               <Grid item xs={8}>
                 <div
                   style={{
-                    fontFamily: "fantasy",
+                    fontFamily: "emoji",
                     fontSize: "1.3rem",
                     color: "cornflowerblue",
                     marginBottom: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   +94 77 459 6550
