@@ -40,7 +40,7 @@ const Home = () => {
   const handleDownloadButtonClick = () => {
     const anchorElement = document.createElement("a");
     anchorElement.href =
-      "https://drive.google.com/file/d/1cJ4ANWS5KQXe1o1wzpsS1uW_0TpLc-Ap/view?usp=drive_link";
+      "https://drive.google.com/file/d/1w-qFh3TcgR5TFr76uex__VZlXx6rqMdX/view?usp=sharing";
     anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
     document.body.appendChild(anchorElement);
     anchorElement.click();
