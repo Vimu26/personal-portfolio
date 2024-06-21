@@ -1,7 +1,7 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+// import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Grid, useMediaQuery, useTheme, Button } from "@mui/material";
@@ -23,33 +23,33 @@ const Projects = () => {
       title: "Foodie",
       link: "https://github.com/Vimu26/Foodie",
       description:
-        "This is a Web application for Restaurants, Restaurant owners can add their restaurant here including their dishes with dish categories and Customers can order food. (2023 - present)",
+        "This is a Web application for Restaurants, Restaurant owners can add their restaurant here including their dishes with dish categories and Customers can add or remove foods to cart and place orders for the food as their preferences ,as well as Riders can take orders and deliver food (2023 - present)",
       stack: "Angular , Bootstrap ExpressJS , MongoDB , FireBase",
       video:
         "https://drive.google.com/file/d/17EHjLkvYFCYKigixvABBXFObn2ayRXy_/view?usp=sharing",
-      objectFit: "fill",
+      objectFit: "fill"
     },
     {
       image: require("../../assets/images/projects/sociafy img.png"),
       title: "Sociafy",
       link: "https://github.com/Vimu26/sociafy-react-app",
       description:
-        "This is a Social Media web application that users can add or remove friends , add new posts , like and comment to posts. (2024-present) ",
+        "This is a Social Media web application that users can Communicate each other globally, users can add or remove friends. users are available to add new posts and those posts can see by all users and they can like or remove like and comment to posts as well. (2024-present) ",
       stack: "React , ExpressJS , MongoDB , REDUX , MUI",
       video:
         "https://drive.google.com/file/d/1ksbmrYmDjmmprLW7wkIPSY_zsn2L568D/view?usp=drive_link",
-      objectFit: "fill",
+      objectFit: "fill"
     },
     {
       image: require("../../assets/images/projects/mobile app.png"),
       title: "Rent a Car Mobile App",
       link: "https://github.com/Vimu26/Rent-a-Car-Mobile-App",
       description:
-        "This is a Mobile application for rent car community , Customers can select their own cars (2024 - present)",
+        "This is a Mobile application suitable for IOS and for Android Platforms, this is developed for rent car community , Users can select their own cars, add as favorites remove if not. (2024 - present)",
       stack: "React Native , Typescript , NestJs , MongoDB",
       video:
         "https://drive.google.com/file/d/1Q53pCGOB9yuC9vFaPoKBrLnnsahJIlIF/view?usp=drive_link",
-      objectFit: "contain",
+      objectFit: "contain"
     },
     {
       image: require("../../assets/images/projects/emp man img.png"),
@@ -58,9 +58,25 @@ const Projects = () => {
       video:
         "https://drive.google.com/file/d/1sS7WbvuWNKvdvDaKqSQOSMQpcArM-Zaq/view?usp=sharing",
       description:
-        "This is a Web Application that manages Employees in a company ,  Admin can add , edit , delete and create and view users according to their details ",
+        "This is a Web Application that manages Employees in a company , Admin can add , edit , delete and create and view and users according to their details ,Employee details of the company can be manages using this BackEnd application ",
       stack: "React , MUI , ExpressJS , MySQL",
-      objectFit: "contain",
+      objectFit: "contain"
+    },
+    {
+      image: require("../../assets/images/projects/book.jpg"),
+      title: "Book Store",
+      link: "https://github.com/Vimu26/Books-Store-api",
+      description:
+        "This is a BackEnd that manages books and their details in a book store , store owners can add their books to the web app and search  books and add books , edit book details and delete books (2024)",
+      stack: " NestJS , MongoDB"
+    },
+    {
+      image: require("../../assets/images/projects/contact.jpg"),
+      title: "Contact Manager App",
+      link: "https://github.com/Vimu26/contact-manger-app",
+      description:
+        "This is a BackEnd that manages Contacts of a specific user, users can save their contact and details in it , and search contacts , edit contact and details and delete contacts also available in this BackEnd application (2023)",
+      stack: " ExpressJs , MongoDB"
     },
     {
       image: require("../../assets/images/projects/rock img.png"),
@@ -71,26 +87,20 @@ const Projects = () => {
       stack: "HTML , CSS , Javascript",
       video:
         "https://drive.google.com/file/d/1QeTgbbQT--Gsl_kRugZT4pUAo_uepyCH/view?usp=sharing",
-      objectFit: "fill",
+      objectFit: "contain"
     },
-    // {
-    //   // image:
-    //   //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-    //   title: "Book Store",
-    //   link: "www.google.com",
-    //   description:
-    //     "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-    //   stack: " 1234",
-    // },
-    // {
-    //   // image:
-    //   //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyD446vRksw83BsovYbnyQGgYdWro8cLX8Q&s",
-    //   title: "Book Store",
-    //   link: "www.google.com",
-    //   description:
-    //     "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-    //   stack: " 1234",
-    // },
+    {
+      image: require("../../assets/images/projects/weather img.png"),
+      title: "Weather App",
+      link: "https://github.com/Vimu26/Weather-App",
+      description:
+        "This is a Web Application that see the real time weather details in a specific place in the world (2023)",
+      stack: "HTML , CSS , Javascript",
+      video:
+        "https://drive.google.com/file/d/1p5XDnzYX1xJ3a5Qem4k6ZSbcdRQm1rxh/view?usp=sharing",
+      objectFit: "contain"
+    },
+ 
   ];
 
   const handleClick = (link) => {
@@ -105,34 +115,34 @@ const Projects = () => {
       breakpoint: theme?.breakpoints?.values?.sm,
       cols: 1,
       rows: 1,
-      gap: 40,
+      gap: 40
     },
     {
       breakpoint: theme?.breakpoints?.values?.md,
       cols: 2,
       rows: 1,
-      gap: 60,
+      gap: 60
     },
     {
       breakpoint: theme?.breakpoints?.values?.lg,
       cols: 2,
       rows: 1,
-      gap: 60,
+      gap: 60
     },
     {
       breakpoint: theme?.breakpoints?.values?.xl,
       cols: 2,
       rows: 1,
-      gap: 60,
-    },
+      gap: 60
+    }
   ];
 
   return (
     <Container
       maxWidth="xl"
       style={{
-        paddingTop: "4rem",
-        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
+        paddingTop: "1rem",
+        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff"
       }}
     >
       <Grid container justifyContent="center" style={{ marginBottom: "2rem" }}>
@@ -160,10 +170,10 @@ const Projects = () => {
                 paddingBottom: "1rem",
                 marginBottom: "2rem",
                 backgroundColor:
-                  theme.palette.mode === "dark" ? "rgb(29 29 29)" : "#ffffff",
+                  theme.palette.mode === "dark" ? "rgb(29 29 29)" : "#ffffff"
               }}
             >
-              {slide.image ? (
+              {/* {slide.image ? (
                 <CardMedia
                   component="img"
                   height="300"
@@ -173,18 +183,18 @@ const Projects = () => {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
+                    alignItems: "center"
                   }}
                   alt=""
                 />
-              ) : null}
+              ) : null} */}
               <CardContent style={{ minHeight: "160px" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
                   style={{
-                    color: "cornflowerblue",
+                    color: "cornflowerblue"
                   }}
                 >
                   <b>{slide.title}</b>
@@ -194,7 +204,7 @@ const Projects = () => {
                   style={{
                     color:
                       theme.palette.mode === "dark" ? "#ffffff" : "#575757",
-                    marginBottom: 10,
+                    marginBottom: 10
                   }}
                 >
                   {slide.description}
@@ -202,7 +212,7 @@ const Projects = () => {
                 <Typography
                   variant="body1"
                   style={{
-                    color: "rgb(144, 101, 255)",
+                    color: "rgb(144, 101, 255)"
                   }}
                 >
                   Technologies : {slide.stack}
@@ -221,14 +231,19 @@ const Projects = () => {
                   >
                     Go to GitHub
                   </Button>
-                  <Button
-                    style={{ width: "45%", backgroundColor: "rgb(68 135 255)" }}
-                    variant="contained"
-                    onClick={() => handleClick(slide.video)}
-                    startIcon={<PreviewIcon />}
-                  >
-                    Watch Video
-                  </Button>
+                  {slide.video ? (
+                    <Button
+                      style={{
+                        width: "45%",
+                        backgroundColor: "rgb(68 135 255)"
+                      }}
+                      variant="contained"
+                      onClick={() => handleClick(slide.video)}
+                      startIcon={<PreviewIcon />}
+                    >
+                      Watch Video
+                    </Button>
+                  ) : null}
                 </CardActions>
               ) : (
                 <CardActions
