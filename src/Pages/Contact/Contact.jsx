@@ -5,7 +5,7 @@ import {
   Typography,
   Snackbar,
   Container,
-  useTheme,
+  useTheme
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import SendIcon from "@mui/icons-material/Send";
@@ -17,42 +17,86 @@ const Contact = () => {
     Lname: "",
     email: "",
     pno: "",
-    message: "",
+    message: ""
   });
   const [formErrors, setFormErrors] = useState({
-    Fname: false,
-    Lname: false,
-    email: false,
-    pno: false,
-    message: false,
+    Fname: "",
+    Lname: "",
+    email: "",
+    pno: "",
+    message: ""
   });
   const [formValid, setFormValid] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhoneNumber = (pno) => {
+    const phoneRegex = /^[0-9]{10}$/;
+    return phoneRegex.test(pno);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    setFormErrors({ ...formErrors, [name]: value.trim() === "" });
+
+    // Prevent non-numeric characters in contact number
+    if (name === "pno") {
+      const numericValue = value.replace(/[^0-9]/g, "");
+      setFormData({ ...formData, [name]: numericValue });
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    let errorMessage = "";
+
+    if (value.trim() === "") {
+      errorMessage = `${
+        name === "Fname"
+          ? "First Name"
+          : name === "Lname"
+          ? "Last Name"
+          : name === "pno"
+          ? "Contact Number"
+          : name.charAt(0).toUpperCase() + name.slice(1)
+      } is required`;
+    } else if (name === "email" && !validateEmail(value)) {
+      errorMessage = "Enter a valid email address";
+    } else if (name === "pno" && !validatePhoneNumber(value)) {
+      errorMessage = "Enter a valid 10-digit contact number";
+    }
+
+    setFormErrors({ ...formErrors, [name]: errorMessage });
   };
 
   const handleSubmit = () => {
     const { Fname, Lname, email, pno, message } = formData;
-    if (
-      Fname.trim() === "" ||
-      Lname.trim() === "" ||
-      email.trim() === "" ||
-      pno.trim() === "" ||
-      message.trim() === ""
-    ) {
-      setFormErrors({
-        Fname: Fname.trim() === "",
-        Lname: Lname.trim() === "",
-        email: email.trim() === "",
-        pno: pno.trim() === "",
-        message: message.trim() === "",
-      });
-      return;
-    }
+    const errors = {
+      Fname: Fname.trim() === "" ? "First Name is required" : "",
+      Lname: Lname.trim() === "" ? "Last Name is required" : "",
+      email:
+        email.trim() === ""
+          ? "Email is required"
+          : !validateEmail(email)
+          ? "Enter a valid email address"
+          : "",
+      pno:
+        pno.trim() === ""
+          ? "Contact Number is required"
+          : !validatePhoneNumber(pno)
+          ? "Enter a valid 10-digit contact number"
+          : "",
+      message: message.trim() === "" ? "Message is required" : ""
+    };
+
+    setFormErrors(errors);
+
+    const hasErrors = Object.values(errors).some((error) => error !== "");
+    if (hasErrors) return;
 
     const subject = "Mail from Portfolio website";
     const to = "akalankavimukthi2@gmail.com";
@@ -75,7 +119,9 @@ const Contact = () => {
       formData.Fname.trim() !== "" &&
       formData.Lname.trim() !== "" &&
       formData.email.trim() !== "" &&
+      validateEmail(formData.email) &&
       formData.pno.trim() !== "" &&
+      validatePhoneNumber(formData.pno) &&
       formData.message.trim() !== "";
     setFormValid(isValid);
   }, [formData]);
@@ -87,7 +133,7 @@ const Contact = () => {
         paddingTop: "6rem",
         paddingBottom: "4rem",
         backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
-        color: theme.palette.text.primary,
+        color: theme.palette.text.primary
       }}
     >
       <Typography
@@ -99,7 +145,7 @@ const Contact = () => {
       </Typography>
       <Typography variant="subtitle1" align="center" sx={{ color: "grey" }}>
         Need to Hire? Please Feel Free to send a Message <br />
-        I'll get Touch with you as Soon as Possible.
+        I'll get in touch with you as Soon as Possible.
       </Typography>
 
       <div style={{ padding: "20px" }}>
@@ -114,12 +160,13 @@ const Contact = () => {
               margin="normal"
               value={formData.Fname}
               onChange={handleChange}
-              error={formErrors.Fname}
-              helperText={formErrors.Fname && "First Name is required"}
+              onBlur={handleBlur}
+              error={!!formErrors.Fname}
+              helperText={formErrors.Fname}
               sx={{
                 "& .MuiOutlinedInput-root.Mui-focused": {
-                  borderColor: "cornflowerblue",
-                },
+                  borderColor: "cornflowerblue"
+                }
               }}
             />
           </Grid>
@@ -133,12 +180,13 @@ const Contact = () => {
               margin="normal"
               value={formData.Lname}
               onChange={handleChange}
-              error={formErrors.Lname}
-              helperText={formErrors.Lname && "Last Name is required"}
+              onBlur={handleBlur}
+              error={!!formErrors.Lname}
+              helperText={formErrors.Lname}
               sx={{
                 "& .MuiOutlinedInput-root.Mui-focused": {
-                  borderColor: "cornflowerblue",
-                },
+                  borderColor: "cornflowerblue"
+                }
               }}
             />
           </Grid>
@@ -156,12 +204,13 @@ const Contact = () => {
               margin="normal"
               value={formData.email}
               onChange={handleChange}
-              error={formErrors.email}
-              helperText={formErrors.email && "Email is required"}
+              onBlur={handleBlur}
+              error={!!formErrors.email}
+              helperText={formErrors.email}
               sx={{
                 "& .MuiOutlinedInput-root.Mui-focused": {
-                  borderColor: "cornflowerblue",
-                },
+                  borderColor: "cornflowerblue"
+                }
               }}
             />
           </Grid>
@@ -176,12 +225,14 @@ const Contact = () => {
               margin="normal"
               value={formData.pno}
               onChange={handleChange}
-              error={formErrors.pno}
-              helperText={formErrors.pno && "Contact Number is required"}
+              onBlur={handleBlur}
+              error={!!formErrors.pno}
+              helperText={formErrors.pno}
+              inputProps={{ maxLength: 10 }}
               sx={{
                 "& .MuiOutlinedInput-root.Mui-focused": {
-                  borderColor: "cornflowerblue",
-                },
+                  borderColor: "cornflowerblue"
+                }
               }}
             />
           </Grid>
@@ -198,12 +249,13 @@ const Contact = () => {
           margin="normal"
           value={formData.message}
           onChange={handleChange}
-          error={formErrors.message}
-          helperText={formErrors.message && "Message is required"}
+          onBlur={handleBlur}
+          error={!!formErrors.message}
+          helperText={formErrors.message}
           sx={{
             "& .MuiOutlinedInput-root.Mui-focused": {
-              borderColor: "cornflowerblue",
-            },
+              borderColor: "cornflowerblue"
+            }
           }}
         />
         <div style={{ display: "flex", justifyContent: "center" }}>
@@ -212,7 +264,7 @@ const Contact = () => {
               width: "100%",
               height: "4rem",
               marginTop: "0.6rem",
-              backgroundColor: "rgb(68, 135, 255)",
+              backgroundColor: "rgb(68, 135, 255)"
             }}
             variant="contained"
             onClick={handleSubmit}
