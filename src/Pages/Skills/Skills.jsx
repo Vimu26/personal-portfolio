@@ -22,7 +22,7 @@ const Skills = () => {
   const handleDownloadButtonClick = () => {
     const anchorElement = document.createElement("a");
     anchorElement.href =
-      "https://drive.google.com/file/d/1w-qFh3TcgR5TFr76uex__VZlXx6rqMdX/view?usp=sharing";
+      "https://drive.google.com/uc?export=download&id=11KJeIhrctYrW6Yl2EaqWMz7bRln82SN2";
     anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
     document.body.appendChild(anchorElement);
     anchorElement.click();
