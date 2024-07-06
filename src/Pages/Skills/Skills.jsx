@@ -22,7 +22,7 @@ const Skills = () => {
   const handleDownloadButtonClick = () => {
     const anchorElement = document.createElement("a");
     anchorElement.href =
-      "https://drive.google.com/uc?export=download&id=11KJeIhrctYrW6Yl2EaqWMz7bRln82SN2";
+      "https://drive.google.com/file/d/1O3KvvDZJENNNZdpzSthZttQ2ACIEqdy7/view?usp=sharing";
     anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
     document.body.appendChild(anchorElement);
     anchorElement.click();
@@ -34,7 +34,7 @@ const Skills = () => {
       maxWidth="xl"
       style={{
         paddingTop: "6rem",
-        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
+        backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff"
       }}
     >
       <Grid container spacing={2}>
@@ -44,7 +44,7 @@ const Skills = () => {
           sm={6}
           style={{
             marginBottom: "2rem",
-            display: "ruby",
+            display: "ruby"
           }}
         >
           <div style={{ marginBottom: "2rem" }}>
@@ -53,7 +53,7 @@ const Skills = () => {
               gutterBottom
               style={{
                 textAlign: isSmallScreen ? "center" : "match-parent",
-                color: "cornflowerblue",
+                color: "cornflowerblue"
               }}
             >
               <b>Skills & Experience</b>
@@ -71,7 +71,7 @@ const Skills = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              flexWrap: "wrap",
+              flexWrap: "wrap"
             }}
           >
             <div style={{ margin: "1rem " }}>
@@ -227,14 +227,14 @@ const Skills = () => {
                 flexGrow: 1,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center",
+                justifyContent: "center"
               }}
             >
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
+                  justifyContent: "center"
                 }}
               >
                 <Button
@@ -248,7 +248,7 @@ const Skills = () => {
                         ? "rgb(68, 135, 255)"
                         : null,
                     mr: 1,
-                    mb: 2,
+                    mb: 2
                   }}
                   onClick={() => onDecisionChange("EXPERIENCE")}
                   startIcon={<WorkIcon />}
@@ -265,7 +265,7 @@ const Skills = () => {
                       selectedDecision === "EDUCATION" && "contained"
                         ? "rgb(68, 135, 255)"
                         : null,
-                    mb: 2,
+                    mb: 2
                   }}
                   onClick={() => onDecisionChange("EDUCATION")}
                   startIcon={<SchoolIcon />}
@@ -283,7 +283,7 @@ const Skills = () => {
                             display: "flex",
                             justifyContent: "end",
                             alignItems: "center",
-                            height: "100%",
+                            height: "100%"
                           }}
                         >
                           <Divider
@@ -291,7 +291,7 @@ const Skills = () => {
                             variant="middle"
                             style={{
                               height: "80%",
-                              marginBottom: "65px",
+                              marginBottom: "65px"
                             }}
                           />
                         </div>
@@ -305,14 +305,14 @@ const Skills = () => {
                               style={{
                                 paddingLeft: "0",
                                 display: "flex",
-                                alignItems: "center",
+                                alignItems: "center"
                               }}
                             >
                               <Divider
                                 style={{
                                   width: "100%",
                                   display: "flex",
-                                  alignItems: "center",
+                                  alignItems: "center"
                                 }}
                               ></Divider>
                             </Grid>
@@ -324,7 +324,7 @@ const Skills = () => {
                                   backgroundColor:
                                     theme.palette.mode === "dark"
                                       ? "#292828"
-                                      : "#ffffff",
+                                      : "#ffffff"
                                 }}
                               >
                                 <CardContent>
@@ -350,14 +350,14 @@ const Skills = () => {
                               style={{
                                 paddingLeft: "0",
                                 display: "flex",
-                                alignItems: "center",
+                                alignItems: "center"
                               }}
                             >
                               <Divider
                                 style={{
                                   width: "100%",
                                   display: "flex",
-                                  alignItems: "center",
+                                  alignItems: "center"
                                 }}
                               ></Divider>
                             </Grid>
@@ -369,7 +369,7 @@ const Skills = () => {
                                   backgroundColor:
                                     theme.palette.mode === "dark"
                                       ? "#292828"
-                                      : "#ffffff",
+                                      : "#ffffff"
                                 }}
                               >
                                 <CardContent>
@@ -442,7 +442,7 @@ const Skills = () => {
                             marginTop: "1rem",
                             marginBottom: "2rem",
                             display: "flex",
-                            justifyContent: "center",
+                            justifyContent: "center"
                           }}
                         >
                           <Button
@@ -466,7 +466,7 @@ const Skills = () => {
                             backgroundColor:
                               theme.palette.mode === "dark"
                                 ? "#292828"
-                                : "#ffffff",
+                                : "#ffffff"
                           }}
                         >
                           <CardContent>
@@ -488,7 +488,7 @@ const Skills = () => {
                             backgroundColor:
                               theme.palette.mode === "dark"
                                 ? "#292828"
-                                : "#ffffff",
+                                : "#ffffff"
                           }}
                         >
                           <CardContent>
@@ -532,7 +532,7 @@ const Skills = () => {
                         style={{
                           marginBottom: "2rem",
                           display: "flex",
-                          justifyContent: "center",
+                          justifyContent: "center"
                         }}
                       >
                         <Button
@@ -553,7 +553,7 @@ const Skills = () => {
                     marginTop: "2rem",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
+                    alignItems: "center"
                   }}
                 >
                   <Grid container spacing={2}>
@@ -565,7 +565,7 @@ const Skills = () => {
                               display: "flex",
                               justifyContent: "end",
                               alignItems: "center",
-                              height: "100%",
+                              height: "100%"
                             }}
                           >
                             <Divider
@@ -573,7 +573,7 @@ const Skills = () => {
                               variant="middle"
                               style={{
                                 height: "80%",
-                                marginBottom: "65px",
+                                marginBottom: "65px"
                               }}
                             />
                           </div>
@@ -587,14 +587,14 @@ const Skills = () => {
                                 style={{
                                   paddingLeft: "0",
                                   display: "flex",
-                                  alignItems: "center",
+                                  alignItems: "center"
                                 }}
                               >
                                 <Divider
                                   style={{
                                     width: "100%",
                                     display: "flex",
-                                    alignItems: "center",
+                                    alignItems: "center"
                                   }}
                                 ></Divider>
                               </Grid>
@@ -606,7 +606,7 @@ const Skills = () => {
                                     backgroundColor:
                                       theme.palette.mode === "dark"
                                         ? "#292828"
-                                        : "#ffffff",
+                                        : "#ffffff"
                                   }}
                                 >
                                   <CardContent>
@@ -632,14 +632,14 @@ const Skills = () => {
                                 style={{
                                   paddingLeft: "0",
                                   display: "flex",
-                                  alignItems: "center",
+                                  alignItems: "center"
                                 }}
                               >
                                 <Divider
                                   style={{
                                     width: "100%",
                                     display: "flex",
-                                    alignItems: "center",
+                                    alignItems: "center"
                                   }}
                                 ></Divider>
                               </Grid>
@@ -652,7 +652,7 @@ const Skills = () => {
                                     backgroundColor:
                                       theme.palette.mode === "dark"
                                         ? "#292828"
-                                        : "#ffffff",
+                                        : "#ffffff"
                                   }}
                                 >
                                   <CardContent>
@@ -678,14 +678,14 @@ const Skills = () => {
                                 style={{
                                   paddingLeft: "0",
                                   display: "flex",
-                                  alignItems: "center",
+                                  alignItems: "center"
                                 }}
                               >
                                 <Divider
                                   style={{
                                     width: "100%",
                                     display: "flex",
-                                    alignItems: "center",
+                                    alignItems: "center"
                                   }}
                                 ></Divider>
                               </Grid>
@@ -698,7 +698,7 @@ const Skills = () => {
                                     backgroundColor:
                                       theme.palette.mode === "dark"
                                         ? "#292828"
-                                        : "#ffffff",
+                                        : "#ffffff"
                                   }}
                                 >
                                   <CardContent>
@@ -723,7 +723,7 @@ const Skills = () => {
                               marginTop: "2rem",
                               marginBottom: "2rem",
                               display: "flex",
-                              justifyContent: "center",
+                              justifyContent: "center"
                             }}
                           >
                             <Button
@@ -750,7 +750,7 @@ const Skills = () => {
                               backgroundColor:
                                 theme.palette.mode === "dark"
                                   ? "#292828"
-                                  : "#ffffff",
+                                  : "#ffffff"
                             }}
                           >
                             <CardContent>
@@ -774,7 +774,7 @@ const Skills = () => {
                               backgroundColor:
                                 theme.palette.mode === "dark"
                                   ? "#292828"
-                                  : "#ffffff",
+                                  : "#ffffff"
                             }}
                           >
                             <CardContent>
@@ -799,7 +799,7 @@ const Skills = () => {
                               backgroundColor:
                                 theme.palette.mode === "dark"
                                   ? "#292828"
-                                  : "#ffffff",
+                                  : "#ffffff"
                             }}
                           >
                             <CardContent>
@@ -822,7 +822,7 @@ const Skills = () => {
                             marginTop: "1rem",
                             marginBottom: "2rem",
                             display: "flex",
-                            justifyContent: "center",
+                            justifyContent: "center"
                           }}
                         >
                           <Button
