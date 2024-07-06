@@ -99,8 +99,7 @@ const Projects = () => {
       video:
         "https://drive.google.com/file/d/1p5XDnzYX1xJ3a5Qem4k6ZSbcdRQm1rxh/view?usp=sharing",
       objectFit: "contain"
-    },
- 
+    }
   ];
 
   const handleClick = (link) => {
@@ -257,14 +256,16 @@ const Projects = () => {
                   >
                     <GitHubIcon fontSize="inherit" />
                   </IconButton>
-                  <IconButton
-                    aria-label="preview"
-                    size="large"
-                    onClick={() => handleClick(slide.video)}
-                    color="primary"
-                  >
-                    <PreviewIcon fontSize="inherit" />
-                  </IconButton>
+                  {slide.video ? (
+                    <IconButton
+                      aria-label="preview"
+                      size="large"
+                      onClick={() => handleClick(slide.video)}
+                      color="primary"
+                    >
+                      <PreviewIcon fontSize="inherit" />
+                    </IconButton>
+                  ) : null}
                 </CardActions>
               )}
             </Card>

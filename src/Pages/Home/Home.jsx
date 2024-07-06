@@ -7,7 +7,7 @@ import {
   useMediaQuery,
   useTheme,
   Button,
-  IconButton,
+  IconButton
 } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -40,7 +40,7 @@ const Home = () => {
   const handleDownloadButtonClick = () => {
     const anchorElement = document.createElement("a");
     anchorElement.href =
-      "https://drive.google.com/uc?export=download&id=11KJeIhrctYrW6Yl2EaqWMz7bRln82SN2";
+      "https://drive.google.com/file/d/1O3KvvDZJENNNZdpzSthZttQ2ACIEqdy7/view?usp=sharing";
     anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
     document.body.appendChild(anchorElement);
     anchorElement.click();
@@ -56,18 +56,18 @@ const Home = () => {
         paddingTop: "2rem",
         overflow: "hidden",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "center"
       }}
     >
       <Container
         maxWidth="xl"
         sx={{
-          flexGrow: 1,
+          flexGrow: 1
         }}
       >
         <Box
           sx={{
-            flexGrow: 1,
+            flexGrow: 1
           }}
         >
           <Grid
@@ -76,7 +76,7 @@ const Home = () => {
             sx={{
               width: "100%",
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "center"
             }}
           >
             {!isSmallScreen && (
@@ -88,7 +88,7 @@ const Home = () => {
                     color: "cornflowerblue",
                     display: "flex",
                     justifyContent: "center",
-                    marginBottom: "1rem",
+                    marginBottom: "1rem"
                   }}
                 >
                   <strong>I'm,</strong>
@@ -101,7 +101,7 @@ const Home = () => {
                     display: "flex",
                     justifyContent: "center",
                     marginBottom: "1rem",
-                    textAlign: "center",
+                    textAlign: "center"
                   }}
                 >
                   <strong>Akalanka Vimukthi Rathnayake</strong>
@@ -111,7 +111,7 @@ const Home = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    textAlign: "center",
+                    textAlign: "center"
                   }}
                 >
                   <div
@@ -125,7 +125,7 @@ const Home = () => {
                       justifyContent: "center",
                       alignItems: "center",
                       color: "rgb(144 101 255)",
-                      marginBottom: "1rem",
+                      marginBottom: "1rem"
                     }}
                   >
                     <Typewriter
@@ -144,7 +144,7 @@ const Home = () => {
                       }}
                       options={{
                         autoStart: true,
-                        loop: true,
+                        loop: true
                       }}
                     />
                   </div>
@@ -154,7 +154,7 @@ const Home = () => {
                     marginTop: "1rem",
                     display: "flex",
                     justifyContent: "center",
-                    gap: "1rem",
+                    gap: "1rem"
                   }}
                 >
                   <Button
@@ -177,14 +177,17 @@ const Home = () => {
                   style={{
                     display: "flex",
                     justifyContent: "center",
-                    marginTop: "2rem",
+                    marginTop: "2rem"
                   }}
                 >
                   <IconButton
                     color="primary"
                     aria-label="fb"
                     onClick={() => {
-                      window.open("https://www.facebook.com", "_blank");
+                      window.open(
+                        "https://web.facebook.com/akalanka.rathnayaka.58/",
+                        "_blank"
+                      );
                     }}
                   >
                     <FacebookIcon />
@@ -232,7 +235,7 @@ const Home = () => {
                     fontFamily: "sans-serif",
                     fontSize: "2rem",
                     color: theme.palette.primary.main,
-                    marginBottom: "1rem",
+                    marginBottom: "1rem"
                   }}
                 >
                   <strong>I'm,</strong>
@@ -245,7 +248,7 @@ const Home = () => {
                     fontSize: "2rem",
                     color: theme.palette.primary.main,
                     textAlign: "center",
-                    marginBottom: "1rem",
+                    marginBottom: "1rem"
                   }}
                 >
                   <strong>Akalanka Vimukthi Rathnayake</strong>
@@ -255,7 +258,7 @@ const Home = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    textAlign: "center",
+                    textAlign: "center"
                   }}
                 >
                   <div
@@ -269,7 +272,7 @@ const Home = () => {
                       justifyContent: "start",
                       alignItems: "center",
                       color: "rgb(144 101 255)",
-                      marginBottom: "1rem",
+                      marginBottom: "1rem"
                     }}
                   >
                     <Typewriter
@@ -288,7 +291,7 @@ const Home = () => {
                       }}
                       options={{
                         autoStart: true,
-                        loop: true,
+                        loop: true
                       }}
                     />
                   </div>
@@ -299,7 +302,7 @@ const Home = () => {
                     textAlign: "center",
                     display: "flex",
                     justifyContent: "center",
-                    gap: 20,
+                    gap: 20
                   }}
                 >
                   <Button
@@ -323,7 +326,7 @@ const Home = () => {
                   style={{
                     display: "flex",
                     justifyContent: "center",
-                    marginTop: "2rem",
+                    marginTop: "2rem"
                   }}
                 >
                   <IconButton
@@ -373,7 +376,7 @@ const Home = () => {
                   width: "100%",
                   height: "100%",
                   display: "block",
-                  margin: "auto",
+                  margin: "auto"
                 }}
               />
             </Grid>
