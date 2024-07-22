@@ -5,6 +5,7 @@ import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
 import Projects from "./Pages/Projects/Projects";
 import Skills from "./Pages/Skills/Skills";
+import Blogs from './Pages/Blogs/Blogs'
 import React, { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { lightTheme, darkTheme } from "./theme";
@@ -38,6 +39,9 @@ function App() {
           </div>
           <div id="projects">
             <Projects />
+          </div>
+          <div id="blogs">
+            <Blogs/>
           </div>
           <div id="contact">
             <Contact />
