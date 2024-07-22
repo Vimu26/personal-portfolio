@@ -113,21 +113,6 @@ const Blogs = () => {
                     theme.palette.mode === "dark" ? "rgb(29 29 29)" : "#ffffff"
                 }}
               >
-                {/* {slide.image ? (
-                  <CardMedia
-                    component="img"
-                    height="300"
-                    image={slide.image}
-                    style={{
-                      objectFit: slide.objectFit,
-                      width: "100%",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center"
-                    }}
-                    alt=""
-                  />
-                ) : null} */}
                 <CardContent style={{ minHeight: "170px" }}>
                   <Typography
                     gutterBottom
