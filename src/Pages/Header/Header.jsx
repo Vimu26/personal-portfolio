@@ -127,6 +127,19 @@ const Header = ({ toggleDarkMode }) => {
                 <Grid item style={{ paddingLeft: "0" }}>
                   <RouterLink
                     underline="none"
+                    onClick={() => scrollToSection("blogs")}
+                    style={{
+                      textDecoration: "none",
+                      color: "cornflowerblue",
+                      fontSize: "20px",
+                    }}
+                  >
+                    <b>Blogs</b>
+                  </RouterLink>
+                </Grid>
+                <Grid item style={{ paddingLeft: "0" }}>
+                  <RouterLink
+                    underline="none"
                     onClick={() => scrollToSection("contact")}
                     style={{
                       textDecoration: "none",
@@ -243,6 +256,17 @@ const Header = ({ toggleDarkMode }) => {
               }}
             >
               <b>Projects</b>
+            </RouterLink>
+            <RouterLink
+              onClick={() => scrollToSection("blogs")}
+              style={{
+                textDecoration: "none",
+                color: "cornflowerblue",
+                fontSize: "20px",
+                textAlign: "center",
+              }}
+            >
+              <b>Blogs</b>
             </RouterLink>
             <RouterLink
               onClick={() => scrollToSection("contact")}
