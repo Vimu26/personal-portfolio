@@ -34,7 +34,7 @@ const Blogs = () => {
       },
       {
         image: require("../../assets/images/blogs/promises.png"),
-        title: "Authentication using Json Web Tokens",
+        title: "Authentication using Json Web Tokens (JWT)",
         link: "https://medium.com/@akalankavimukthi2/understanding-callbacks-promises-and-async-await-in-javascript-cd3bcaa3c25b",
         description:
           "This Article is Still Ongoing",
