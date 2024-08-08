@@ -610,14 +610,14 @@ const Skills = () => {
                                 >
                                   <CardContent>
                                     <Typography variant="h6" gutterBottom>
-                                      <b>Undergraduate Student</b>
+                                      <b>B.Sc (General) Degree in Physical Science</b>
                                     </Typography>
                                     <Typography variant="body1" gutterBottom>
                                       University of Sri Jayawardenapura ,
                                       SriLanka | (2021 - 2024)
                                     </Typography>
                                     <Typography variant="body1">
-                                      Computer Science related Degree
+                                      Major in Computer Science
                                     </Typography>
                                   </CardContent>
                                 </Card>
