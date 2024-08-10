@@ -379,7 +379,7 @@ const Skills = () => {
                                     Echonlabs (PVT) LTD | (2023 Feb - 2024 Feb)
                                   </Typography>
                                   <Typography variant="body1">
-                                    Worked as a Trainee Software Engineer
+                                    Worked as a Part-time Trainee Software Engineer
                                   </Typography>
                                 </CardContent>
                               </Card>
@@ -498,7 +498,7 @@ const Skills = () => {
                               Echonlabs (PVT) LTD | (2023 Feb - 2024 Feb)
                             </Typography>
                             <Typography variant="body1">
-                              Worked as a Trainee Software Engineer
+                              Worked as a Part-time Trainee Software Engineer
                             </Typography>
                           </CardContent>
                         </Card>
@@ -614,7 +614,7 @@ const Skills = () => {
                                       Major in Computer Science</b>
                                     </Typography>
                                     <Typography variant="body1" gutterBottom>
-                                      University of Sri Jayawardenapura ,
+                                      University of Sri Jayawardenapura,
                                       SriLanka | (2021 - 2024)
                                     </Typography>
                                   </CardContent>
