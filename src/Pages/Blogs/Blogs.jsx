@@ -29,7 +29,7 @@ const Blogs = () => {
         title: "Callbacks , Promises and Async/Await in Javascript",
         link: "https://medium.com/@akalankavimukthi2/understanding-callbacks-promises-and-async-await-in-javascript-cd3bcaa3c25b",
         description:
-          "This Article is About Asynchronous Programming in javascript, that is the concept, most of the javascript developers struggles.This article includes about callbacks , promises and async/await ",
+          "This Article is about Asynchronous Programming in javascript, that is the concept, most of the javascript developers struggles.This article includes about callbacks , promises and async/await ",
         objectFit: "fill"
       },
       {
