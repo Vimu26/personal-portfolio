@@ -37,7 +37,7 @@ const Blogs = () => {
         title: "Authentication using Json Web Token (JWT)",
         link: "https://medium.com/@akalankavimukthi2/understanding-json-web-tokens-jwt-for-authentication-6c22d1a52ca1",
         description:
-          "This Article is about Authentication , also this is explained using Json Web Token (JWT) , for node js developers , the code also included in this article.",
+          "This Article is about Authentication using Json Web Token (JWT), this article explains all about the JWT, for node js developers , the code also included in this article.",
         objectFit: "fill"
       },
     ];
