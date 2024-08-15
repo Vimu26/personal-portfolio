@@ -17,7 +17,6 @@ const Blogs = () => {
   
     const slides = [
       {
-        image: require("../../assets/images/blogs/angular-communication.png"),
         title: "Communication Between Components in Angular",
         link: "https://medium.com/@akalankavimukthi2/communication-between-components-in-angular-2dedeaeeb8d3",
         description:
@@ -25,7 +24,6 @@ const Blogs = () => {
         objectFit: "fill"
       },
       {
-        image: require("../../assets/images/blogs/promises.png"),
         title: "Callbacks , Promises and Async/Await in Javascript",
         link: "https://medium.com/@akalankavimukthi2/understanding-callbacks-promises-and-async-await-in-javascript-cd3bcaa3c25b",
         description:
@@ -33,7 +31,6 @@ const Blogs = () => {
         objectFit: "fill"
       },
       {
-        image: require("../../assets/images/blogs/promises.png"),
         title: "Authentication using Json Web Token (JWT)",
         link: "https://medium.com/@akalankavimukthi2/understanding-json-web-tokens-jwt-for-authentication-6c22d1a52ca1",
         description:
