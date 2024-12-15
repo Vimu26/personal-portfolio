@@ -37,6 +37,20 @@ const Blogs = () => {
           "This Article is about Authentication using Json Web Token (JWT), this article explains all about the JWT, for node js developers , the code also included in this article.",
         objectFit: "fill"
       },
+      {
+        title: "Exploring TypeScript Utility Types",
+        link: "https://medium.com/@akalankavimukthi2/exploring-typescript-utility-types-6d88efab5cc9",
+        description:
+          "This Article is about utility types in Typescript, using these, reduces number of line in the code and make it more clear and improves the readability.",
+        objectFit: "fill"
+      },
+      {
+        title: "Basics of MongoDB Aggregation",
+        link: "https://medium.com/@akalankavimukthi2/basics-operators-in-mongodb-aggregation-d71c6696183e",
+        description:
+          "This Article is about Basics of MongoDB Aggregation, If you are using MongoDB, MongoDB Aggregations are essential for querying, transforming, and combining data from multiple collections, enabling efficient data processing and improved application performance",
+        objectFit: "fill"
+      },
     ];
   
     const handleClick = (link) => {
