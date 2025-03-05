@@ -22,8 +22,8 @@ const Skills = () => {
   const handleDownloadButtonClick = () => {
     const anchorElement = document.createElement("a");
     anchorElement.href =
-      "https://drive.google.com/uc?export=download&id=1ciyUv3KWPzZseTtKFwxYCn8uNnfRA-zb";
-    anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
+      "https://drive.google.com/uc?export=download&id=1ILEyFOSKD3Z-mSQ2d_ZniPS7O1ywSStT";
+    anchorElement.download = "Akalanka Vimukthi CV 2025.pdf";
     document.body.appendChild(anchorElement);
     anchorElement.click();
     document.body.removeChild(anchorElement);
@@ -379,7 +379,8 @@ const Skills = () => {
                                     Echonlabs (PVT) LTD | (2023 Feb - 2024 Feb)
                                   </Typography>
                                   <Typography variant="body1">
-                                    Worked as a Part-time Trainee Software Engineer
+                                    Worked as a Part-time Trainee Software
+                                    Engineer
                                   </Typography>
                                 </CardContent>
                               </Card>
@@ -610,8 +611,11 @@ const Skills = () => {
                                 >
                                   <CardContent>
                                     <Typography variant="h6" gutterBottom>
-                                      <b>B.Sc (General) Degree in Physical Science <br></br>
-                                      Major in Computer Science</b>
+                                      <b>
+                                        B.Sc (General) Degree in Physical
+                                        Science <br></br>
+                                        Major in Computer Science
+                                      </b>
                                     </Typography>
                                     <Typography variant="body1" gutterBottom>
                                       University of Sri Jayawardenapura,
