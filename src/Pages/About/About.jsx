@@ -3,7 +3,7 @@ import {
   Grid,
   Typography,
   useMediaQuery,
-  useTheme,
+  useTheme
 } from "@mui/material";
 import React from "react";
 
@@ -17,53 +17,32 @@ const About = () => {
       sx={{
         backgroundColor: theme.palette.mode === "dark" ? "#292828" : "#ffffff",
         color: theme.palette.text.primary,
+        padding: "2rem 1rem"
       }}
     >
-      <Grid
-        container
-        // spacing={2}
-        sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}
-      >
+      <Grid container sx={{ width: "100%", alignItems: "center" }}>
         {!isSmallScreen && (
-          <Grid item xs={12} sm={6} style={{ paddingBottom: "1rem" }}>
+          <Grid item xs={12} sm={6} sx={{ paddingBottom: "1rem" }}>
             <img
-              src="https://thehonestcoder.com/wp-content/uploads/2022/12/logo-1-1024x831.png"
-              alt=""
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                margin: "auto",
-              }}
+              src="https://miro.medium.com/v2/resize:fit:1400/1*dbp0mouy8vkUXC5y-NosiQ.jpeg"
+              alt="Profile"
+              style={{ width: "100%", height: "auto", display: "block" }}
             />
           </Grid>
         )}
 
         <Grid item xs={12} sm={6}>
-          <div
-            style={{
-              textAlign: isSmallScreen ? "center" : "match-parent",
-              // paddingBottom: "2rem",
-            }}
-          >
+          <div style={{ textAlign: "start" }}>
             <Typography
               variant="h4"
               gutterBottom
-              sx={{
-                color: "cornflowerblue",
-              }}
+              sx={{ color: "cornflowerblue" }}
             >
               <b>About Me</b>
             </Typography>
             <Typography
               variant="body1"
-              gutterBottom
-              sx={{
-                marginTop: "1rem",
-                marginBottom: "1.5rem",
-                fontSize: "1.1rem",
-                color: theme.palette.text.primary,
-              }}
+              sx={{ marginBottom: "1rem", fontSize: "1.1rem" }}
             >
               I'm Akalanka Vimukthi Rathnayake, a Passionate Software Engineer
               from Sri Lanka. I'm a Fast Learning, Responsible, Adaptable,
@@ -71,209 +50,38 @@ const About = () => {
               exceed a company's expectations to deliver high-quality software
               products.
             </Typography>
-            <Grid container>
+
+            {[
+              { label: "Name", value: "Akalanka Vimukthi Rathnayake" },
+              { label: "Date of Birth", value: "2000.01.26" },
+              {
+                label: "Address",
+                value: "67/9B , Woodland av, Kalubowila , Dehiwala , SriLanka"
+              },
+              { label: "Email", value: "akalankavimukthi2@gmail.com" },
+              { label: "Phone", value: "+94 77 459 6550" }
+            ].map((item, index) => (
               <Grid
-                item
-                xs={4}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+                container
+                key={index}
+                sx={{ alignItems: "center", marginBottom: "0.5rem" }}
               >
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    marginBottom: "1rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: theme.palette.text.primary,
-                  }}
+                <Grid
+                  item
+                  xs={3}
+                  sx={{ fontSize: "1.2rem", color: theme.palette.text.primary }}
                 >
-                  Name
-                </Typography>
-              </Grid>
-              <Grid item xs={8}>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    color: "cornflowerblue",
-                    marginBottom: "1rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  {item.label}
+                </Grid>
+                <Grid
+                  item
+                  xs={9}
+                  sx={{ fontSize: "1.2rem", color: "cornflowerblue" }}
                 >
-                  Akalanka Vimukthi Rathnayake
-                </Typography>
+                  {item.value}
+                </Grid>
               </Grid>
-            </Grid>
-            <Grid container>
-              <Grid
-                item
-                xs={4}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    marginBottom: "1rem",
-                    color: theme.palette.text.primary,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Date of Birth
-                </div>
-              </Grid>
-              <Grid item xs={8}>
-                <div
-                  style={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    color: "cornflowerblue",
-                    marginBottom: "1rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  2000.01.26
-                </div>
-              </Grid>
-            </Grid>
-            <Grid container>
-              <Grid
-                item
-                xs={4}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    marginBottom: "1rem",
-                    color: theme.palette.text.primary,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Address
-                </div>
-              </Grid>
-              <Grid item xs={8}>
-                <div
-                  style={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    color: "cornflowerblue",
-                    marginBottom: "1rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  67/9B , Woodland av, Kalubowila , Dehiwala , SriLanka
-                </div>
-              </Grid>
-            </Grid>
-            <Grid container>
-              <Grid
-                item
-                xs={2}
-                sm={4}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    marginBottom: "1rem",
-                    color: theme.palette.text.primary,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Email
-                </div>
-              </Grid>
-              <Grid item xs={10} sm={8}>
-                <div
-                  style={{
-                    fontFamily: "emoji",
-                    fontSize: isSmallScreen ? "1.12rem" : "1.3rem",
-                    color: "cornflowerblue",
-                    marginBottom: "1rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  akalankavimukthi2@gmail.com
-                </div>
-              </Grid>
-            </Grid>
-            <Grid container>
-              <Grid
-                item
-                xs={4}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    marginBottom: "1rem",
-                    color: theme.palette.text.primary,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Phone
-                </div>
-              </Grid>
-              <Grid item xs={8}>
-                <div
-                  style={{
-                    fontFamily: "emoji",
-                    fontSize: "1.3rem",
-                    color: "cornflowerblue",
-                    marginBottom: "1rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  +94 77 459 6550
-                </div>
-              </Grid>
-            </Grid>
+            ))}
           </div>
         </Grid>
       </Grid>

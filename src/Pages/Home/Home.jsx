@@ -40,8 +40,8 @@ const Home = () => {
   const handleDownloadButtonClick = () => {
     const anchorElement = document.createElement("a");
     anchorElement.href =
-      "https://drive.google.com/uc?export=download&id=1ciyUv3KWPzZseTtKFwxYCn8uNnfRA-zb";
-    anchorElement.download = "Akalanka Vimukthi CV 2024.pdf";
+      "https://drive.google.com/uc?export=download&id=1ILEyFOSKD3Z-mSQ2d_ZniPS7O1ywSStT";
+    anchorElement.download = "Akalanka Vimukthi CV 2025.pdf";
     document.body.appendChild(anchorElement);
     anchorElement.click();
     document.body.removeChild(anchorElement);
