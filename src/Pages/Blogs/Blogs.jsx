@@ -68,7 +68,7 @@ const Blogs = () => {
         "Understanding Memory Management and Garbage Collection in JavaScript",
       link: "https://medium.com/@akalankavimukthi2/understanding-memory-management-and-garbage-collection-in-javascript-f466a45b6b00",
       description:
-        "This Article is about Memory Management and Garbage collection in javascript, In JavaScript, Memory management is automatic and performed by the JavaScript engine.",
+        "This Article is about Memory Management and Garbage collection in javascript, In JavaScript and other languages, Memory management is automatic and performed by the JavaScript engine.",
       objectFit: "fill"
     }
   ];
